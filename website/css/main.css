@@ -9,32 +9,34 @@
     font-family: "asse 5";
     src: url('./fonts/Compasse Bold.ttf');
 }
+
 @font-face {
     font-family: "asse 6";
     src: url('./fonts/Compasse Light.ttf');
 }
+
 @font-face {
     font-family: "asse 11";
     src: url('./fonts/Compasse Regular.ttf');
 }
 
 html {
-scroll-behavior:smooth;
-font-size: 100%;
+    scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 /*----- body -----*/
 
 body {
-    scroll-behavior:smooth;
-    background-color:rgb(230, 230, 230);
-    }
+    scroll-behavior: smooth;
+    background-color: rgb(230, 230, 230);
+}
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
-.noscroll{
+.noscroll {
     overflow: hidden;
 }
 
@@ -45,11 +47,11 @@ body::-webkit-scrollbar {
 .navibar {
     position: fixed;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     height: 6.5vh;
     width: 100%;
-    background-color:black;
+    background-color: black;
     z-index: 2;
 }
 
@@ -57,17 +59,17 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     height: 100%;
     width: 124vh;
     margin-left: 30px;
-    margin-right:30px;
+    margin-right: 30px;
 }
 
 .navi-elements {
     position: relative;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     height: 100%;
 }
@@ -82,7 +84,7 @@ body::-webkit-scrollbar {
 
 .menu-btn {
     position: relative;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 19px;
@@ -100,7 +102,7 @@ body::-webkit-scrollbar {
 
 .menu-burger::before,
 .menu-burger::after {
-    content:'';
+    content: '';
     position: absolute;
     width: 100%;
     height: 3px;
@@ -126,7 +128,7 @@ body::-webkit-scrollbar {
     animation-name: ani-top-for;
     animation-duration: 0.6s;
     transform: rotate(-45deg);
-    background-color:red;
+    background-color: red;
     visibility: visible;
 }
 
@@ -134,29 +136,57 @@ body::-webkit-scrollbar {
     animation-name: ani-bottom-for;
     animation-duration: 0.6s;
     transform: rotate(45deg);
-    background-color:red;
+    background-color: red;
     visibility: visible;
 }
 
 @keyframes ani-top-for {
-    0%    { transform:translateY(-8px); background-color: white; }
-    50%   { transform:translateY(0px); background-color: white; }
-    51%   { transform:translateY(0px); }
-    100%  { transform:rotate(-45deg); }
+    0% {
+        transform: translateY(-8px);
+        background-color: white;
+    }
+    50% {
+        transform: translateY(0px);
+        background-color: white;
+    }
+    51% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
 }
 
 @keyframes ani-bottom-for {
-    0%    { transform:translateY(8px); background-color: white; }
-    50%   { transform:translateY(0px);background-color: white; }
-    51%   { transform:translateY(0px); }
-    100%  { transform:rotate(45deg); }
+    0% {
+        transform: translateY(8px);
+        background-color: white;
+    }
+    50% {
+        transform: translateY(0px);
+        background-color: white;
+    }
+    51% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
 }
 
 @keyframes ani-middle-for {
-    0%    { visibility: visible; }
-    50%   { visibility: visible; }
-    51%   { visibility: hidden; }
-    100%  { visibility: hidden; }
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: visible;
+    }
+    51% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
 }
 
 .menu-btn.close .menu-burger {
@@ -175,29 +205,57 @@ body::-webkit-scrollbar {
 .menu-btn.close .menu-burger::after {
     animation-name: ani-bottom-back;
     animation-duration: 0.6s;
-    background-color:white;
+    background-color: white;
     visibility: visible;
 }
 
 @keyframes ani-top-back {
-    0%    { transform:rotate(-45deg); background-color:red;}
-    50%   { transform:translateY(0px); background-color:red;}
-    51%   { transform:translateY(0px); }
-    100%  { transform:translateY(-8px); }
+    0% {
+        transform: rotate(-45deg);
+        background-color: red;
+    }
+    50% {
+        transform: translateY(0px);
+        background-color: red;
+    }
+    51% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes ani-bottom-back {
-    0%    { transform:rotate(45deg); background-color: red; }
-    50%   { transform:translateY(0px); background-color: red;}
-    51%   { transform:translateY(0px);}
-    100%  { transform:translateY(8px); }
+    0% {
+        transform: rotate(45deg);
+        background-color: red;
+    }
+    50% {
+        transform: translateY(0px);
+        background-color: red;
+    }
+    51% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(8px);
+    }
 }
 
 @keyframes ani-middle-back {
-    0%    { visibility: hidden; }
-    50%   { visibility: hidden; }
-    51%   { visibility: visible; }
-    100%  { visibility: visible; }
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    51% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+    }
 }
 
 /*----- burger -----*/
@@ -209,31 +267,31 @@ body::-webkit-scrollbar {
     display: none;
     height: 100%;
     width: 100%;
-    margin-top:6.5vh;
+    margin-top: 6.5vh;
     opacity: 1;
-    background-color:black;
+    background-color: black;
     z-index: 1;
 }
 
 .menu-frame {
     position: relative;
-    display:flex;
+    display: flex;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-60%);
+    left: 50%;
+    transform: translate(-50%, -60%);
     flex-direction: column;
 }
 
 .menu-links {
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .menu-language {
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 60px;
@@ -249,7 +307,7 @@ body::-webkit-scrollbar {
 
 .menu-language-mitte {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     width: 60px;
     margin-left: 15px;
@@ -270,8 +328,8 @@ body::-webkit-scrollbar {
 
 #home {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -292,9 +350,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "a b b"
-    "a b b";
+    grid-template-areas: "a b b" "a b b";
 }
 
 .home-box-a {
@@ -330,8 +386,8 @@ body::-webkit-scrollbar {
 
 #about {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -351,9 +407,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "a b b"
-    "c d d";
+    grid-template-areas: "a b b" "c d d";
 }
 
 .about-box-a {
@@ -369,7 +423,7 @@ body::-webkit-scrollbar {
     position: relative;
     transition: .3s ease;
     overflow: hidden;
-    background-color:white;
+    background-color: white;
 }
 
 .about-box-c {
@@ -377,7 +431,7 @@ body::-webkit-scrollbar {
     position: relative;
     transition: .3s ease;
     overflow: hidden;
-    background-color:rgb(129, 236, 236);
+    background-color: rgb(129, 236, 236);
 }
 
 .about-box-d {
@@ -385,7 +439,7 @@ body::-webkit-scrollbar {
     position: relative;
     transition: .3s ease;
     overflow: hidden;
-    background-color:white;
+    background-color: white;
 }
 
 .about-overlay {
@@ -412,7 +466,7 @@ body::-webkit-scrollbar {
     padding: 30px;
     transition: .3s ease;
     opacity: 0;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .about-overlay-3 {
@@ -461,40 +515,37 @@ body::-webkit-scrollbar {
 }
 
 
-
-
-
 .about-box-a:hover .about-overlay-2 {
     opacity: 1;
- } 
+}
 
 .about-box-a:hover .pic {
     filter: blur(1.5px);
-} 
+}
 
 .about-box-a:hover .text-overlay {
     transform: translateY(0px);
- } 
+}
 
 .about-box-c:hover .about-overlay-3 {
     opacity: 1;
-  }  
+}
 
- .about-box-c:hover .about-overlay-4 {
+.about-box-c:hover .about-overlay-4 {
     opacity: 1;
-  } 
+}
 
-.about-box-c:hover .projectname{
+.about-box-c:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.about-box-c:hover .projectlink{
+.about-box-c:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.about-box-a:hover .projectname{
+.about-box-a:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -511,8 +562,8 @@ body::-webkit-scrollbar {
 
 #work {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -560,20 +611,20 @@ body::-webkit-scrollbar {
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color:rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     opacity: 0;
     transition: .3s ease;
     padding: 30px;
 }
 
 .text-overlay {
-    position:relative;
+    position: relative;
     height: 100%;
     width: 100%;
 }
 
 .projectname {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -583,11 +634,11 @@ body::-webkit-scrollbar {
     width: 100%;
     transition: .3s ease;
     transform: translateY(-30px);
-    opacity:0;
+    opacity: 0;
 }
 
 .projectlink {
-    position:relative;
+    position: relative;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -598,9 +649,6 @@ body::-webkit-scrollbar {
     transform: translateY(30px);
     opacity: 0;
 }
-
-
-
 
 
 .slideshow-frame {
@@ -684,10 +732,10 @@ body::-webkit-scrollbar {
 
 .button-prev {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width:30px;
+    width: 30px;
     height: 60px;
     padding-left: 4px;
     background-color: black;
@@ -709,13 +757,13 @@ body::-webkit-scrollbar {
 
 .button-next {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width:30px;
+    width: 30px;
     height: 60px;
     padding-right: 4px;
-    background-color:black;
+    background-color: black;
     transform: translateX(30px);
     transition: .3s ease;
     opacity: 0
@@ -748,18 +796,18 @@ body::-webkit-scrollbar {
     width: 12px;
     margin-left: 8px;
     margin-right: 8px;
-    background-color:rgb(150,150,150);
+    background-color: rgb(150, 150, 150);
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
+}
 
 .active {
-    background-color:black;
-  }
+    background-color: black;
+}
 
 .dot:hover {
     background-color: black;
-  }
+}
 
 .slideshow-rotate-screen {
     position: absolute;
@@ -772,24 +820,21 @@ body::-webkit-scrollbar {
     text-align: center;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     display: none;
 }
 
 
-  
-
-
 .box:hover .box-overlay {
     opacity: 1;
-  }
-  
-.box:hover .projectname{
+}
+
+.box:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.box:hover .projectlink{
+.box:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -800,10 +845,7 @@ body::-webkit-scrollbar {
 
 .box:hover .pic {
     filter: blur(1.5px);
-} 
-
-
-
+}
 
 
 .button-prev:hover .prev {
@@ -826,21 +868,21 @@ body::-webkit-scrollbar {
     background-color: white;
 }
 
-.slideshow-frame:hover .slideshow-controls{
+.slideshow-frame:hover .slideshow-controls {
     opacity: 1;
 }
 
-.slideshow-frame:hover .button-prev{
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.slideshow-frame:hover .button-next{
+.slideshow-frame:hover .button-prev {
     opacity: 1;
     transform: translateX(0px);
 }
 
-.slideshow-frame:hover .compass{
+.slideshow-frame:hover .button-next {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.slideshow-frame:hover .compass {
     opacity: 1;
     transform: translateX(0px);
 }
@@ -852,8 +894,8 @@ body::-webkit-scrollbar {
 
 #resume {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -873,9 +915,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-    "a a b"
-    "a a b";
+    grid-template-areas: "a a b" "a a b";
 }
 
 .resume-box-a {
@@ -914,7 +954,7 @@ body::-webkit-scrollbar {
     width: 100%;
     padding: 30px;
     margin-bottom: 15px;
-    background-color:white;
+    background-color: white;
 }
 
 .split-bottom {
@@ -925,7 +965,7 @@ body::-webkit-scrollbar {
     width: 100%;
     margin-top: 15px;
     padding: 30px;
-    background-color:white;
+    background-color: white;
 }
 
 .exp-infobox {
@@ -995,8 +1035,8 @@ body::-webkit-scrollbar {
 
 #contact {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -1016,9 +1056,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: repeat (3, 1fr);
     grid-template-rows: repeat (2, 1fr);
-    grid-template-areas:
-    "b a a"
-    "c a a";
+    grid-template-areas: "b a a" "c a a";
 }
 
 .contact-box1 {
@@ -1053,14 +1091,14 @@ body::-webkit-scrollbar {
 
 .contact-box3:hover .box-overlay {
     opacity: 1;
-  }
-  
-.contact-box3:hover .projectname{
+}
+
+.contact-box3:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box3:hover .projectlink{
+.contact-box3:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1071,14 +1109,14 @@ body::-webkit-scrollbar {
 
 .contact-box2:hover .box-overlay {
     opacity: 1;
-  }
-  
-.contact-box2:hover .projectname{
+}
+
+.contact-box2:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box2:hover .projectlink{
+.contact-box2:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1089,14 +1127,14 @@ body::-webkit-scrollbar {
 
 .contact-box1:hover .box-overlay {
     opacity: 1;
-  }
-  
-.contact-box1:hover .projectname{
+}
+
+.contact-box1:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box1:hover .projectlink{
+.contact-box1:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1106,15 +1144,15 @@ body::-webkit-scrollbar {
 }
 
 .message {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .resume {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .portfolio {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /*----- contact -----*/
@@ -1124,8 +1162,8 @@ body::-webkit-scrollbar {
 
 #contact2 {
     position: relative;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: 12.5vh;
     padding-bottom: 12.5vh;
@@ -1136,7 +1174,7 @@ body::-webkit-scrollbar {
 .contact2-frame {
     position: relative;
     width: 124vh;
-    display:none;
+    display: none;
 }
 
 .contact2-grid {
@@ -1146,9 +1184,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "a b b"
-    "a b b";
+    grid-template-areas: "a b b" "a b b";
 }
 
 .contact2-box-a {
@@ -1168,8 +1204,10 @@ body::-webkit-scrollbar {
     background-color: white;
 }
 
-
-
+.doc-box-b label input[type="checkbox"]:checked {
+    background-color: rgb(129, 236, 236);
+    color: black;
+}
 
 .doc-grid {
     position: absolute;
@@ -1184,20 +1222,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 15px;
     grid-template-columns: 2fr;
     grid-template-rows: repeat(13, 1fr);
-    grid-template-areas:
-    "t"
-    "t"
-    "."
-    "a"
-    "b"
-    "c"
-    "."
-    "d"
-    "d"
-    "d"
-    "d"
-    "d"
-    "d";
+    grid-template-areas: "t" "t" "." "a" "b" "c" "." "d" "d" "d" "d" "d" "d";
 }
 
 .doc-box-t {
@@ -1215,32 +1240,32 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-.doc-box-a div{ /*klickrahmen*/
-    position:relative;
+.doc-box-a div { /*klickrahmen*/
+    position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-a div label{ /*klickfläche*/
+.doc-box-a div label { /*klickfläche*/
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color:rgb(129, 236, 236);
+    background-color: rgb(129, 236, 236);
 }
 
-.doc-box-a label input[type="checkbox"]  {
-    display:none;
+.doc-box-a label input[type="checkbox"] {
+    display: none;
 }
 
-.doc-box-a div label span{
+.doc-box-a div label span {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
-    line-height:100%;
-    color:black;
+    line-height: 100%;
+    color: black;
 }
 
 .doc-box-b {
@@ -1250,41 +1275,36 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-.doc-box-b div{ /*klickrahmen*/
-    position:relative;
+.doc-box-b div { /*klickrahmen*/
+    position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-b div label{ /*klickfläche*/
+.doc-box-b div label { /*klickfläche*/
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.doc-box-b label input[type="checkbox"]  {
-    display:none;
+.checked {
+    background-color: rgb(129, 236, 236);
 }
 
-.doc-box-b div label span{
+.doc-box-b div.checked label span {
+    color: black;
+}
+
+.doc-box-b div label span {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
-    line-height:100%;
-    color:rgb(129, 236, 236);
-}
-
-.doc-box-b div label:hover {
-    background-color:rgb(129, 236, 236);
-    transition: 0.3s;
-}
-
-.doc-box-b div label:hover span{
-    color:black;
+    line-height: 100%;
+    color: rgb(129, 236, 236);
 }
 
 .doc-box-c {
@@ -1294,41 +1314,32 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-.doc-box-c div{ /*klickrahmen*/
-    position:relative;
+.doc-box-c div { /*klickrahmen*/
+    position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-c div label{ /*klickfläche*/
+.doc-box-c div label { /*klickfläche*/
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.doc-box-c label input[type="checkbox"]  {
-    display:none;
+.doc-box-c div.checked label span {
+    color: black;
 }
 
-.doc-box-c div label span{
+.doc-box-c div label span {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
-    line-height:100%;
-    color:rgb(129, 236, 236);
-}
-
-.doc-box-c div label:hover {
-    background-color:rgb(129, 236, 236);
-    transition: 0.3s;
-}
-
-.doc-box-c div label:hover span{
-    color:black;
+    line-height: 100%;
+    color: rgb(129, 236, 236);
 }
 
 .doc-box-d {
@@ -1338,8 +1349,6 @@ body::-webkit-scrollbar {
     transition: .3s ease;
     overflow: hidden;
 }
-
-
 
 
 .form-grid {
@@ -1354,20 +1363,7 @@ body::-webkit-scrollbar {
     grid-row-gap: 15px;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(13, 1fr);
-    grid-template-areas:
-    "t t t t t t t t"
-    "t t t t t t t t"
-    "a a a a a a a a"
-    "b b b b c c c c"
-    "d d d d e e e e"
-    "f f f f g g g g"
-    "h h h h i i i i"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    ". . . k k . . .";
+    grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
 }
 
 .write-message {
@@ -1392,7 +1388,7 @@ input[type=text] {
     width: 100%;
     height: 100%;
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
     padding-left: 15px;
     padding-right: 15px;
@@ -1402,34 +1398,34 @@ input[type=text] {
 
 input[type=text]:focus,
 input[type=text]:valid {
-    background-color: rgb(230,230,230);
+    background-color: rgb(230, 230, 230);
     outline: none;
 }
 
 ::placeholder {
-      color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
 }
 
 textarea:focus,
 textarea:valid {
-    background-color:rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
     outline: none;
-    }
+}
 
 textarea::placeholder {
-  font-size: 17px;
-  font-weight:500;
-  font-family: 'asse 11';
-  line-height:100%;
-  color:rgb(150, 150, 150);
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'asse 11';
+    line-height: 100%;
+    color: rgb(150, 150, 150);
 }
 
 input, textarea {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
-    line-height:100%;
-    color:rgb(150, 150, 150);
+    line-height: 100%;
+    color: rgb(150, 150, 150);
 }
 
 .form-box-t {
@@ -1450,10 +1446,10 @@ input, textarea {
 }
 
 .form-box-a {
-        grid-area: a;
-        position: relative;
-        display: flex;
-        transition: .3s ease;
+    grid-area: a;
+    position: relative;
+    display: flex;
+    transition: .3s ease;
 }
 
 .form-box-b {
@@ -1537,41 +1533,41 @@ input, textarea {
     resize: none;
 }
 
-.form-box-k div{ /*klickrahmen*/
-    position:relative;
+.form-box-k div { /*klickrahmen*/
+    position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.form-box-k div label{ /*klickfläche*/
+.form-box-k div label { /*klickfläche*/
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.form-box-k label input[type="checkbox"]  {
-    display:none;
+.form-box-k label input[type="checkbox"] {
+    display: none;
 }
 
-.form-box-k div label span{
+.form-box-k div label span {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
-    line-height:100%;
-    color:rgb(129, 236, 236);
+    line-height: 100%;
+    color: rgb(129, 236, 236);
 }
 
 .form-box-k div label:hover {
-    background-color:rgb(129, 236, 236);
+    background-color: rgb(129, 236, 236);
     transition: 0.3s;
 }
 
-.form-box-k div label:hover span{
-    color:white;
+.form-box-k div label:hover span {
+    color: white;
 }
 
 
@@ -1583,13 +1579,13 @@ input, textarea {
 
 .footer {
     position: relative;
-    display:flex;
+    display: flex;
     justify-content: center;
     height: 26vh;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
-    background-color:black;
+    background-color: black;
 }
 
 .footer-frame {
@@ -1598,8 +1594,8 @@ input, textarea {
     justify-content: flex-start;
     flex-direction: column;
     width: 120vh;
-    margin-bottom:6.5vh;
-    margin-top: 3.5vh;   
+    margin-bottom: 6.5vh;
+    margin-top: 3.5vh;
 }
 
 .footer-part1 {
@@ -1618,10 +1614,10 @@ input, textarea {
     height: 30px;
     width: 30px;
     padding-top: 4px;
-    background-color:rgb(40, 40, 40);
+    background-color: rgb(40, 40, 40);
     transition: .3s ease;
 }
-  
+
 .arrow {
     content: '';
     display: inline-block;
@@ -1694,88 +1690,86 @@ a {
 }
 
 a:hover {
-    color:white;
+    color: white;
 }
 
 h1 {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 22px;
-    color:white;
+    color: white;
 }
 
 h2 {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 22px;
-    color:black;
+    color: black;
 }
 
 h3 {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 22px;
-    color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
 }
 
 h3 a {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 22px;
-    color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
 }
 
 h4 {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 22px;
-    color:rgb(129, 236, 236);
+    color: rgb(129, 236, 236);
 }
 
 p {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 6';
     line-height: 22px;
-    color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
 }
 
-p a{
+p a {
     font-size: 17px;
-    font-weight:500;
+    font-weight: 500;
     font-family: 'asse 11';
     line-height: 22px;
-    color:rgb(129, 236, 236);
+    color: rgb(129, 236, 236);
 }
 
 /*----- fonts-----*/
 
 /*----- responsive -----*/
 
-@media only screen and (max-width: 65vh){
+@media only screen and (max-width: 65vh) {
 
 
     .navi-frame {
         margin-left: 15px;
-        margin-right:15px;
+        margin-right: 15px;
     }
-    
-
 
 
     #home {
@@ -1788,13 +1782,8 @@ p a{
         grid-row-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "a a"
-        "b b"
-        "b b";
-        }
-    
-
+        grid-template-areas: "a a" "b b" "b b";
+    }
 
 
     #about {
@@ -1807,54 +1796,49 @@ p a{
         grid-row-gap: 15px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "a c"
-        "b b"
-        "d d";
-        }
+        grid-template-areas: "a c" "b b" "d d";
+    }
 
-        .about-overlay {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            padding: 15px;
-            transition: .3s ease;
-            opacity: 1;
-        }
-        
-        .about-overlay-2 {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            padding: 15px;
-            transition: .3s ease;
-            opacity: 0;
-            background-color: rgba(0,0,0, 0.75);
-        }
-        
-        .about-overlay-3 {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            padding: 15px;
-            transition: .3s ease;
-            opacity: 0;
-            background-color: black;
-        }
-    
+    .about-overlay {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        transition: .3s ease;
+        opacity: 1;
+    }
 
+    .about-overlay-2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        transition: .3s ease;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .about-overlay-3 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        transition: .3s ease;
+        opacity: 0;
+        background-color: black;
+    }
 
 
     #work {
@@ -1862,115 +1846,85 @@ p a{
         padding-left: 15px;
     }
 
-    .work-grid{
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    .work-grid {
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
     }
 
-    .project-grid{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     .slideshow-rotate-screen {
         display: flex;
     }
-    
+
     .resume-grid {
         grid-row-gap: 15px;
         grid-column-gap: 15px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        "a a"
-        "a a"
-        "b b";
-        }
-    
-
-
-
-#contact {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-#contact2 {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.contact-grid {
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    grid-template-columns: repeat (2, 1fr);
-    grid-template-rows: repeat (3, 1fr);
-    grid-template-areas:
-    "b c"
-    "a a"
-    "a a";
+        grid-template-areas: "a a" "a a" "b b";
     }
 
-.contact2-grid {
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-    "a a"
-    "b b"
-    "b b";
+
+    #contact {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
-.doc-grid {
-    position: absolute;
-    display: grid;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 15px;
-    grid-column-gap: 15px;
-    grid-row-gap: 7.5px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:
-    "t d"
-    "t d"
-    ". d"
-    "a d"
-    "b d"
-    "c d";
+    #contact2 {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
-.form-grid {
-    position: absolute;
-    display: grid;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 15px;
-    grid-column-gap: 7.5px;
-    grid-row-gap: 7.5px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    grid-template-areas:
-    "t t t t t t t t"
-    "t t t t t t t t"
-    "a a a a a a a a"
-    "b b b b c c c c"
-    "d d d d e e e e"
-    "f f f f g g g g"
-    "h h h h i i i i"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    ". . . k k . . .";
+    .contact-grid {
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-rows: repeat (3, 1fr);
+        grid-template-areas: "b c" "a a" "a a";
+    }
+
+    .contact2-grid {
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "a a" "b b" "b b";
+    }
+
+    .doc-grid {
+        position: absolute;
+        display: grid;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        grid-column-gap: 15px;
+        grid-row-gap: 7.5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "t d" "t d" ". d" "a d" "b d" "c d";
+    }
+
+    .form-grid {
+        position: absolute;
+        display: grid;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        grid-column-gap: 7.5px;
+        grid-row-gap: 7.5px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
     }
 
 /*----- responsive -----*/

@@ -519,7 +519,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="portfolio">
-                            <p><a href="#contact" onclick="toggleMenu()">Request</a></p>
+                            <p><a href="#contact" onclick="toggleForm('.req-portfolio');$('#checkboxPortfolio').toggleClass('checked')">Request</a></p>
                         </div>
                     </div>
                 </div>
@@ -536,7 +536,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="message">
-                            <p><a href="#contact" onclick="toggleForm();">Message</a></p>
+                            <p><a href="#contact" onclick="toggleForm('.write-message');">Message</a></p>
                         </div>
                     </div>
                 </div>
@@ -553,7 +553,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="resume">
-                            <p><a href="#contact" onclick="toggleMenu()">Request</a></p>
+                            <p><a href="#contact" onclick="toggleForm('.req-resume');$('#checkboxResume').toggleClass('checked')">Request</a></p>
                         </div>
                     </div>
                 </div>
@@ -577,17 +577,17 @@
                     </div>
                     <div class="doc-box-a">
                         <div>
-                            <label><input type="checkbox"><span>Message</span></label>
+                            <label><input id="checkboxMessage" type="checkbox"><span>Message</span></label>
                         </div>
                     </div>
                     <div class="doc-box-b">
-                        <div>
-                            <label><input type="checkbox"><span>Resume</span></label>
+                        <div id="checkboxResume" onclick="$(this).toggleClass('checked');evaluateDocuments();">
+                            <label><span>Resume</span></label>
                         </div>
                     </div>
                     <div class="doc-box-c">
-                        <div>
-                            <label><input type="checkbox"><span>Portfolio</span></label>
+                        <div id="checkboxPortfolio" onclick="$(this).toggleClass('checked');evaluateDocuments();">
+                            <label><span>Portfolio</span></label>
                         </div>
                     </div>
                     <div class="doc-box-d">

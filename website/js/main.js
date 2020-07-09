@@ -1,9 +1,9 @@
 /*menu auf / zu*/
-
+var checkboxMsg = false;
 $(document).ready(function () {
     $('.menu-btn').on('click', function () {
         if (!messageFormClosed) {
-            toggleForm()
+            toggleForm(currentFormName)
         } else {
             $('.menu').delay(300).fadeToggle(300);
         }
@@ -131,39 +131,55 @@ $('label.btn').on('click', 'input', function (e) {
 
 /*contact*/
 var messageFormClosed = true
+var currentFormName = undefined;
 
-function toggleForm() {
-    $('.contact-frame').fadeToggle(300);
-    $('.contact2-frame').delay(300).fadeToggle(300);
-    $('.write-message').toggleClass();
+function toggleForm(formName) {
     if (messageFormClosed) {
+        currentFormName = formName;
+        $('.contact-frame').fadeToggle(300);
+        $('.contact2-frame').delay(300).fadeToggle(300);
+        $(formName).toggle();
         menuBtn.classList.add('open');
         $('body').addClass('noscroll');
         menuBtn.classList.remove('close') /*lösung*/
     } else {
+        $('.contact-frame').delay(300).fadeToggle(300);
+        $('.contact2-frame').fadeToggle(300);
+        $(formName).toggle();
         menuBtn.classList.add('close');
         $('body').removeClass('noscroll');
         menuBtn.classList.remove('open') /*lösung*/
+        setTimeout(function () {
+            $('.checked').removeClass("checked")
+        }, 400);
     }
     messageFormClosed = !messageFormClosed;
 };
 
-$(document).ready(function () {
-    $('.resume11').on('click', function () {
-
-        $('.contact-frame').fadeToggle(300);
-        $('.contact2-frame').delay(300).fadeToggle(600);
-        $('.req-resume').toggleClass();
-
-    });
-});
-
-$(document).ready(function () {
-    $('.portfolio').on('click', function () {
-        $('.contact-frame').fadeToggle(300);
-        $('.contact2-frame').delay(300).fadeToggle(600);
-        $('.req-portfolio').toggleClass();
-    });
-});
+function evaluateDocuments() {
+    let resumeChecked = $('#checkboxResume').hasClass("checked");
+    let portfolieChecked = $('#checkboxPortfolio').hasClass("checked");
+    $(currentFormName).toggle();
+    //Resume
+    if (resumeChecked && !portfolieChecked) {
+        currentFormName = '.req-resume'
+        $('.req-resume').toggle();
+    }
+    //Portfolie
+    else if (!resumeChecked && portfolieChecked) {
+        currentFormName = '.req-portfolio'
+        $('.req-portfolio').toggle();
+    }
+    //Resume und PF
+    else if (resumeChecked && portfolieChecked) {
+        currentFormName = '.req-resume-portfolio'
+        $('.req-resume-portfolio').toggle();
+    }
+    //Message
+    else {
+        currentFormName = '.write-message'
+        $('.write-message').toggle();
+    }
+}
 
 /*contact*/  
