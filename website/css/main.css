@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+
+@font-face {
+    font-family: "asse 5";
+    src: url('./fonts/Compasse Bold.ttf');
+}
+@font-face {
+    font-family: "asse 6";
+    src: url('./fonts/Compasse Light.ttf');
+}
+@font-face {
+    font-family: "asse 11";
+    src: url('./fonts/Compasse Regular.ttf');
+}
+
 html {
 scroll-behavior:smooth;
 font-size: 100%;
