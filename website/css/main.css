@@ -7,17 +7,17 @@
 
 @font-face {
     font-family: "asse 5";
-    src: url('./Compasse Bold.ttf');
+    src: url('./fonts/asse5.ttf');
 }
 
 @font-face {
     font-family: "asse 6";
-    src: url('./Compasse Light.ttf');
+    src: url('./fonts/asse6.ttf');
 }
 
 @font-face {
     font-family: "asse 11";
-    src: url('./Compasse Regular.ttf');
+    src: url('./fonts/asse11.ttf');
 }
 
 html {
