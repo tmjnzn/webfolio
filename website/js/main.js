@@ -1,4 +1,5 @@
 /*menu auf / zu*/
+
 var checkboxMsg = false;
 $(document).ready(function () {
     $('.menu-btn').on('click', function () {
@@ -17,9 +18,9 @@ $(document).ready(function () {
             menuBtn.classList.add('close') /*lösung*/
             $('.menu').fadeToggle(300);
 
-            /*menu auf / zu*/
+/*menu auf / zu*/
 
-            /*burger animation*/
+/*burger animation*/
 
             const burger = document.querySelector('.menu-btn');
             menuBtn.classList.remove('open');
@@ -138,17 +139,19 @@ function toggleForm(formName) {
         currentFormName = formName;
         $('.contact-frame').fadeToggle(300);
         $('.contact2-frame').delay(300).fadeToggle(300);
+        $('.contact-bg').delay(300).fadeToggle(300);
         $(formName).toggle();
         menuBtn.classList.add('open');
         $('body').addClass('noscroll');
-        menuBtn.classList.remove('close') /*lösung*/
+        menuBtn.classList.remove('close')
     } else {
         $('.contact-frame').delay(300).fadeToggle(300);
         $('.contact2-frame').fadeToggle(300);
+        $('.contact-bg').delay(300).fadeToggle(300);
         $(formName).toggle();
         menuBtn.classList.add('close');
         $('body').removeClass('noscroll');
-        menuBtn.classList.remove('open') /*lösung*/
+        menuBtn.classList.remove('open')
         setTimeout(function () {
             $('.checked').removeClass("checked")
         }, 400);
@@ -159,26 +162,26 @@ function toggleForm(formName) {
 function evaluateDocuments() {
     let resumeChecked = $('#checkboxResume').hasClass("checked");
     let portfolieChecked = $('#checkboxPortfolio').hasClass("checked");
-    $(currentFormName).toggle();
+    $(currentFormName).fadeToggle();
     //Resume
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
-        $('.req-resume').toggle();
+        $('.req-resume').delay(300).fadeToggle(300);
     }
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
-        $('.req-portfolio').toggle();
+        $('.req-portfolio').delay(300).fadeToggle(300);
     }
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
-        $('.req-resume-portfolio').toggle();
+        $('.req-resume-portfolio').delay(300).fadeToggle(300);
     }
     //Message
     else {
         currentFormName = '.write-message'
-        $('.write-message').toggle();
+        $('.write-message').delay(300).fadeToggle(300);
     }
 }
 

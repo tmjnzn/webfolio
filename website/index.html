@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Timo Janzon | Industrial Designer</title>
     <link rel="stylesheet" href=".\css\main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src=".\js\jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,6 +36,9 @@
 </div>
 
 
+
+
+
 <div class="menu">
         <div class="menu-frame">
             <div class="menu-links">
@@ -52,7 +55,7 @@
 
             <div class="menu-language">
                 <div class="menu-language-links">
-                    <p><a href="#home"  onclick="toggleMenu()">german</a></p>
+                    <h5><a href="#home"  onclick="toggleMenu()">german</a></h5>
                 </div>
 
                  <div class="menu-language-mitte">
@@ -60,7 +63,7 @@
                 </div>
 
                 <div class="menu-language-rechts">
-                    <p><a href="#home" onclick="toggleMenu()">español</a></p>
+                    <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
                 </div>
             </div>
     
@@ -109,7 +112,7 @@
         <div class="about-grid">
 
             <div class="about-box-a">
-                <img class="pic" src=".\img\02_about\portrait.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\02_about\01.png" alt="Avatar" style="width:100%">
                 <div class="about-overlay-2">
                     <div class="text-overlay">
                         <h1>Born</h1>
@@ -164,7 +167,7 @@
                     <div class="text-overlay"></div>
                     <div class="projectname"></div>
                     <div class="projectlink">
-                        <p><a href="#contact">Hire Me</a></p>
+                        <h5><a href="#contact">Hire Me</a></h5>
                     </div>
                 </div>
             </div>
@@ -233,11 +236,14 @@
 
 <div id="work">
 
+    <div class="work-bg">
+    </div>
+
     <div class="work-frame">
 
         <div class="work-grid">
             <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\01.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\03_work\01.png" alt="Avatar" style="width:100%">
                 <div class="box-overlay">
                     <div class="text-overlay"></div>
                     <div class="projectname">
@@ -245,13 +251,27 @@
                         <h1>Speaker</h1>
                     </div>
                     <div class="projectlink">
-                        <p><a href="#work" onclick="$('#slideshow1').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></p>
+                        <h5><a href="#work" onclick="$('#slideshow1').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
                     </div>
                 </div>
             </div>
     
             <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\02.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\03_work\02.png" alt="Avatar" style="width:100%">
+                <div class="box-overlay">
+                    <div class="text-overlay"></div>
+                    <div class="projectname">
+                        <h1>Form</h1>
+                        <h1>Study</h1>
+                    </div>
+                    <div class="projectlink">
+                        <h5><a href="#work" onclick="$('#slideshow2').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <img class="pic" src=".\img\03_work\03.png" alt="Avatar" style="width:100%">
                 <div class="box-overlay">
                     <div class="text-overlay"></div>
                     <div class="projectname">
@@ -259,13 +279,13 @@
                         <h1>Station</h1>
                     </div>
                     <div class="projectlink">
-                        <p><a href="#work" onclick="$('#slideshow2').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></p>
+                        <h5><a href="#work" onclick="$('#slideshow3').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
                     </div>
                 </div>
             </div>
     
             <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\03.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\03_work\04.png" alt="Avatar" style="width:100%">
                 <div class="box-overlay">
                     <div class="text-overlay"></div>
                     <div class="projectname">
@@ -273,13 +293,13 @@
                         <h1>Blender</h1>
                     </div>
                     <div class="projectlink">
-                        <p><a href="#work" onclick="$('#slideshow3').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></p>
+                        <h5><a href="#work" onclick="$('#slideshow4').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
                     </div>
                 </div>
             </div>
     
             <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\04.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\03_work\05.png" alt="Avatar" style="width:100%">
                 <div class="box-overlay">
                     <div class="text-overlay"></div>
                     <div class="projectname">
@@ -287,13 +307,13 @@
                         <h1>Dispenser</h1>
                     </div>
                     <div class="projectlink">
-                        <p><a href="#work" onclick="$('#slideshow4').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></p>
+                        <h5><a href="#work" onclick="$('#slideshow5').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
                     </div>
                 </div>
             </div>
     
             <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\05.png" alt="Avatar" style="width:100%">
+                <img class="pic" src=".\img\03_work\06.png" alt="Avatar" style="width:100%">
                 <div class="box-overlay">
                     <div class="text-overlay"></div>
                     <div class="projectname">
@@ -301,21 +321,7 @@
                         <h1>Cart</h1>
                     </div>
                     <div class="projectlink">
-                        <p><a href="#work" onclick="$('#slideshow5').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="box">
-                <img class="pic" src=".\img\03_work\gallery\06.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Coming</h1>
-                        <h1>Soon</h1>
-                    </div>
-                    <div class="projectlink">
-                        <p><a href="#work" target="_blank"></a></p>
+                        <h5><a href="#work" onclick="$('#slideshow5').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
                     </div>
                 </div>
             </div>
@@ -406,87 +412,13 @@
 
         <div class="resume-grid">
 
-            <div class="resume-box-a">
-
-                <div class="split-box">
-
-                    <div class="split-top">
-                        <h2>Experience</h2>
-                        <div class="exp-infobox">
-                            <div class="exp-details">
-                                <div class="period">
-                                    <p>08 / 2017 -</p>
-                                    <p>04 / 2017</p>
-                                </div>
-                                <div class="company">
-                                    <h2>Alfred Kärcher GmbH & C0. KG</h2>
-                                    <p>Industrial Design Internship</p>
-                                    <p>Department Home & Garden</p>
-                                    <p>Winnenden, BW</p>
-                                </div>
-                                <div class="companylogo">
-                                    <img class="resumelogo" src=".\img\04_resume\kaercher.svg"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="split-bottom">
-                        <h2>Education</h2>
-                        <div class="exp-infobox">
-                            <div class="exp-details">
-                                <div class="period">
-                                    <p>03 / 2018 -</p>
-                                    <p>10 / 2013</p>
-                                </div>
-                                <div class="company">
-                                    <h2>University Of Wuppertal</h2>
-                                    <p>Bachelor‘s Degree Programme</p>
-                                    <p>Industrial Design</p>
-                                    <p>Wuppertal, NRW</p>
-                                </div>
-                                <div class="companylogo">
-                                    <img class="resumelogo" src=".\img\04_resume\buw.svg"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
-
-                </div>
-
+            <div class="resume-box-a">            
             </div>
             
-
             <div class="resume-box-b">
-                <h2>Summary</h2>
-                <div class="summ-infobox">
-                    <div class="summary">
-                        <h2>2013 - 2018</h2>
-                        <p>Bachelor Degree</p>
-                        <p>Industrial Design</p>
-                    </div>
-                    <div class="summary">
-                        <h2>2011 - 2013</h2>
-                        <p>Full Employment</p>
-                        <p>CAD Design Engineer</p>
-                    </div>
-                    <div class="summary">
-                        <h2>2008 - 2011</h2>
-                        <p>Apprenticeship</p>
-                        <p>Technical Product Designer</p>
-                    </div>
-                    <div class="summary">
-                        <h2>2007 - 2008</h2>
-                        <p>Community</p>
-                        <p>Service</p>
-                    </div>
-                    <div class="summary">
-                        <h2>2007</h2>
-                        <p>Highschool</p>
-                        <p>Graduation</p>
-                    </div>
+            </div>
 
-                </div>
+            <div class="resume-box-c">
             </div>
 
         </div>
@@ -500,6 +432,9 @@
 
 
 <div id="contact">
+
+    <div class="contact-bg">
+    </div>
         
     <div class="contact-frame">
 
@@ -516,7 +451,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="portfolio">
-                            <p><a href="#contact" onclick="toggleForm('.req-portfolio');$('#checkboxPortfolio').toggleClass('checked')">Request</a></p>
+                            <h5><a href="#contact" onclick="toggleForm('.req-portfolio');$('#checkboxPortfolio').toggleClass('checked')">Request</a></h5>
                         </div>
                     </div>
                 </div>
@@ -533,7 +468,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="message">
-                            <p><a href="#contact" onclick="toggleForm('.write-message');">Message</a></p>
+                            <h5><a href="#contact" onclick="toggleForm('.write-message');">Message</a></h5>
                         </div>
                     </div>
                 </div>
@@ -550,7 +485,7 @@
                     </div>
                     <div class="projectlink">
                         <div class="resume">
-                            <p><a href="#contact" onclick="toggleForm('.req-resume');$('#checkboxResume').toggleClass('checked')">Request</a></p>
+                            <h5><a href="#contact" onclick="toggleForm('.req-resume');$('#checkboxResume').toggleClass('checked')">Request</a></h5>
                         </div>
                     </div>
                 </div>
@@ -588,6 +523,7 @@
                         </div>
                     </div>
                     <div class="doc-box-d">
+                        <img class="pic" src=".\img\05_contact2\00.png" alt="Avatar" style="width:100%">
                         <div class="write-message">
                             <img class="pic" src=".\img\05_contact2\01.png" alt="Avatar" style="width:100%">
                         </div>
@@ -601,210 +537,125 @@
                         </div>
 
                         <div class="req-resume-portfolio">
-                        <img class="pic" src=".\img\05_contact2\04.png" alt="Avatar" style="width:100%">
+                            <img class="pic" src=".\img\05_contact2\04.png" alt="Avatar" style="width:100%">
                         </div>
                     </div>
 
                 </div>
 
-            </div>  
-
+            </div>
 
 
             <div class="contact2-box-b">
-                    
-                <div class="write-message">
 
                     <div class="form-grid">
-
-                        <div class="form-box-t">
-                            <h2>Get In Touch</h2>
-                            <p>Please fill out the following form if possible (*) and send me a message.</p>
-                        </div>
-                        <div class="form-box-1">
-                            <div>
-                                <p><a>You have not requested any documents.</a></p>
-                            </div>
-                        </div>
                         <div class="form-box-b">
-                            <input type="text" required id="fname" name="fname" placeholder="First Name">
+                            <input type="text" required id="fname" name="fname" placeholder="First Name*">
                         </div>
                         <div class="form-box-c">
-                            <input type="text" required id="fname" name="fname" placeholder="Last Name">
-                        </div>
-                        <div class="form-box-d">
-                            <input type="text" required id="fname" name="fname" placeholder="Company*">
-                        </div>
+                            <input type="text" required id="fname" name="fname" placeholder="Last Name*">
+                        </div>                      
                         <div class="form-box-e">
-                            <input type="text" required id="fname" name="fname" placeholder="Website / Social Media">
-                        </div>
-                        <div class="form-box-f">
-                            <input type="text" required id="fname" name="fname" placeholder="Adress / No*">
-                        </div>
-                        <div class="form-box-g">
-                            <input type="text" required id="fname" name="fname" placeholder="Postal Code*">
+                            <input type="text" required id="fname" name="fname" placeholder="Website* / Social Media*">
                         </div>
                         <div class="form-box-h">
-                            <input type="text" required id="fname" name="fname" placeholder="City">
+                            <input type="text" required id="fname" name="fname" placeholder="City*">
                         </div>
                         <div class="form-box-i">
-                            <input type="text" required id="fname" name="fname" placeholder="Country">
+                            <input type="text" required id="fname" name="fname" placeholder="Country*">
                         </div>
                         <div class="form-box-j">
-                            <textarea placeholder="Your Message" required name="fname"></textarea>
+                            <textarea placeholder="Your Message*" required name="fname"></textarea>
                         </div>
                         <div class="form-box-k">
                             <div>
                                 <label><input type="checkbox"><span>Send</span></label>
                             </div>
                         </div>
-
                     </div>
-
+ 
+                <div class="write-message">
+                    <div class="form-grid">
+                        <div class="form-box-t">
+                            <h2>Get In Touch</h2>
+                            <p>Please fill out the following form if possible and send me a message.</p>
+                        </div>
+                        <div class="form-box-1">
+                            <h5>You have not requested any documents.</h5>
+                        </div>
+                        <div class="form-box-d">
+                            <input type="text" required id="fname" name="fname" placeholder="Company">
+                        </div>
+                        <div class="form-box-f">
+                            <input type="text" required id="fname" name="fname" placeholder="Address / No">
+                        </div>
+                        <div class="form-box-g">
+                            <input type="text" required id="fname" name="fname" placeholder="Post Code">
+                        </div>                                          
+                    </div>
                 </div>
 
                 <div class="req-resume">
-
                     <div class="form-grid">
-
                         <div class="form-box-t">
                             <h2>Request for Resume</h2>
-                            <p>Please fill out the following form if possible (*).</p>
+                            <p>Please fill out the following form if possible.</p>
                         </div>
                         <div class="form-box-a">
-                            <input type="text" required id="fname" name="fname" placeholder="Intent Of Request">
+                            <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
                         </div>
-                        <div class="form-box-b">
-                            <input type="text" required id="fname" name="fname" placeholder="First Name">
+                        <div class="form-box-d">
+                            <input type="text" required id="fname" name="fname" placeholder="Company">
                         </div>
-                        <div class="form-box-c">
-                            <input type="text" required id="fname" name="fname" placeholder="Last Name">
+                        <div class="form-box-f">
+                            <input type="text" required id="fname" name="fname" placeholder="Address / No">
+                        </div>
+                        <div class="form-box-g">
+                            <input type="text" required id="fname" name="fname" placeholder="Post Code">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="req-portfolio">
+                    <div class="form-grid">
+                        <div class="form-box-t">
+                            <h2>Request for Portfolio</h2>
+                            <p>Due to copyright restrictions please fill out the following form.</p>
+                        </div>
+                        <div class="form-box-a">
+                            <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
                         </div>
                         <div class="form-box-d">
                             <input type="text" required id="fname" name="fname" placeholder="Company*">
                         </div>
-                        <div class="form-box-e">
-                            <input type="text" required id="fname" name="fname" placeholder="Website / Social Media">
-                        </div>
                         <div class="form-box-f">
-                            <input type="text" required id="fname" name="fname" placeholder="Adress / No*">
+                            <input type="text" required id="fname" name="fname" placeholder="Address* / No*">
                         </div>
                         <div class="form-box-g">
-                            <input type="text" required id="fname" name="fname" placeholder="Postal Code*">
+                            <input type="text" required id="fname" name="fname" placeholder="Post Code*">
                         </div>
-                        <div class="form-box-h">
-                            <input type="text" required id="fname" name="fname" placeholder="City">
-                        </div>
-                        <div class="form-box-i">
-                            <input type="text" required id="fname" name="fname" placeholder="Country">
-                        </div>
-                        <div class="form-box-j">
-                            <textarea placeholder="Your Message" required name="fname"></textarea>
-                        </div>
-                        <div class="form-box-k">
-                            <div>
-                                <label><input type="checkbox"><span>Send</span></label>
-                            </div>
-                        </div>
-
                     </div>
-
-                </div>
-
-                <div class="req-portfolio">
-
-                    <div class="form-grid">
-
-                        <div class="form-box-t">
-                            <h2>Request for Portfolio</h2>
-                            <p>Due to copyright restrictions please fill out the following form completely.</p>
-                        </div>
-                        <div class="form-box-a">
-                            <input type="text" required id="fname" name="fname" placeholder="Intent of Request">
-                        </div>
-                        <div class="form-box-b">
-                            <input type="text" required id="fname" name="fname" placeholder="First Name">
-                        </div>
-                        <div class="form-box-c">
-                            <input type="text" required id="fname" name="fname" placeholder="Last Name">
-                        </div>
-                        <div class="form-box-d">
-                            <input type="text" required id="fname" name="fname" placeholder="Company">
-                        </div>
-                        <div class="form-box-e">
-                            <input type="text" required id="fname" name="fname" placeholder="Website / Social Media">
-                        </div>
-                        <div class="form-box-f">
-                            <input type="text" required id="fname" name="fname" placeholder="Adress / No">
-                        </div>
-                        <div class="form-box-g">
-                            <input type="text" required id="fname" name="fname" placeholder="Postal Code">
-                        </div>
-                        <div class="form-box-h">
-                            <input type="text" required id="fname" name="fname" placeholder="City">
-                        </div>
-                        <div class="form-box-i">
-                            <input type="text" required id="fname" name="fname" placeholder="Country">
-                        </div>
-                        <div class="form-box-j">
-                            <textarea placeholder="Your Message" required name="fname"></textarea>
-                        </div>
-                        <div class="form-box-k">
-                            <div>
-                                <label><input type="checkbox"><span>Send</span></label>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
                 <div class="req-resume-portfolio">
-
                     <div class="form-grid">
-
                         <div class="form-box-t">
                             <h2>Request for Resume & Portfolio</h2>
-                            <p>Due to copyright restrictions please fill out the following form completely.</p>
+                            <p>Due to copyright restrictions please fill out the following form.</p>
                         </div>
                         <div class="form-box-a">
-                            <input type="text" required id="fname" name="fname" placeholder="Intent of Request">
-                        </div>
-                        <div class="form-box-b">
-                            <input type="text" required id="fname" name="fname" placeholder="First Name">
-                        </div>
-                        <div class="form-box-c">
-                            <input type="text" required id="fname" name="fname" placeholder="Last Name">
+                            <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
                         </div>
                         <div class="form-box-d">
-                            <input type="text" required id="fname" name="fname" placeholder="Company">
-                        </div>
-                        <div class="form-box-e">
-                            <input type="text" required id="fname" name="fname" placeholder="Website / Social Media">
+                            <input type="text" required id="fname" name="fname" placeholder="Company*">
                         </div>
                         <div class="form-box-f">
-                            <input type="text" required id="fname" name="fname" placeholder="Adress / No">
+                            <input type="text" required id="fname" name="fname" placeholder="Address* / No*">
                         </div>
                         <div class="form-box-g">
-                            <input type="text" required id="fname" name="fname" placeholder="Postal Code">
+                            <input type="text" required id="fname" name="fname" placeholder="Post Code*">
                         </div>
-                        <div class="form-box-h">
-                            <input type="text" required id="fname" name="fname" placeholder="City">
-                        </div>
-                        <div class="form-box-i">
-                            <input type="text" required id="fname" name="fname" placeholder="Country">
-                        </div>
-                        <div class="form-box-j">
-                            <textarea placeholder="Your Message" required name="fname"></textarea>
-                        </div>
-                        <div class="form-box-k">
-                            <div>
-                                <label><input type="checkbox"><span>Send</span></label>
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
 
             </div>
@@ -834,19 +685,19 @@
             <div class="socials">
 
             <div class="logospace">
-                <a href="https://www.behance.net/timojanzon"><img class="logo" src=".\img\06_footer\behance.svg"></a>
+                <a href="https://www.behance.net"><img class="logo" src=".\img\06_footer\behance.svg"></a>
             </div>
 
             <div class="logospace">
-                <a href="https://www.xing.com/timojanzon"><img class="logo" src=".\img\06_footer\xing.svg"></a>
+                <a href="https://www.xing.com"><img class="logo" src=".\img\06_footer\xing.svg"></a>
             </div>
 
             <div class="logospace">
-                <a href="https://www.instagram.com/timojanzon"><img class="logo" src=".\img\06_footer\insta.svg"></a>
+                <a href="https://www.instagram.com"><img class="logo" src=".\img\06_footer\insta.svg"></a>
             </div>
 
             <div class="logospace">
-                <a href="https://www.youtube.com/timojanzon"><img class="logo" src=".\img\06_footer\yt.svg"></a>
+                <a href="https://www.youtube.com"><img class="logo" src=".\img\06_footer\yt.svg"></a>
             </div>
 
             </div>

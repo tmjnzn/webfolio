@@ -7,17 +7,17 @@
 
 @font-face {
     font-family: "asse 5";
-    src: url('./fonts/Compasse Bold.ttf');
+    src: url('./Compasse Bold.ttf');
 }
 
 @font-face {
     font-family: "asse 6";
-    src: url('./fonts/Compasse Light.ttf');
+    src: url('./Compasse Light.ttf');
 }
 
 @font-face {
     font-family: "asse 11";
-    src: url('./fonts/Compasse Regular.ttf');
+    src: url('./Compasse Regular.ttf');
 }
 
 html {
@@ -90,14 +90,12 @@ body::-webkit-scrollbar {
     height: 19px;
     width: 24px;
     cursor: pointer;
-    transition: all .6s ease-in-out;
 }
 
 .menu-burger {
     width: 100%;
     height: 3px;
     background-color: white;
-    transition: all 0.6s ease-in-out;
 }
 
 .menu-burger::before,
@@ -107,7 +105,6 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 3px;
     background-color: white;
-    transition: all 0.6s ease-in-out;
 }
 
 .menu-burger::before {
@@ -269,7 +266,7 @@ body::-webkit-scrollbar {
     width: 100%;
     margin-top: 6.5vh;
     opacity: 1;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
 }
 
@@ -574,6 +571,18 @@ body::-webkit-scrollbar {
 .work-frame {
     position: relative;
     width: 124vh;
+}
+
+.work-bg {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .work-grid {
@@ -915,7 +924,9 @@ body::-webkit-scrollbar {
     grid-row-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "a a b" "a a b";
+    grid-template-areas:
+    "a a b"
+    "a a c";
 }
 
 .resume-box-a {
@@ -923,6 +934,7 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     padding-top: 100%;
+    background: blue;
 }
 
 .resume-box-b {
@@ -930,8 +942,15 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    background-color: white;
+    background-color:yellow;
+}
+
+.resume-box-c {
+    grid-area: c;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
 }
 
 .split-box {
@@ -1066,7 +1085,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
-    transition: .3s ease;
 }
 
 .contact-box2 {
@@ -1076,7 +1094,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
-    transition: .3s ease;
 }
 
 .contact-box3 {
@@ -1086,7 +1103,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
-    transition: .3s ease;
 }
 
 .contact-box3:hover .box-overlay {
@@ -1187,26 +1203,31 @@ body::-webkit-scrollbar {
     grid-template-areas: "a b b" "a b b";
 }
 
+.contact-bg {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
 .contact2-box-a {
     grid-area: a;
     position: relative;
-    transition: .3s ease;
-    background-color: black;
+    background-color:black;
 }
 
 .contact2-box-b {
     grid-area: b;
     position: relative;
     display: flex;
-    transition: .3s ease;
     overflow: hidden;
     padding-top: 100%;
     background-color: white;
-}
-
-.doc-box-b label input[type="checkbox"]:checked {
-    background-color: rgb(129, 236, 236);
-    color: black;
 }
 
 .doc-grid {
@@ -1230,17 +1251,15 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: .3s ease;
 }
 
 .doc-box-a {
     grid-area: a;
     position: relative;
     display: flex;
-    transition: .3s ease;
 }
 
-.doc-box-a div { /*klickrahmen*/
+.doc-box-a div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
@@ -1253,7 +1272,7 @@ body::-webkit-scrollbar {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(129, 236, 236);
+    background-color:rgb(129, 236, 236);
 }
 
 .doc-box-a label input[type="checkbox"] {
@@ -1272,16 +1291,15 @@ body::-webkit-scrollbar {
     grid-area: b;
     position: relative;
     display: flex;
-    transition: .3s ease;
 }
 
-.doc-box-b div { /*klickrahmen*/
+.doc-box-b div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-b div label { /*klickfläche*/
+.doc-box-b div label {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1293,6 +1311,17 @@ body::-webkit-scrollbar {
 
 .checked {
     background-color: rgb(129, 236, 236);
+    transition: 0.3s;
+}
+
+/*:not(.checked) {
+    transition: 0.3s;
+}*/
+
+.doc-box-b label input[type="checkbox"]:checked {
+    background-color: rgb(129, 236, 236);
+    color:black;
+    border: 3px solid rgb(129, 236, 236);
 }
 
 .doc-box-b div.checked label span {
@@ -1311,10 +1340,9 @@ body::-webkit-scrollbar {
     grid-area: c;
     position: relative;
     display: flex;
-    transition: .3s ease;
 }
 
-.doc-box-c div { /*klickrahmen*/
+.doc-box-c div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
@@ -1346,7 +1374,6 @@ body::-webkit-scrollbar {
     grid-area: d;
     position: relative;
     display: flex;
-    transition: .3s ease;
     overflow: hidden;
 }
 
@@ -1433,7 +1460,6 @@ input, textarea {
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: .3s ease;
 }
 
 .form-box-1 {
@@ -1441,85 +1467,85 @@ input, textarea {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    transition: .3s ease;
+    justify-content: center;
+    background-color: white;
 }
 
 .form-box-a {
     grid-area: a;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-b {
     grid-area: b;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-c {
     grid-area: c;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-d {
     grid-area: d;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-e {
     grid-area: e;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-f {
     grid-area: f;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-g {
     grid-area: g;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-h {
     grid-area: h;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-i {
     grid-area: i;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-j {
     grid-area: j;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-k {
     grid-area: k;
     position: relative;
     display: flex;
-    transition: .3s ease;
+    z-index: 1;
 }
 
 .form-box-j textarea {
@@ -1563,7 +1589,6 @@ input, textarea {
 
 .form-box-k div label:hover {
     background-color: rgb(129, 236, 236);
-    transition: 0.3s;
 }
 
 .form-box-k div label:hover span {
@@ -1743,20 +1768,28 @@ h4 {
     color: rgb(129, 236, 236);
 }
 
+h5 {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'asse 11';
+    line-height: 22px;
+    color: rgb(129, 236, 236);
+}
+
+h5 a {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'asse 11';
+    line-height: 22px;
+    color: rgb(129, 236, 236);
+}
+
 p {
     font-size: 17px;
     font-weight: 500;
     font-family: 'asse 6';
     line-height: 22px;
     color: rgb(150, 150, 150);
-}
-
-p a {
-    font-size: 17px;
-    font-weight: 500;
-    font-family: 'asse 11';
-    line-height: 22px;
-    color: rgb(129, 236, 236);
 }
 
 /*----- fonts-----*/
@@ -1862,12 +1895,20 @@ p a {
         display: flex;
     }
 
+    #resume {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
     .resume-grid {
         grid-row-gap: 15px;
         grid-column-gap: 15px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "a a" "a a" "b b";
+        grid-template-areas:
+        "b c"
+        "a a"
+        "a a";
     }
 
 
