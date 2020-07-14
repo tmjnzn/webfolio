@@ -60,6 +60,7 @@ var showMenu = false;
 function toggleMenu() {
     if (messageFormClosed) {
         if (!showMenu) {
+            visibleHeaderName = undefined
             showMenu = true;
             $('.chapter[data-visible]').each(function () {
                 $(this).fadeOut(300);
@@ -73,6 +74,7 @@ function toggleMenu() {
     }
 }
 
+var visibleHeaderName = undefined
 function setHeader() {
     var scrollTop = $(this).scrollTop();
     var firstVisible = undefined;
@@ -80,14 +82,19 @@ function setHeader() {
         let elem = $("#" + $(this).data('visible'));
         if ((elem.offset().top + 500 >= scrollTop) && (firstVisible === undefined)) {
             firstVisible = $(this);
+        } else{
+            $(this).hide();
         }
     });
-    $('.chapter[data-visible]').hide();
-    if (firstVisible)
+
+    if (firstVisible && firstVisible.attr("data-visible") !== visibleHeaderName) {
         firstVisible.fadeIn(300);
+        visibleHeaderName = firstVisible.attr("data-visible");
+    }
 }
 
 $(window).scroll(() => setHeader());
+
 
 
 var slideIndex = 1;
