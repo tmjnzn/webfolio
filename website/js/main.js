@@ -67,8 +67,8 @@ function toggleMenu() {
             $("#menu").delay(300).fadeToggle(300);
         } else {
             showMenu = false;
-            $("#menu").delay(300).fadeToggle(300);
-            setHeader();
+            $("#menu").fadeToggle(300);
+            setTimeout(()=>setHeader(),300);
         }
     }
 }
@@ -84,7 +84,7 @@ function setHeader() {
     });
     $('.chapter[data-visible]').hide();
     if (firstVisible)
-        firstVisible.show();
+        firstVisible.fadeIn(300);
 }
 
 $(window).scroll(() => setHeader());
@@ -166,22 +166,35 @@ function evaluateDocuments() {
     //Resume
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
-        $('.req-resume').delay(300).fadeToggle(300);
+        $('.req-resume').fadeToggle(300);
+        $('.form-2').fadeIn(300);
+        $('.form-3').fadeOut(300);
+        $('.form-1').fadeOut(300);
     }
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
-        $('.req-portfolio').delay(300).fadeToggle(300);
+        $('.req-portfolio').fadeToggle(300);
+        $('.form-3').fadeIn(300);
+        $('.form-1').fadeOut(300);
+        $('.form-2').fadeOut(300);
     }
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
-        $('.req-resume-portfolio').delay(300).fadeToggle(300);
+        $('.req-resume-portfolio').fadeToggle(300);
+        $('.form-3').fadeIn(300);
+        $('.form-1').fadeOut(300);
+        $('.form-2').fadeOut(300);
     }
     //Message
     else {
         currentFormName = '.write-message'
-        $('.write-message').delay(300).fadeToggle(300);
+        $('.write-message').fadeToggle(300);
+        $('.form-1').fadeIn(300);
+        $('.form-2').fadeOut(300);
+        $('.form-3').fadeOut(300);
+
     }
 }
 

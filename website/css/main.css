@@ -1471,6 +1471,33 @@ input, textarea {
     background-color: white;
 }
 
+.form-1 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.form-2 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.form-3 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 .form-box-a {
     grid-area: a;
     position: relative;
