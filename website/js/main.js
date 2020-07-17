@@ -18,9 +18,9 @@ $(document).ready(function () {
             menuBtn.classList.add('close') /*lösung*/
             $('.menu').fadeToggle(300);
 
-/*menu auf / zu*/
+            /*menu auf / zu*/
 
-/*burger animation*/
+            /*burger animation*/
 
             const burger = document.querySelector('.menu-btn');
             menuBtn.classList.remove('open');
@@ -69,12 +69,13 @@ function toggleMenu() {
         } else {
             showMenu = false;
             $("#menu").fadeToggle(300);
-            setTimeout(()=>setHeader(),300);
+            setTimeout(() => setHeader(), 300);
         }
     }
 }
 
 var visibleHeaderName = undefined
+
 function setHeader() {
     var scrollTop = $(this).scrollTop();
     var firstVisible = undefined;
@@ -82,7 +83,7 @@ function setHeader() {
         let elem = $("#" + $(this).data('visible'));
         if ((elem.offset().top + 500 >= scrollTop) && (firstVisible === undefined)) {
             firstVisible = $(this);
-        } else{
+        } else {
             $(this).hide();
         }
     });
@@ -94,7 +95,6 @@ function setHeader() {
 }
 
 $(window).scroll(() => setHeader());
-
 
 
 var slideIndex = 1;
@@ -174,21 +174,34 @@ function evaluateDocuments() {
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
         $('.req-resume').fadeToggle(300);
+        $('.form-2').fadeIn(300);
+        $('.form-3').fadeOut(300);
+        $('.form-1').fadeOut(300);
     }
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
         $('.req-portfolio').fadeToggle(300);
+        $('.form-3').fadeIn(300);
+        $('.form-1').fadeOut(300);
+        $('.form-2').fadeOut(300);
     }
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
         $('.req-resume-portfolio').fadeToggle(300);
+        $('.form-3').fadeIn(300);
+        $('.form-1').fadeOut(300);
+        $('.form-2').fadeOut(300);
     }
     //Message
-else {
+    else {
         currentFormName = '.write-message'
         $('.write-message').fadeToggle(300);
+        $('.form-1').fadeIn(300);
+        $('.form-2').fadeOut(300);
+        $('.form-3').fadeOut(300);
+
     }
 }
 
