@@ -174,34 +174,21 @@ function evaluateDocuments() {
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
         $('.req-resume').fadeToggle(300);
-        $('.form-2').fadeIn(300);
-        $('.form-3').fadeOut(300);
-        $('.form-1').fadeOut(300);
     }
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
         $('.req-portfolio').fadeToggle(300);
-        $('.form-3').fadeIn(300);
-        $('.form-1').fadeOut(300);
-        $('.form-2').fadeOut(300);
     }
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
         $('.req-resume-portfolio').fadeToggle(300);
-        $('.form-3').fadeIn(300);
-        $('.form-1').fadeOut(300);
-        $('.form-2').fadeOut(300);
     }
     //Message
-    else {
+else {
         currentFormName = '.write-message'
         $('.write-message').fadeToggle(300);
-        $('.form-1').fadeIn(300);
-        $('.form-2').fadeOut(300);
-        $('.form-3').fadeOut(300);
-
     }
 }
 
