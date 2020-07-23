@@ -56,8 +56,9 @@ $(window).on('beforeunload', function () {
 });
 
 var showMenu = false;
+var scrollDisabled = false
 
-function toggleMenu() {
+function toggleMenu(name) {
     if (messageFormClosed) {
         if (!showMenu) {
             visibleHeaderName = undefined
@@ -67,9 +68,17 @@ function toggleMenu() {
             })
             $("#menu").delay(300).fadeToggle(300);
         } else {
+            scrollDisabled = true
+            setTimeout(() => {
+                scrollDisabled = false
+            }, 1000)
             showMenu = false;
             $("#menu").fadeToggle(300);
-            setTimeout(() => setHeader(), 300);
+            if(name)
+                setTimeout(()=>{$("#" + name).fadeIn(300)}, 300)
+            else{
+                setTimeout(()=>setHeader(), 300)
+            }
         }
     }
 }
@@ -94,7 +103,10 @@ function setHeader() {
     }
 }
 
-$(window).scroll(() => setHeader());
+$(window).scroll(() => {
+    if (!scrollDisabled)
+        setHeader();
+});
 
 
 var slideIndex = 1;
@@ -144,18 +156,18 @@ var currentFormName = undefined;
 function toggleForm(formName) {
     if (messageFormClosed) {
         currentFormName = formName;
-        $('.contact-frame').fadeToggle(300);
-        $('.contact2-frame').delay(300).fadeToggle(300);
+        $('.contact1').fadeToggle(300);
+        $('.contact2').delay(300).fadeToggle(300);
         $('.contact-bg').delay(300).fadeToggle(300);
         $(formName).toggle();
         menuBtn.classList.add('open');
         $('body').addClass('noscroll');
         menuBtn.classList.remove('close')
     } else {
-        $('.contact-frame').delay(300).fadeToggle(300);
-        $('.contact2-frame').fadeToggle(300);
+        $('.contact1').delay(300).fadeToggle(300);
+        $('.contact2').fadeToggle(300);
         $('.contact-bg').delay(300).fadeToggle(300);
-        $(formName).toggle();
+        $(formName).fadeToggle(300);
         menuBtn.classList.add('close');
         $('body').removeClass('noscroll');
         menuBtn.classList.remove('open')
@@ -165,6 +177,7 @@ function toggleForm(formName) {
     }
     messageFormClosed = !messageFormClosed;
 };
+
 
 function evaluateDocuments() {
     let resumeChecked = $('#checkboxResume').hasClass("checked");

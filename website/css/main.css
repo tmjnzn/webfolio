@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6.5vh;
+    height: 60px;
     width: 100%;
     background-color: black;
     z-index: 2;
@@ -264,7 +264,7 @@ body::-webkit-scrollbar {
     display: none;
     height: 100%;
     width: 100%;
-    margin-top: 6.5vh;
+    margin-top: 60px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
@@ -1063,12 +1063,28 @@ body::-webkit-scrollbar {
     padding-left: 30px;
 }
 
+.contact-bg {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
 .contact-frame {
     position: relative;
     width: 124vh;
 }
 
-.contact-grid {
+
+
+
+
+.contact1-grid {
     position: relative;
     display: grid;
     grid-column-gap: 30px;
@@ -1078,7 +1094,7 @@ body::-webkit-scrollbar {
     grid-template-areas: "b a a" "c a a";
 }
 
-.contact-box1 {
+.contact1-box1 {
     grid-area: a;
     position: relative;
     display: flex;
@@ -1087,7 +1103,7 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact-box2 {
+.contact1-box2 {
     grid-area: b;
     position: relative;
     display: flex;
@@ -1096,7 +1112,7 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact-box3 {
+.contact1-box3 {
     grid-area: c;
     position: relative;
     display: flex;
@@ -1105,57 +1121,57 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact-box3:hover .box-overlay {
+.contact1-box3:hover .box-overlay {
     opacity: 1;
 }
 
-.contact-box3:hover .projectname {
+.contact1-box3:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box3:hover .projectlink {
+.contact1-box3:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box3:hover .pic {
+.contact1-box3:hover .pic {
     filter: blur(1.5px);
 }
 
-.contact-box2:hover .box-overlay {
+.contact1-box2:hover .box-overlay {
     opacity: 1;
 }
 
-.contact-box2:hover .projectname {
+.contact1-box2:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box2:hover .projectlink {
+.contact1-box2:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box2:hover .pic {
+.contact1-box2:hover .pic {
     filter: blur(1.5px);
 }
 
-.contact-box1:hover .box-overlay {
+.contact1-box1:hover .box-overlay {
     opacity: 1;
 }
 
-.contact-box1:hover .projectname {
+.contact1-box1:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box1:hover .projectlink {
+.contact1-box1:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact-box1:hover .pic {
+.contact1-box1:hover .pic {
     filter: blur(1.5px);
 }
 
@@ -1171,25 +1187,11 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
-/*----- contact -----*/
 
 
-/*----- contact2 -----*/
 
-#contact2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 12.5vh;
-    padding-bottom: 12.5vh;
-    padding-left: 30px;
-    padding-right: 30px;
-}
 
-.contact2-frame {
-    position: relative;
-    width: 124vh;
+.contact2 {
     display: none;
 }
 
@@ -1203,31 +1205,14 @@ body::-webkit-scrollbar {
     grid-template-areas: "a b b" "a b b";
 }
 
-.contact-bg {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-}
+
+
+
 
 .contact2-box-a {
     grid-area: a;
     position: relative;
     background-color:black;
-}
-
-.contact2-box-b {
-    grid-area: b;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    padding-top: 100%;
-    background-color: white;
 }
 
 .doc-grid {
@@ -1314,10 +1299,6 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
-/*:not(.checked) {
-    transition: 0.3s;
-}*/
-
 .doc-box-b label input[type="checkbox"]:checked {
     background-color: rgb(129, 236, 236);
     color:black;
@@ -1348,7 +1329,7 @@ body::-webkit-scrollbar {
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-c div label { /*klickfläche*/
+.doc-box-c div label {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1377,22 +1358,6 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-
-.form-grid {
-    position: absolute;
-    display: grid;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 30px;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(13, 1fr);
-    grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
-}
-
 .write-message {
     display: none;
 }
@@ -1407,6 +1372,34 @@ body::-webkit-scrollbar {
 
 .req-resume-portfolio {
     display: none;
+}
+
+
+
+
+
+.contact2-box-b {
+    grid-area: b;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding-top: 100%;
+    background-color: white;
+}
+
+.form-grid {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
 }
 
 input[type=text] {
@@ -1469,33 +1462,6 @@ input, textarea {
     flex-direction: column;
     justify-content: center;
     background-color: white;
-}
-
-.form-1 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.form-2 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.form-3 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 .form-box-a {
@@ -1622,6 +1588,32 @@ input, textarea {
     color: white;
 }
 
+.form-1 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.form-2 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.form-3 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 
 /*----- contact2 -----*/
 
@@ -1646,7 +1638,7 @@ input, textarea {
     justify-content: flex-start;
     flex-direction: column;
     width: 120vh;
-    margin-bottom: 6.5vh;
+    margin-bottom: 60px;
     margin-top: 3.5vh;
 }
 
@@ -1949,7 +1941,7 @@ p {
         padding-left: 15px;
     }
 
-    .contact-grid {
+    .contact1-grid {
         grid-column-gap: 15px;
         grid-row-gap: 15px;
         grid-template-columns: repeat (2, 1fr);
