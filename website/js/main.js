@@ -6,7 +6,7 @@ $(document).ready(function () {
         if (!messageFormClosed) {
             toggleForm(currentFormName)
         } else {
-            $('.menu').delay(300).fadeToggle(300);
+            $('.menu').fadeToggle(300);
         }
     });
 });
@@ -109,6 +109,9 @@ $(window).scroll(() => {
 });
 
 
+
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -124,7 +127,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("slides");
+    var slides = document.getElementsByClassName("slides1");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {
         slideIndex = 1
@@ -141,6 +144,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+
+
 
 $('label.btn').on('click', 'input', function (e) {
     e.stopPropagation();

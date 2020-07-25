@@ -568,14 +568,9 @@ body::-webkit-scrollbar {
     padding-left: 30px;
 }
 
-.work-frame {
-    position: relative;
-    width: 124vh;
-}
-
 .work-bg {
     position: absolute;
-    display: none;
+    display: non;
     top: 0;
     left: 0;
     bottom: 0;
@@ -583,6 +578,15 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
+}
+
+.work-frame {
+    position: relative;
+    width: 124vh;
+}
+
+.work {
+    display: none;
 }
 
 .work-grid {
@@ -660,37 +664,57 @@ body::-webkit-scrollbar {
 }
 
 
-.slideshow-frame {
-    position: relative;
-    width: 124vh;
+
+
+
+.slideshows {
+    overflow: hidden;
 }
 
 .slideshow-grid {
     position: relative;
     display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
 }
 
 .slideshow-box {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 100%;
 }
 
 .slideshow {
     position: absolute;
-    display: flex;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    object-fit: cover;
-    overflow: hidden;
+}
+
+#slideshow1 {
+    display: non;
+}
+
+#slideshow2 {
+    display: none;
+}
+
+#slideshow3 {
+    display: none;
+}
+
+#slideshow4 {
+    display: none;
+}
+
+#slideshow5 {
+    display: none;
+}
+
+#slideshow6 {
+    display: none;
 }
 
 .slides {
@@ -820,6 +844,8 @@ body::-webkit-scrollbar {
 
 .slideshow-rotate-screen {
     position: absolute;
+    display:flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     bottom: 0;
@@ -829,10 +855,9 @@ body::-webkit-scrollbar {
     text-align: center;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.85);
     display: none;
 }
-
 
 .box:hover .box-overlay {
     opacity: 1;
@@ -857,6 +882,9 @@ body::-webkit-scrollbar {
 }
 
 
+
+
+
 .button-prev:hover .prev {
     transform: rotate(-135deg);
     border-top: 3px solid black;
@@ -877,21 +905,21 @@ body::-webkit-scrollbar {
     background-color: white;
 }
 
-.slideshow-frame:hover .slideshow-controls {
+.slideshow:hover .slideshow-controls {
     opacity: 1;
 }
 
-.slideshow-frame:hover .button-prev {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.slideshow-frame:hover .button-next {
+.slideshow:hover .button-prev {
     opacity: 1;
     transform: translateX(0px);
 }
 
-.slideshow-frame:hover .compass {
+.slideshow:hover .button-next {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.slideshow:hover .compass {
     opacity: 1;
     transform: translateX(0px);
 }
