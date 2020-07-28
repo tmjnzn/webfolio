@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 50px;
     width: 100%;
     background-color: black;
     z-index: 2;
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     height: 19px;
-    width: 24px;
+    width: 25px;
     cursor: pointer;
 }
 
@@ -264,7 +264,7 @@ body::-webkit-scrollbar {
     display: none;
     height: 100%;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 50px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
@@ -386,8 +386,8 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 12.5vh;
-    padding-bottom: 12.5vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -562,8 +562,8 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 12.5vh;
-    padding-bottom: 12.5vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
     padding-right: 30px;
     padding-left: 30px;
 }
@@ -693,27 +693,27 @@ body::-webkit-scrollbar {
     right: 0;
 }
 
-#slideshow1 {
-    display: non;
-}
-
-#slideshow2 {
+#work1 {
     display: none;
 }
 
-#slideshow3 {
+#work2 {
     display: none;
 }
 
-#slideshow4 {
+#work3 {
     display: none;
 }
 
-#slideshow5 {
+#work4 {
     display: none;
 }
 
-#slideshow6 {
+#work5 {
+    display: none;
+}
+
+#work6 {
     display: none;
 }
 
@@ -934,8 +934,8 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 12.5vh;
-    padding-bottom: 12.5vh;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
     padding-left: 30px;
     padding-right: 30px;
 }
