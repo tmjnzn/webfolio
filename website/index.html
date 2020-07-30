@@ -26,12 +26,12 @@
             <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
             <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
             <div class="chapter" id="menu"><h1>Menu</h1></div>
-            <div class="chapter" id="work1"><h1>Work1</h1></div>
-            <div class="chapter" id="work2"><h1>Work2</h1></div>
-            <div class="chapter" id="work3"><h1>Work3</h1></div>
-            <div class="chapter" id="work4"><h1>Work4</h1></div>
-            <div class="chapter" id="work5"><h1>Work5</h1></div>
-            <div class="chapter" id="work6"><h1>Work6</h1></div>
+            <div class="chapter" id="work1Header"><h1>Bluetooth Speaker</h1></div>
+            <div class="chapter" id="work2Header"><h1>Work2</h1></div>
+            <div class="chapter" id="work3Header"><h1>Work3</h1></div>
+            <div class="chapter" id="work4Header"><h1>Work4</h1></div>
+            <div class="chapter" id="work5Header"><h1>Work5</h1></div>
+            <div class="chapter" id="work6Header"><h1>Work6</h1></div>
         </div>
 
         <div class="navi-elements">
@@ -262,7 +262,7 @@
                             <h1>Speaker</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow1').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work1').toggle();$('body').addClass('noscroll');openSlideShow('work1')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -276,7 +276,7 @@
                             <h1>Study</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow2').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work2').toggle(); $('body').addClass('noscroll');openSlideShow('work2')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -290,7 +290,7 @@
                             <h1>Station</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow3').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work3').toggle(); $('body').addClass('noscroll');openSlideShow('work3')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
                             <h1>Blender</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow4').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work4').toggle(); $('body').addClass('noscroll');openSlideShow('work4')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -318,7 +318,7 @@
                             <h1>Dispenser</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow5').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work5').toggle(); $('body').addClass('noscroll');openSlideShow('work5')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -332,7 +332,7 @@
                             <h1>Cart</h1>
                         </div>
                         <div class="projectlink">
-                            <h5><a href="#work" onclick="$('#slideshow5').toggle(); $('.work-frame').toggle();$('body').addClass('noscroll');">Show More</a></h5>
+                            <h5><a href="#work" onclick="$('.work-bg').toggle();$('#work6').toggle(); $('body').addClass('noscroll');openSlideShow('work6')">Show More</a></h5>
                         </div>
                     </div>
                 </div>
@@ -342,27 +342,27 @@
                 
         <div class="slideshow" id="work1">
     
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\01.png" style="width:100%">
                     </div>
                 
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\02.png" style="width:100%">
                     </div>
                 
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\03.png" style="width:100%">
                     </div>
         
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\04.png" style="width:100%">
                     </div>
                     
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\05.png" style="width:100%">
                     </div>
                     
-                    <div class="slides1 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work1\06.png" style="width:100%">
                     </div>
 
@@ -393,27 +393,27 @@
 
         <div class="slideshow" id="work2">
     
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\01.png" style="width:100%">
                     </div>
                 
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\02.png" style="width:100%">
                     </div>
                 
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\03.png" style="width:100%">
                     </div>
         
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\04.png" style="width:100%">
                     </div>
                     
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\05.png" style="width:100%">
                     </div>
                     
-                    <div class="slides2 fade">
+                    <div class="slides fade">
                         <img class="pic" src=".\img\03_work2\06.png" style="width:100%">
                     </div>
 
@@ -437,25 +437,25 @@
                                 <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
                             </div>
                         </div>
-        
+
                     </div>
-                
+
         </div>
 
         <div class="slideshow" id="work3">
-    
+
                     <div class="slides fade">
                         <img class="pic" src=".\img\03_work3\01.png" style="width:100%">
                     </div>
-                
+
                     <div class="slides fade">
                         <img class="pic" src=".\img\03_work3\02.png" style="width:100%">
                     </div>
-                
+
                     <div class="slides fade">
                         <img class="pic" src=".\img\03_work3\03.png" style="width:100%">
                     </div>
-        
+
                     <div class="slides fade">
                         <img class="pic" src=".\img\03_work3\04.png" style="width:100%">
                     </div>

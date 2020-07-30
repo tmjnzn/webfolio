@@ -112,8 +112,7 @@ $(window).scroll(() => {
 
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
+
 
 // Next/previous controls
 function plusSlides(n) {
@@ -125,10 +124,19 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+var currentSlideShow;
+var slideIndex = 1;
+
+function openSlideShow(name){
+    currentSlideShow = name;
+    slideIndex = 1
+    showSlides(slideIndex);
+}
+
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("slides1");
-    var dots = document.getElementsByClassName("dot");    
+    var slides = $("#" + currentSlideShow + " .slides");
+    var dots = $("#" + currentSlideShow + " .dot");
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -138,11 +146,10 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides.fadeOut(300)
+    dots.removeClass("active")
+    $(slides.get([slideIndex - 1])).fadeIn(300)
+    $(dots.get(slideIndex - 1)).addClass("active");
 }
 
 
