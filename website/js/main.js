@@ -155,45 +155,39 @@ function showSlides(n) {
 
 
 
-/*projecte
+/*project*/
 
-$(document).ready(function () {
-    $('.projektlink').on('click', function () {
-        if (!messageFormClosed) {
-            toggleForm(currentFormName)
-            $('.work-bg').delay(300).fadeToggle(300);
-            $('.work-frame').fadeToggle(300);
-            $('.slideshow-frame').delay(300).fadeToggle(300);
-            $('.chapter').fadeToggle(300);
-            $('#menu').Toggle()
-            $('#work1Header').delay(300).fadeToggle(300);
+function toggleProject(projectName) {
+    if (messageProjectClosed) {
+        currentProjectName = projectName;
+        $('.work-bg').delay(300).fadeToggle(300);
+        $('.work-frame').fadeToggle(300);
+        $('.slideshow-frame').delay(300).fadeToggle(300);
+        $('#work1').toggle();
+        openSlideShow('work1');
+        $('body').addClass('noscroll');
+        $('#workHeader').fadeToggle(300);
+        $('.chapter #menu').toggle();
+        $('#work1Header').delay(300).fadeToggle(300);
+        menuBtn.classList.add('open');
+        menuBtn.classList.remove('close');
+    } else {
+        $('.work-bg').delay(300).fadeToggle(300);
+        $('.work-frame').delay(300).fadeToggle(300);
+        $('.slideshow-frame').fadeToggle(300);
+        $('#work1').toggle();
+        openSlideShow('work1');
+        $('body').removeClass('noscroll');
+        $('#workHeader').delay(300).fadeToggle(300);
+        $('.chapter #menu').toggle();
+        $('#work1Header').fadeToggle(300);
+        menuBtn.classList.add('close');
+        menuBtn.classList.remove('open');
 
-            $(formName).toggle();
-            $('body').addClass('noscroll');
-            openSlideShow()
-            menuBtn.classList.add('open');
-            menuBtn.classList.remove('close')
-        } else {
-            $('.work-bg').delay(300).fadeToggle(300);
-            $('.work-frame').delay(300).fadeToggle(300);
-            $('.slideshow-frame').fadeToggle(300);
-            $('.chapter').delay(300).fadeToggle(300);
-            $('#menu').Toggle()
-            $('#work1Header').fadeToggle(300);
-            
-            $(formName).toggle();
-            $('body').removeClass('noscroll');
-            openSlideShow()
-            menuBtn.classList.add('close');
-            menuBtn.classList.remove('open')
-
-            setTimeout(function () {
-                $('.checked').removeClass("checked")
-            }, 400);
-        }
-        messageFormClosed = !messageFormClosed;
-    });
-});
+    }
+    messageProjectClosed = !messageProjectClosed;
+};
+        
 
 
 
