@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 @font-face {
     font-family: "asse 5";
     src: url('../fonts/asse5.ttf');
@@ -25,6 +24,10 @@ html {
     font-size: 100%;
 }
 
+
+
+
+
 /*----- body -----*/
 
 body {
@@ -40,7 +43,9 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-/*----- body -----*/
+
+
+
 
 /*----- navi -----*/
 
@@ -78,7 +83,9 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/*----- navi -----*/
+
+
+
 
 /*----- burger -----*/
 
@@ -255,7 +262,9 @@ body::-webkit-scrollbar {
     }
 }
 
-/*----- burger -----*/
+
+
+
 
 /*----- menu -----*/
 
@@ -328,7 +337,9 @@ body::-webkit-scrollbar {
     width: 75px;
 }
 
-/*----- menu-----*/
+
+
+
 
 /*-----home-----*/
 
@@ -386,7 +397,9 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-/*----- home -----*/
+
+
+
 
 /*----- about me -----*/
 
@@ -520,7 +533,6 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-
 .about-box-a:hover .about-overlay-2 {
     opacity: 1;
 }
@@ -561,7 +573,7 @@ body::-webkit-scrollbar {
 }
 
 
-/*----- about me -----*/
+
 
 
 /*----- my work -----*/
@@ -592,10 +604,6 @@ body::-webkit-scrollbar {
 .work-frame {
     position: relative;
     width: 124vh;
-}
-
-.work {
-    display: non;
 }
 
 .work-grid {
@@ -676,6 +684,21 @@ body::-webkit-scrollbar {
 
 
 
+.slideshow-frame {
+    position: relative;
+    width: 124vh;
+    display: none;
+}
+
+.slideshow-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
 .slideshow {
     position: absolute;
     top: 0;
@@ -706,6 +729,30 @@ body::-webkit-scrollbar {
 }
 
 #work6 {
+    display: none;
+}
+
+#work1Header {
+    display: none;
+}
+
+#work2Header {
+    display: none;
+}
+
+#work3Header {
+    display: none;
+}
+
+#work4Header {
+    display: none;
+}
+
+#work5Header {
+    display: none;
+}
+
+#work6Header {
     display: none;
 }
 
@@ -916,7 +963,8 @@ body::-webkit-scrollbar {
     transform: translateX(0px);
 }
 
-/*----- my work -----*/
+
+
 
 
 /*-----resume-----*/
@@ -1068,7 +1116,8 @@ body::-webkit-scrollbar {
 }
 
 
-/*-----resume-----*/
+
+
 
 /*----- contact -----*/
 
@@ -1224,10 +1273,6 @@ body::-webkit-scrollbar {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "a b b" "a b b";
 }
-
-
-
-
 
 .contact2-box-a {
     grid-area: a;
@@ -1635,11 +1680,11 @@ input, textarea {
     right: 0;
 }
 
-/*----- contact2 -----*/
+
+
 
 
 /*----- footer -----*/
-
 
 .footer {
     position: relative;
@@ -1745,7 +1790,9 @@ input, textarea {
     background-color: white;
 }
 
-/*----- footer -----*/
+
+
+
 
 /*----- fonts-----*/
 
@@ -1831,7 +1878,9 @@ p {
     color: rgb(150, 150, 150);
 }
 
-/*----- fonts-----*/
+
+
+
 
 /*----- responsive -----*/
 

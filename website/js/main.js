@@ -113,13 +113,12 @@ $(window).scroll(() => {
 
 
 
+/*slideshow*/
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
@@ -148,7 +147,7 @@ function showSlides(n) {
     }
     slides.fadeOut(300)
     dots.removeClass("active")
-    $(slides.get([slideIndex - 1])).fadeIn(300)
+    $(slides.get([slideIndex - 1])).delay(300).fadeIn(300)
     $(dots.get(slideIndex - 1)).addClass("active");
 }
 
@@ -156,14 +155,52 @@ function showSlides(n) {
 
 
 
-$('label.btn').on('click', 'input', function (e) {
-    e.stopPropagation();
-    $(this).attr('checked', !$(this).attr('checked'));
-    $(e.target).closest('label').toggleClass('btn-flat');
+/*projecte
+
+$(document).ready(function () {
+    $('.projektlink').on('click', function () {
+        if (!messageFormClosed) {
+            toggleForm(currentFormName)
+            $('.work-bg').delay(300).fadeToggle(300);
+            $('.work-frame').fadeToggle(300);
+            $('.slideshow-frame').delay(300).fadeToggle(300);
+            $('.chapter').fadeToggle(300);
+            $('#menu').Toggle()
+            $('#work1Header').delay(300).fadeToggle(300);
+
+            $(formName).toggle();
+            $('body').addClass('noscroll');
+            openSlideShow()
+            menuBtn.classList.add('open');
+            menuBtn.classList.remove('close')
+        } else {
+            $('.work-bg').delay(300).fadeToggle(300);
+            $('.work-frame').delay(300).fadeToggle(300);
+            $('.slideshow-frame').fadeToggle(300);
+            $('.chapter').delay(300).fadeToggle(300);
+            $('#menu').Toggle()
+            $('#work1Header').fadeToggle(300);
+            
+            $(formName).toggle();
+            $('body').removeClass('noscroll');
+            openSlideShow()
+            menuBtn.classList.add('close');
+            menuBtn.classList.remove('open')
+
+            setTimeout(function () {
+                $('.checked').removeClass("checked")
+            }, 400);
+        }
+        messageFormClosed = !messageFormClosed;
+    });
 });
 
 
+
+
+
 /*contact*/
+
 var messageFormClosed = true
 var currentFormName = undefined;
 
@@ -192,6 +229,17 @@ function toggleForm(formName) {
     messageFormClosed = !messageFormClosed;
 };
 
+
+
+
+
+/*form*/
+
+$('label.btn').on('click', 'input', function (e) {
+    e.stopPropagation();
+    $(this).attr('checked', !$(this).attr('checked'));
+    $(e.target).closest('label').toggleClass('btn-flat');
+});
 
 function evaluateDocuments() {
     let resumeChecked = $('#checkboxResume').hasClass("checked");
@@ -231,5 +279,3 @@ function evaluateDocuments() {
 
     }
 }
-
-/*contact*/  
