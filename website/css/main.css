@@ -276,7 +276,7 @@ body::-webkit-scrollbar {
     margin-top: 50px;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.85);
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-frame {
@@ -296,7 +296,6 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .menu-link {
@@ -310,6 +309,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .menu-language-links {
@@ -335,6 +335,63 @@ body::-webkit-scrollbar {
     justify-content: flex-start;
     align-items: center;
     width: 75px;
+}
+
+
+
+
+
+/*-----home-----*/
+
+.imp {
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color:rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+.imp-overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px;
+}
+
+.imp-frame {
+    position: relative;
+    width: 124vh;
+    background-color:red;
+}
+
+.imp-grid {
+    position: relative;
+    display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#impHeader {
+    display: none;
+}
+
+.imp-box {
+    position: relative;
+    transition: .3s ease;
+    overflow: hidden;
+    padding-top: 100%;
+    background-color: yellow;
 }
 
 
@@ -870,7 +927,7 @@ body::-webkit-scrollbar {
     margin-right: 7.5px;
     background-color: rgb(150, 150, 150);
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: 0.6s ease;
 }
 
 .active {
@@ -895,6 +952,10 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+}
+
+#rotateHeader {
     display: none;
 }
 
@@ -1882,16 +1943,44 @@ p {
 
 
 
-/*----- responsive -----*/
+/*responsive*/
 
 @media only screen and (max-width: 65vh) {
 
+
+
+
+
+/*navibar*/
 
     .navi-frame {
         margin-left: 12.5px;
         margin-right: 12.5px;
     }
 
+
+
+
+
+/*navibar*/
+
+    .imp-overlay {
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+    }
+    
+    .imp-grid {
+        grid-column-gap: 12.5px;
+        grid-row-gap: 12.5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }    
+
+
+
+
+
+/*home*/
 
     #home {
         padding-left: 12.5px;
@@ -1906,6 +1995,11 @@ p {
         grid-template-areas: "a a" "b b" "b b";
     }
 
+
+
+
+
+/*about*/
 
     #about {
         padding-left: 12.5px;
@@ -1962,6 +2056,11 @@ p {
     }
 
 
+
+
+
+/*work*/
+
     #work {
         padding-right: 12.5px;
         padding-left: 12.5px;
@@ -1979,9 +2078,24 @@ p {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    .slideshow-rotate-screen {
-        display: none;
+    .slideshow-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 12.5px;
+        grid-row-gap: 12.5px;
     }
+
+    .slideshow-rotate-screen {
+        display: flex;
+    }
+
+
+
+
+
+/*resume*/
 
     #resume {
         padding-right: 12.5px;
@@ -1999,6 +2113,11 @@ p {
         "a a";
     }
 
+
+
+
+
+/*contact*/ 
 
     #contact {
         padding-right: 12.5px;
@@ -2056,4 +2175,12 @@ p {
         grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
     }
 
-/*----- responsive -----*/
+
+
+
+
+    @media only screen and (min-width: 65vh) {
+
+    
+
+    }

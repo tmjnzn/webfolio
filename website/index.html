@@ -12,71 +12,113 @@
     <script src=".\js\jquery.min.js"></script>
 </head>
 
+
+
+
+
 <body>
 
 
 <div class="navibar">
 
-    <div class="navi-frame">
+        <div class="navi-frame">
 
-        <div class="navi-elements">
-            <div class="chapter" id="homeHeader" data-visible="home"><h1></h1></div>
-            <div class="chapter" id="aboutHeader" data-visible="about"><h1>About Me</h1></div>
-            <div class="chapter" id="workHeader" data-visible="work"><h1>Latest Work</h1></div>
-            <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
-            <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
+            <div class="navi-elements">
+                <div class="chapter" id="homeHeader" data-visible="home"><h1></h1></div>
+                <div class="chapter" id="aboutHeader" data-visible="about"><h1>About Me</h1></div>
+                <div class="chapter" id="workHeader" data-visible="work"><h1>Latest Work</h1></div>
+                <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
+                <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
 
-            <div class="chapter" id="menu"><h1>Menu</h1></div>
+                <div class="chapter" id="menu"><h1>Menu</h1></div>
 
-            <div id="work1Header"><h1>Bluetooth Speaker</h1></div>
-            <div id="work2Header"><h1>Form Study</h1></div>
-            <div id="work3Header"><h1>Weather Station</h1></div>
-            <div id="work4Header"><h1>Hand Blender</h1></div>
-            <div id="work5Header"><h1>Water Dispenser</h1></div>
-            <div id="work6Header"><h1>Delivery Cart</h1></div>
-        </div>
+                <div id="work1Header"><h1>Bluetooth Speaker</h1></div>
+                <div id="work2Header"><h1>Form Study</h1></div>
+                <div id="work3Header"><h1>Weather Station</h1></div>
+                <div id="work4Header"><h1>Hand Blender</h1></div>
+                <div id="work5Header"><h1>Water Dispenser</h1></div>
+                <div id="work6Header"><h1>Delivery Cart</h1></div>
 
-        <div class="navi-elements">
-            <div class="menu-btn" onclick="menuBtnClick()">
-                <div class="menu-burger"></div>
+                <div id="rotateHeader"><h1>Attention</h1></div>
+
+                <div id="impHeader"><h1>Impressum</h1></div>
             </div>
-        </div>
 
-    </div>
+            <div class="navi-elements">
+                <div class="menu-btn" onclick="menuBtnClick()">
+                    <div class="menu-burger"></div>
+                </div>
+            </div>
+
+        </div>
 
 </div>
+
+
 
 
 <div class="menu">
-    <div class="menu-frame">
-        <div class="menu-links">
-            <h3><a href="#home" onclick="toggleMenu('homeHeader')">Home</a></h3>
-            <div class="menu-link"></div>
-            <h3><a href="#about" onclick="toggleMenu('aboutHeader')">About Me</a></h3>
-            <div class="menu-link"></div>
-            <h3><a href="#work" onclick="toggleMenu('workHeader')">Latest Work</a></h3>
-            <div class="menu-link"></div>
-            <h3><a href="#resume" onclick="toggleMenu('resumeHeader')">Resume</a></h3>
-            <div class="menu-link"></div>
-            <h3><a href="#contact" onclick="toggleMenu('contactHeader')">Contact</a></h3>
+        <div class="menu-frame">
+            <div class="menu-links">
+                <h3><a href="#home" onclick="toggleMenu('homeHeader')">Home</a></h3>
+                <div class="menu-link"></div>
+                <h3><a href="#about" onclick="toggleMenu('aboutHeader')">About Me</a></h3>
+                <div class="menu-link"></div>
+                <h3><a href="#work" onclick="toggleMenu('workHeader')">Latest Work</a></h3>
+                <div class="menu-link"></div>
+                <h3><a href="#resume" onclick="toggleMenu('resumeHeader')">Resume</a></h3>
+                <div class="menu-link"></div>
+                <h3><a href="#contact" onclick="toggleMenu('contactHeader')">Contact</a></h3>
+                <div class="menu-link"></div>
+                <h3><a href="#home" onclick="toggleMenu('homeHeader')">Impressum</a></h3>
+            </div>
+
+            <div class="menu-language">
+                <div class="menu-language-links">
+                    <h5><a href="#home" onclick="toggleMenu(undefined)">german</a></h5>
+                </div>
+
+                <div class="menu-language-mitte">
+                    <h3>|</h3>
+                </div>
+
+                <div class="menu-language-rechts">
+                    <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
+                </div>
+            </div>
+
         </div>
+</div>
 
-        <div class="menu-language">
-            <div class="menu-language-links">
-                <h5><a href="#home" onclick="toggleMenu(undefined)">german</a></h5>
+
+
+
+
+<div class="imp">
+
+    <div class="imp-overlay">
+
+        <div class="imp-frame">
+
+            <div class="imp-grid">
+
+                <div class="imp-box"></div>
+                <div class="imp-box"></div>
+                <div class="imp-box"></div>
+                <div class="imp-box"></div>
+                <div class="imp-box"></div>
+                <div class="imp-box"></div>
+
             </div>
 
-            <div class="menu-language-mitte">
-                <h3>|</h3>
-            </div>
-
-            <div class="menu-language-rechts">
-                <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
-            </div>
         </div>
 
     </div>
+
 </div>
+
+
+
 
 
 <div id="home">
@@ -105,6 +147,9 @@
     </div>
 
 </div>
+
+
+
 
 
 <div id="about">
@@ -231,6 +276,9 @@
     </div>
 
 </div>
+
+
+
 
 
 <div id="work">
@@ -608,6 +656,9 @@
 </div>
 
 
+
+
+
 <div id="resume">
 
     <div class="resume-frame">
@@ -628,6 +679,9 @@
     </div>
 
 </div>
+
+
+
 
 
 <div id="contact">
@@ -877,6 +931,9 @@
 </div>
 
 
+
+
+
 <div class="footer">
 
     <div class="footer-frame">
@@ -922,6 +979,9 @@
     </div>
 
 </div>
+
+
+
 
 
 <script src=".\js\main.js"></script>
