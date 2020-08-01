@@ -2,7 +2,7 @@
 
 var checkboxMsg = false;
 
-
+const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 $(document).ready(function () {
     $('.menu a').on('click', function () {
@@ -13,32 +13,11 @@ $(document).ready(function () {
 
         /*burger animation*/
 
-        const burger = document.querySelector('.menu-btn');
         menuBtn.classList.remove('open');
         $('body').removeClass('noscroll');
         menuOpen = false;
     });
 });
-
-const menuBtn = document.querySelector('.menu-btn');
-menuBtn.addEventListener('click', () => {
-    if (messageProjectClosed)
-        if (messageFormClosed) {
-            if (!menuOpen) {
-                menuBtn.classList.add('open');
-                $('body').addClass('noscroll');
-                menuBtn.classList.remove('close') /*lösung*/
-                menuOpen = true;
-            } else {
-                menuBtn.classList.remove('open');
-                $('body').removeClass('noscroll');
-                menuBtn.classList.add('close') /*lösung*/
-                menuOpen = false;
-            }
-        }
-});
-
-/*burger animation*/
 
 
 $(window).on('beforeunload', function () {
@@ -46,37 +25,61 @@ $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
 });
 
+
 var showMenu = false;
 var scrollDisabled = false
 
 function toggleMenu(name) {
-    if (messageProjectClosed) {
-        if (messageFormClosed) {
-            $('.menu').fadeToggle(300);
-            if (!showMenu) {
-                visibleHeaderName = undefined
-                showMenu = true;
-                $('.chapter[data-visible]').each(function () {
-                    $(this).fadeOut(300);
-                })
-                $("#menu").delay(300).fadeToggle(300);
-            } else {
-                scrollDisabled = true
+    if (messageFormClosed) {
+        if (!showMenu) {
+            visibleHeaderName = undefined
+            showMenu = true;
+            $('.chapter[data-visible]').each(function () {
+                $(this).fadeOut(300);
+            })
+            $("#menu").delay(300).fadeToggle(300);
+        } else {
+            scrollDisabled = true
+            setTimeout(() => {
+                scrollDisabled = false
+            }, 1000)
+            showMenu = false;
+            $("#menu").fadeToggle(300);
+            if (name)
                 setTimeout(() => {
-                    scrollDisabled = false
-                }, 1000)
-                showMenu = false;
-                $("#menu").fadeToggle(300);
-                if (name)
-                    setTimeout(() => {
-                        $("#" + name).fadeIn(300)
-                    }, 300)
-                else {
-                    setTimeout(() => setHeader(), 300)
+                    $("#" + name).fadeIn(300)
+                }, 300)
+            else {
+                setTimeout(() => setHeader(), 300)
+            }
+        }
+    }
+
+}
+
+function menuBtnClick() {
+
+    if (messageProjectClosed) {
+        {
+            if (!messageFormClosed) {
+                toggleForm(currentFormName)
+            } else {
+                $('.menu').fadeToggle(300);
+            }
+            if (messageFormClosed) {
+                toggleMenu(undefined);
+                if (!menuOpen) {
+                    menuBtn.classList.add('open');
+                    $('body').addClass('noscroll');
+                    menuBtn.classList.remove('close') /*lösung*/
+                    menuOpen = true;
+                } else {
+                    menuBtn.classList.remove('open');
+                    $('body').removeClass('noscroll');
+                    menuBtn.classList.add('close') /*lösung*/
+                    menuOpen = false;
                 }
             }
-        } else {
-            toggleForm(currentFormName)
         }
     } else {
         $('.work-bg').delay(300).fadeToggle(300);
@@ -84,33 +87,35 @@ function toggleMenu(name) {
         $('.slideshow-frame').fadeToggle(300);
         $('#' + currentProjectName).toggle();
         $('body').removeClass('noscroll');
-        $('#' + currentProjectName + 'Header').delay(300).fadeToggle(300);
         $('.chapter #menu').toggle();
         $('#' + currentProjectName + 'Header').fadeToggle(300);
-        menuBtn.classList.add('close');
-        menuBtn.classList.remove('open');
         messageProjectClosed = true;
-        console.log("hello1")
+        menuBtn.classList.add('close');
+        $('body').removeClass('noscroll');
+        menuBtn.classList.remove('open') /*lösung*/
+        setTimeout(() => setHeader(), 300)
+        currentProjectName = undefined
     }
 }
 
 var visibleHeaderName = undefined
 
 function setHeader() {
-    var scrollTop = $(this).scrollTop();
-    var firstVisible = undefined;
-    $('.chapter[data-visible]').each(function () {
-        let elem = $("#" + $(this).data('visible'));
-        if ((elem.offset().top + 500 >= scrollTop) && (firstVisible === undefined)) {
-            firstVisible = $(this);
-        } else {
-            $(this).hide();
+    if (messageProjectClosed) {
+        var scrollTop = $(this).scrollTop();
+        var firstVisible = undefined;
+        $('.chapter[data-visible]').each(function () {
+            let elem = $("#" + $(this).data('visible'));
+            if ((elem.offset().top + 500 >= scrollTop) && (firstVisible === undefined)) {
+                firstVisible = $(this);
+            } else {
+                $(this).hide();
+            }
+        });
+        if (firstVisible && firstVisible.attr("data-visible") !== visibleHeaderName) {
+            firstVisible.fadeIn(300);
+            visibleHeaderName = firstVisible.attr("data-visible");
         }
-    });
-
-    if (firstVisible && firstVisible.attr("data-visible") !== visibleHeaderName) {
-        firstVisible.fadeIn(300);
-        visibleHeaderName = firstVisible.attr("data-visible");
     }
 }
 
@@ -172,13 +177,16 @@ function toggleProject(projectName) {
         $('#' + projectName).toggle();
         openSlideShow(projectName);
         $('body').addClass('noscroll');
-        $('#workHeader').fadeToggle(300);
+        $('.chapter[data-visible]').each(function () {
+            $(this).fadeOut(300);
+        })
         $('.chapter #menu').toggle();
         $('#' + projectName + 'Header').delay(300).fadeToggle(300);
         menuBtn.classList.add('open');
         menuBtn.classList.remove('close');
+        currentProjectName = projectName
+        visibleHeaderName = undefined
     }
-    currentProjectName = projectName
     messageProjectClosed = false;
 };
 

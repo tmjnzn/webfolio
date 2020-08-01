@@ -28,16 +28,16 @@
 
             <div class="chapter" id="menu"><h1>Menu</h1></div>
 
-            <div id="work1Header" ><h1>Bluetooth Speaker</h1></div>
-            <div id="work2Header" ><h1>Form Study</h1></div>
-            <div id="work3Header" ><h1>Weather Station</h1></div>
-            <div id="work4Header" ><h1>Hand Blender</h1></div>
-            <div id="work5Header" ><h1>Water Dispenser</h1></div>
-            <div id="work6Header" ><h1>Delivery Cart</h1></div>
+            <div id="work1Header"><h1>Bluetooth Speaker</h1></div>
+            <div id="work2Header"><h1>Form Study</h1></div>
+            <div id="work3Header"><h1>Weather Station</h1></div>
+            <div id="work4Header"><h1>Hand Blender</h1></div>
+            <div id="work5Header"><h1>Water Dispenser</h1></div>
+            <div id="work6Header"><h1>Delivery Cart</h1></div>
         </div>
 
         <div class="navi-elements">
-            <div class="menu-btn" onclick="toggleMenu(undefined)">
+            <div class="menu-btn" onclick="menuBtnClick()">
                 <div class="menu-burger"></div>
             </div>
         </div>
@@ -45,9 +45,6 @@
     </div>
 
 </div>
-
-
-
 
 
 <div class="menu">
@@ -66,7 +63,7 @@
 
         <div class="menu-language">
             <div class="menu-language-links">
-                <h5><a href="#home"  onclick="toggleMenu(undefined)">german</a></h5>
+                <h5><a href="#home" onclick="toggleMenu(undefined)">german</a></h5>
             </div>
 
             <div class="menu-language-mitte">
@@ -80,9 +77,6 @@
 
     </div>
 </div>
-
-
-
 
 
 <div id="home">
@@ -111,9 +105,6 @@
     </div>
 
 </div>
-
-
-
 
 
 <div id="about">
@@ -242,9 +233,6 @@
 </div>
 
 
-
-
-
 <div id="work">
 
     <div class="work-bg"></div>
@@ -290,7 +278,7 @@
                         <h1>Station</h1>
                     </div>
                     <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work3')">Show More</a></h5>                        </div>
+                        <h5><a href="#work" onclick="toggleProject('work3')">Show More</a></h5></div>
                 </div>
             </div>
 
@@ -303,7 +291,7 @@
                         <h1>Blender</h1>
                     </div>
                     <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work4')">Show More</a></h5>                        </div>
+                        <h5><a href="#work" onclick="toggleProject('work4')">Show More</a></h5></div>
                 </div>
             </div>
 
@@ -316,7 +304,7 @@
                         <h1>Dispenser</h1>
                     </div>
                     <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work5')">Show More</a></h5>                        </div>
+                        <h5><a href="#work" onclick="toggleProject('work5')">Show More</a></h5></div>
                 </div>
             </div>
 
@@ -329,7 +317,7 @@
                         <h1>Cart</h1>
                     </div>
                     <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work6')">Show More</a></h5>                        </div>
+                        <h5><a href="#work" onclick="toggleProject('work6')">Show More</a></h5></div>
                 </div>
             </div>
 
@@ -620,9 +608,6 @@
 </div>
 
 
-
-
-
 <div id="resume">
 
     <div class="resume-frame">
@@ -645,9 +630,6 @@
 </div>
 
 
-
-
-
 <div id="contact">
 
     <div class="contact-bg"></div>
@@ -668,7 +650,9 @@
                         </div>
                         <div class="projectlink">
                             <div class="portfolio">
-                                <h5><a href="#contact" onclick="toggleForm('.req-portfolio');$('#checkboxPortfolio').toggleClass('checked');evaluateDocuments();">Request</a></h5>
+                                <h5><a href="#contact"
+                                       onclick="toggleForm('.req-portfolio');$('#checkboxPortfolio').toggleClass('checked');evaluateDocuments();">Request</a>
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -685,7 +669,8 @@
                         </div>
                         <div class="projectlink">
                             <div class="message">
-                                <h5><a href="#contact" onclick="toggleForm('.write-message');evaluateDocuments();">Message</a></h5>
+                                <h5><a href="#contact" onclick="toggleForm('.write-message');evaluateDocuments();">Message</a>
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -702,7 +687,9 @@
                         </div>
                         <div class="projectlink">
                             <div class="resume">
-                                <h5><a href="#contact" onclick="toggleForm('.req-resume');$('#checkboxResume').toggleClass('checked');evaluateDocuments();">Request</a></h5>
+                                <h5><a href="#contact"
+                                       onclick="toggleForm('.req-resume');$('#checkboxResume').toggleClass('checked');evaluateDocuments();">Request</a>
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -722,7 +709,8 @@
 
                         <div class="doc-box-t">
                             <h1>Documents</h1>
-                            <p>For the requestion of my resume a/o portfolio please enable the corresponding boxes below.</p>
+                            <p>For the requestion of my resume a/o portfolio please enable the corresponding boxes
+                                below.</p>
                         </div>
                         <div class="doc-box-a">
                             <div>
@@ -889,17 +877,16 @@
 </div>
 
 
-
-
-
 <div class="footer">
 
     <div class="footer-frame">
 
         <div class="footer-part1">
-            <a href="#home"><div class="homebutton">
-                <span class="arrow"></span>
-            </div></a>
+            <a href="#home">
+                <div class="homebutton">
+                    <span class="arrow"></span>
+                </div>
+            </a>
         </div>
 
         <div class="footer-part2">
@@ -927,15 +914,14 @@
         </div>
 
         <div class="footer-part3">
-            <div><p>2020 © Timo Janzon. All Rights Reserved.<p></div>
+            <div><p>2020 © Timo Janzon. All Rights Reserved.
+                <p></div>
         </div>
 
 
     </div>
 
 </div>
-
-
 
 
 <script src=".\js\main.js"></script>
