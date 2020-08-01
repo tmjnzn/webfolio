@@ -12,7 +12,6 @@ $(document).ready(function () {
         /*menu auf / zu*/
 
         /*burger animation*/
-
         menuBtn.classList.remove('open');
         $('body').removeClass('noscroll');
         menuOpen = false;
@@ -61,11 +60,7 @@ function menuBtnClick() {
 
     if (messageProjectClosed) {
         {
-            if (!messageFormClosed) {
-                toggleForm(currentFormName)
-            } else {
-                $('.menu').fadeToggle(300);
-            }
+
             if (messageFormClosed) {
                 toggleMenu(undefined);
                 if (!menuOpen) {
@@ -79,6 +74,11 @@ function menuBtnClick() {
                     menuBtn.classList.add('close') /*lösung*/
                     menuOpen = false;
                 }
+            }
+            if (!messageFormClosed) {
+                toggleForm(currentFormName)
+            } else {
+                $('.menu').fadeToggle(300);
             }
         }
     } else {
