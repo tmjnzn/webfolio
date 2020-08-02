@@ -1978,7 +1978,7 @@ p {
 
 
 
-/*navibar*/
+/*impressum*/
 
     .imp-overlay {
         padding-left: 12.5px;
@@ -1990,7 +1990,11 @@ p {
         grid-row-gap: 12.5px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-    }    
+        grid-template-areas:
+        "a a" 
+        "b b"
+        "b b";
+        }    
 
 
 
