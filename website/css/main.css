@@ -273,20 +273,25 @@ body::-webkit-scrollbar {
     display: none;
     height: 100%;
     width: 100%;
-    margin-top: 50px;
-    opacity: 1;
+    padding-top: 50px;
     background-color: rgba(0, 0, 0, 0.85);
-    z-index: 2;
+    z-index: 1;
 }
 
-.menu-frame {
-    position: relative;
+.menu-overlay {
+    position: absolute;
     display: flex;
-    width: 124vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
     flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px;
+    z-index: 2;
 }
 
 .menu-links {
@@ -341,17 +346,7 @@ body::-webkit-scrollbar {
 
 
 
-/*-----home-----*/
-
-.imp {
-    position: fixed;
-    display: none;
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    background-color:rgba(0, 0, 0, 0.85);
-    z-index: 1;
-}
+/*-----imp-----*/
 
 .imp-overlay {
     position: absolute;
@@ -369,8 +364,9 @@ body::-webkit-scrollbar {
 
 .imp-frame {
     position: relative;
+    display: none;
     width: 124vh;
-    background-color:red;
+    z-index: 1;
 }
 
 .imp-grid {
@@ -380,18 +376,38 @@ body::-webkit-scrollbar {
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "a b b" 
+    "a b b";
 }
 
 #impHeader {
     display: none;
 }
 
-.imp-box {
+.imp-box-a {
+    grid-area: a;
+    position: relative;
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.imp-box-b {
+    grid-area: b;
     position: relative;
     transition: .3s ease;
     overflow: hidden;
     padding-top: 100%;
-    background-color: yellow;
+}
+
+.imp-box-overlay {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: .3s ease;
 }
 
 

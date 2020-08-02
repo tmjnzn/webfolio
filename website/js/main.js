@@ -56,6 +56,10 @@ function toggleMenu(name) {
 
 }
 
+
+
+
+
 function menuBtnClick() {
 
     if (messageProjectClosed) {
@@ -98,6 +102,10 @@ function menuBtnClick() {
     }
 }
 
+
+
+
+
 var visibleHeaderName = undefined
 
 function setHeader() {
@@ -123,6 +131,43 @@ $(window).scroll(() => {
     if (!scrollDisabled)
         setHeader();
 });
+
+
+
+
+
+
+
+
+
+
+
+/*project*/
+
+var messageProjectClosed = true
+var currentProjectName
+
+function toggleProject(projectName) {
+    if (messageProjectClosed) {
+        $('.work-bg').delay(300).fadeToggle(300);
+        $('.work-frame').fadeToggle(300);
+        $('.slideshow-frame').delay(300).fadeToggle(300);
+        /*$('#rotateHeader').delay(300).fadeToggle(300);*/
+        $('#' + projectName).toggle();
+        openSlideShow(projectName);
+        $('body').addClass('noscroll');
+        $('.chapter[data-visible]').each(function () {
+            $(this).fadeOut(300);
+        })
+        $('.chapter #menu').toggle();
+        $('#' + projectName + 'Header').delay(300).fadeToggle(300);
+        menuBtn.classList.add('open');
+        menuBtn.classList.remove('close');
+        currentProjectName = projectName
+        visibleHeaderName = undefined
+    }
+    messageProjectClosed = false;
+};
 
 
 
@@ -165,37 +210,6 @@ function showSlides(n) {
     $(slides.get([slideIndex - 1])).delay(300).fadeIn(300)
     $(dots.get(slideIndex - 1)).addClass("active").fadeIn(300);
 }
-
-
-
-
-
-/*project*/
-
-var messageProjectClosed = true
-var currentProjectName
-
-function toggleProject(projectName) {
-    if (messageProjectClosed) {
-        $('.work-bg').delay(300).fadeToggle(300);
-        $('.work-frame').fadeToggle(300);
-        $('.slideshow-frame').delay(300).fadeToggle(300);
-        /*$('#rotateHeader').delay(300).fadeToggle(300);*/
-        $('#' + projectName).toggle();
-        openSlideShow(projectName);
-        $('body').addClass('noscroll');
-        $('.chapter[data-visible]').each(function () {
-            $(this).fadeOut(300);
-        })
-        $('.chapter #menu').toggle();
-        $('#' + projectName + 'Header').delay(300).fadeToggle(300);
-        menuBtn.classList.add('open');
-        menuBtn.classList.remove('close');
-        currentProjectName = projectName
-        visibleHeaderName = undefined
-    }
-    messageProjectClosed = false;
-};
 
 
 
@@ -281,3 +295,30 @@ function evaluateDocuments() {
 
     }
 }
+
+
+
+
+
+/*impressum*/
+
+var messageImpClosed = true
+var currentImpName
+
+function toggleImp(impName) {
+    if (messageImpClosed) {
+        currentImpName = impName;
+        $('.imp-frame').delay(300).fadeToggle(300);
+        $('#impHeader').delay(300).fadeToggle(300);
+        $('#menu').fadeToggle(300);
+        $('.menu-overlay').fadeToggle(300)
+    } else {
+        menuBtn.classList.add('close');
+        $('body').removeClass('noscroll');
+        menuBtn.classList.remove('open')
+        setTimeout(function () {
+            $('.checked').removeClass("checked")
+        }, 400);
+    }
+    messageImpClosed = false;
+};
