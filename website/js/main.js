@@ -5,13 +5,9 @@ var checkboxMsg = false;
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 $(document).ready(function () {
-    $('.menu a').on('click', function () {
-        menuBtn.classList.add('close') /*lösung*/
+    $('#links a').on('click', function () {
+        menuBtn.classList.add('close')
         $('.menu').fadeToggle(300);
-
-        /*menu auf / zu*/
-
-        /*burger animation*/
         menuBtn.classList.remove('open');
         $('body').removeClass('noscroll');
         menuOpen = false;
@@ -59,47 +55,64 @@ function toggleMenu(name) {
 
 
 
-
+var messageImpClosed = true
 function menuBtnClick() {
 
-    if (messageProjectClosed) {
-        {
+    if (messageImpClosed) {
 
-            if (messageFormClosed) {
-                toggleMenu(undefined);
-                if (!menuOpen) {
-                    menuBtn.classList.add('open');
-                    $('body').addClass('noscroll');
-                    menuBtn.classList.remove('close') /*lösung*/
-                    menuOpen = true;
+        if (messageProjectClosed) {
+            {
+
+                if (messageFormClosed) {
+                    toggleMenu(undefined);
+                    if (!menuOpen) {
+                        menuBtn.classList.add('open');
+                        $('body').addClass('noscroll');
+                        menuBtn.classList.remove('close') /*lösung*/
+                        menuOpen = true;
+                    } else {
+                        menuBtn.classList.remove('open');
+                        $('body').removeClass('noscroll');
+                        menuBtn.classList.add('close') /*lösung*/
+                        menuOpen = false;
+                    }
+                }
+                if (!messageFormClosed) {
+                    toggleForm(currentFormName)
                 } else {
-                    menuBtn.classList.remove('open');
-                    $('body').removeClass('noscroll');
-                    menuBtn.classList.add('close') /*lösung*/
-                    menuOpen = false;
+                    $('.menu').fadeToggle(300);
                 }
             }
-            if (!messageFormClosed) {
-                toggleForm(currentFormName)
-            } else {
-                $('.menu').fadeToggle(300);
-            }
+        } else {
+            $('.work-bg').delay(300).fadeToggle(300);
+            $('.work-frame').delay(300).fadeToggle(300);
+            $('.slideshow-frame').fadeToggle(300);
+            $('#' + currentProjectName).toggle();
+            $('body').removeClass('noscroll');
+            $('.chapter #menu').toggle();
+            $('#' + currentProjectName + 'Header').fadeToggle(300);
+            messageProjectClosed = true;
+            menuBtn.classList.add('close');
+            $('body').removeClass('noscroll');
+            menuBtn.classList.remove('open')
+            setTimeout(() => setHeader(), 300)
+            currentProjectName = undefined
         }
+
     } else {
-        $('.work-bg').delay(300).fadeToggle(300);
-        $('.work-frame').delay(300).fadeToggle(300);
-        $('.slideshow-frame').fadeToggle(300);
-        $('#' + currentProjectName).toggle();
-        $('body').removeClass('noscroll');
+        $('#impHeader').fadeToggle(300);
+        $('.imp-frame').delay(300).toggle(300);
+        $('.menu').fadeToggle(300);
         $('.chapter #menu').toggle();
-        $('#' + currentProjectName + 'Header').fadeToggle(300);
-        messageProjectClosed = true;
-        menuBtn.classList.add('close');
+        $('.menu-overlay').delay(300).fadeToggle(300);
         $('body').removeClass('noscroll');
-        menuBtn.classList.remove('open') /*lösung*/
-        setTimeout(() => setHeader(), 300)
-        currentProjectName = undefined
+        menuBtn.classList.add('close');
+        menuBtn.classList.remove('open');
+        setTimeout(() => setHeader(), 300);
+        messageImpClosed = true
+        menuOpen = false;
     }
+
 }
 
 
@@ -302,23 +315,13 @@ function evaluateDocuments() {
 
 /*impressum*/
 
-var messageImpClosed = true
-var currentImpName
 
-function toggleImp(impName) {
-    if (messageImpClosed) {
-        currentImpName = impName;
-        $('.imp-frame').delay(300).fadeToggle(300);
+$(document).ready(function () {
+    $('#imp a').on('click', function () {
         $('#impHeader').delay(300).fadeToggle(300);
         $('#menu').fadeToggle(300);
-        $('.menu-overlay').fadeToggle(300)
-    } else {
-        menuBtn.classList.add('close');
-        $('body').removeClass('noscroll');
-        menuBtn.classList.remove('open')
-        setTimeout(function () {
-            $('.checked').removeClass("checked")
-        }, 400);
-    }
-    messageImpClosed = false;
-};
+        $('.imp-frame').delay(300).fadeToggle(300);
+        $('.menu-overlay').fadeToggle(300);
+        messageImpClosed =  !messageImpClosed;
+    });
+});
