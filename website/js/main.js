@@ -111,6 +111,7 @@ function menuBtnClick() {
         setTimeout(() => setHeader(), 300);
         messageImpClosed = true
         menuOpen = false;
+        showMenu=false
     }
 
 }
