@@ -17,163 +17,551 @@
 <body>
 
 
+    <div class="grid">
 
-<div class="navibar">
+        <div class="grid-top">
 
-        <div class="navi-frame">
+            <div class="navibar">
 
-            <div class="navi-elements">
-                <div class="chapter" id="homeHeader" data-visible="home"><h1></h1></div>
-                <div class="chapter" id="aboutHeader" data-visible="about"><h1>About Me</h1></div>
-                <div class="chapter" id="workHeader" data-visible="work"><h1>Latest Work</h1></div>
-                <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
-                <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
-
-                <div class="chapter" id="menu"><h1>Menu</h1></div>
-
-                <div id="work1Header"><h1>Bluetooth Speaker</h1></div>
-                <div id="work2Header"><h1>Form Study</h1></div>
-                <div id="work3Header"><h1>Weather Station</h1></div>
-                <div id="work4Header"><h1>Hand Blender</h1></div>
-                <div id="work5Header"><h1>Water Dispenser</h1></div>
-                <div id="work6Header"><h1>Delivery Cart</h1></div>
-
-                <div id="rotateHeader"><h1>Attention</h1></div>
-
-                <div id="impHeader"><h1>Impressum</h1></div>
-            </div>
-
-            <div class="navi-elements">
-                <div class="menu-btn" onclick="menuBtnClick()">
-                    <div class="menu-burger"></div>
+                <div class="navi-frame">
+            
+                    <div class="navi-elements">
+                        <div class="chapter" id="homeHeader" data-visible="home"><h1></h1></div>
+                        <div class="chapter" id="aboutHeader" data-visible="about"><h1>About Me</h1></div>
+                        <div class="chapter" id="workHeader" data-visible="work"><h1>Latest Work</h1></div>
+                        <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
+                        <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
+            
+                        <div class="chapter" id="menu"><h1>Menu</h1></div>
+            
+                        <div id="work1Header"><h1>Bluetooth Speaker</h1></div>
+                        <div id="work2Header"><h1>Form Study</h1></div>
+                        <div id="work3Header"><h1>Weather Station</h1></div>
+                        <div id="work4Header"><h1>Hand Blender</h1></div>
+                        <div id="work5Header"><h1>Water Dispenser</h1></div>
+                        <div id="work6Header"><h1>Delivery Cart</h1></div>
+            
+                        <div id="rotateHeader"><h1>Attention</h1></div>
+            
+                        <div id="impHeader"><h1>Impressum</h1></div>
+                    </div>
+            
+                    <div class="navi-elements">
+                        <div class="menu-btn" onclick="menuBtnClick()">
+                            <div class="menu-burger"></div>
+                        </div>
+                    </div>
+            
                 </div>
-            </div>
+            
+                </div>
 
         </div>
-
-</div>
-
-
-
-<div class="menu">
-
-    <div class="menu-overlay">
-
-        <div class="menu-links">
-            <div id="links">
-                <h3><a href="#home" onclick="toggleMenu('homeHeader')">Home</a></h3>
-                <div class="menu-link"></div>
-                <h3><a href="#about" onclick="toggleMenu('aboutHeader')">About Me</a></h3>
-                <div class="menu-link"></div>
-                <h3><a href="#work" onclick="toggleMenu('workHeader')">Latest Work</a></h3>
-                <div class="menu-link"></div>
-                <h3><a href="#resume" onclick="toggleMenu('resumeHeader')">Resume</a></h3>
-                <div class="menu-link"></div>
-                <h3><a href="#contact" onclick="toggleMenu('contactHeader')">Contact</a></h3>
-                <div class="menu-link"></div>
-            </div>
-            <div id="imp">
-                <h3><a href="javascript:;" onclick="toggleImp('imp-frame')">Impressum</a></h3>
-            </div>
         
-        </div>
+        <div class="grid-bottom">
 
+            <div class="menu">
 
-        <div id="links" class="menu-language">
-            <div class="menu-language-links">
-                <h5><a href="#home" onclick="toggleMenu(undefined)">german</a></h5>
+                <div class="menu-overlay">
+            
+                    <div class="menu-links">
+                        <div id="links">
+                            <h3><a href="#home" onclick="toggleMenu('homeHeader')">Home</a></h3>
+                            <div class="menu-link"></div>
+                            <h3><a href="#about" onclick="toggleMenu('aboutHeader')">About Me</a></h3>
+                            <div class="menu-link"></div>
+                            <h3><a href="#work" onclick="toggleMenu('workHeader')">Latest Work</a></h3>
+                            <div class="menu-link"></div>
+                            <h3><a href="#resume" onclick="toggleMenu('resumeHeader')">Resume</a></h3>
+                            <div class="menu-link"></div>
+                            <h3><a href="#contact" onclick="toggleMenu('contactHeader')">Contact</a></h3>
+                            <div class="menu-link"></div>
+                        </div>
+                        <div id="imp">
+                            <h3><a href="javascript:;" onclick="toggleImp('imp-frame')">Impressum</a></h3>
+                        </div>
+                    
+                    </div>
+            
+            
+                    <div id="links" class="menu-language">
+                        <div class="menu-language-links">
+                            <h5><a href="#home" onclick="toggleMenu(undefined)">german</a></h5>
+                        </div>
+                        <div class="menu-language-mitte">
+                            <h3>|</h3>
+                        </div>
+                        <div class="menu-language-rechts">
+                            <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            
+                <div class="imp-overlay">
+            
+                    <div class="imp-frame">
+            
+                        <div class="imp-grid">
+            
+                            <div class="imp-box-a">
+                                <div class="imp-box-overlay">
+                                    <h1>Creator & Designer</h1>
+                                    <h4>Timo Janzon</h4>
+                                    <p>Industrial Designer &</p>
+                                    <p>Technical Product Designer</p>
+                                    <br>
+                                    <br>
+                                    <h1>Programming God</h1>
+                                    <h4>Carsten Klaffke</h4>
+                                    <p>IT Consultant</p>
+                                    <p>Software Engineer</p>
+                                    <p>Computer Scientist</p>
+                                    <h5><a href="https://carsten-klaffke.de" target="_blank">carsten-klaffke.de</a></h5>
+                                </div>
+                            </div>
+            
+                            <div class="imp-box-b">
+                                <div class="imp-box-overlay">
+                                    <h1>General Info</h1>
+                                    <p>
+                                    I hereby declare that this portfolio is my own unaided work. All text and artwork published in this portfolio belong to Timo Janzon and are subject to German copyright and ancillary copyright law unless otherwise noted. 
+                                    Any parts of this portfolio that are reproduced or transmitted in any form or by any means require the prior written consent of the orginator or respective creator. This applies in particular to electronic or
+                                    mechanical duplication, including photocopying,xerography, videography recording, editing, translation and storage or processing of content in databases or other electronic media and systems.
+                                    This portfolio has not yet been published or publicly presented.
+                                    </p>
+                                    <br>
+                                    <h1>Copyright</h1>
+                                    <p>
+                                    I hereby declare that this portfolio is my own unaided work. All text and artwork published in this portfolio belong to Timo Janzon and are subject to German copyright and ancillary copyright law unless otherwise noted. 
+                                    Any parts of this portfolio that are reproduced or transmitted in any form or by any means require the prior written consent of the orginator or respective creator. This applies in particular to electronic or
+                                    mechanical duplication, including photocopying,xerography, videography recording, editing, translation and storage or processing of content in databases or other electronic media and systems.
+                                    This portfolio has not yet been published or publicly presented.
+                                    </p>
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                    </div>
+            
+                </div>
+            
             </div>
-            <div class="menu-language-mitte">
-                <h3>|</h3>
+
+            <div class="grid-frame">
+
+                <div class="home">
+                
+                    <div class="home-box-a">
+                        <div class="home-box-a-overlay">
+                                    <h1>Portfolio</h1>
+                                    <h1>Industrial</h1>
+                                    <h1>Design</h1>
+                                    <h4>Timo</h4>
+                                    <h4>Janzon</h4>
+                                    <br>
+                                    <br>
+                                    <h5><a href="#contact"></a></h5>
+                        </div>
+                    </div>
+                
+                    <div class="home-box-b">
+                        <img class="pic" src=".\img\01_home\01.png" alt="Avatar" style="width:100%">
+                    </div>
+                
+                </div>
+
+                
+                
             </div>
-            <div class="menu-language-rechts">
-                <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
-            </div>
+
         </div>
 
     </div>
 
 
-    <div class="imp-overlay">
+</body>
 
-        <div class="imp-frame">
 
-            <div class="imp-grid">
 
-                <div class="imp-box-a">
-                    <div class="imp-box-overlay">
-                        <h1>Creator & Designer</h1>
-                        <h4>Timo Janzon</h4>
-                        <p>Industrial Designer &</p>
-                        <p>Technical Product Designer</p>
-                        <br>
-                        <br>
-                        <h1>Programming God</h1>
-                        <h4>Carsten Klaffke</h4>
-                        <p>IT Consultant</p>
-                        <p>Software Engineer</p>
-                        <p>Computer Scientist</p>
-                        <h5><a href="https://carsten-klaffke.de" target="_blank">carsten-klaffke.de</a></h5>
-                    </div>
-                </div>
 
-                <div class="imp-box-b">
-                    <div class="imp-box-overlay">
-                        <h1>General Info</h1>
-                        <p>
-                        I hereby declare that this portfolio is my own unaided work. All text and artwork published in this portfolio belong to Timo Janzon and are subject to German copyright and ancillary copyright law unless otherwise noted. 
-                        Any parts of this portfolio that are reproduced or transmitted in any form or by any means require the prior written consent of the orginator or respective creator. This applies in particular to electronic or
-                        mechanical duplication, including photocopying,xerography, videography recording, editing, translation and storage or processing of content in databases or other electronic media and systems.
-                        This portfolio has not yet been published or publicly presented.
-                        </p>
-                        <br>
-                        <h1>Copyright</h1>
-                        <p>
-                        I hereby declare that this portfolio is my own unaided work. All text and artwork published in this portfolio belong to Timo Janzon and are subject to German copyright and ancillary copyright law unless otherwise noted. 
-                        Any parts of this portfolio that are reproduced or transmitted in any form or by any means require the prior written consent of the orginator or respective creator. This applies in particular to electronic or
-                        mechanical duplication, including photocopying,xerography, videography recording, editing, translation and storage or processing of content in databases or other electronic media and systems.
-                        This portfolio has not yet been published or publicly presented.
-                        </p>
-                    </div>
-                </div>
+<div id="work">
 
+    <div class="work-frame">
+
+<div class="work-grid">
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\01.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Bluetooth</h1>
+                <h1>Speaker</h1>
             </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work1')">Show More</a></h5>
+            </div>
+        </div>
+    </div>
 
+    <div class="box">
+        <img class="pic" src=".\img\03_work\02.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Form</h1>
+                <h1>Study</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work2')">Show More</a></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\03.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Weather</h1>
+                <h1>Station</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work3')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\04.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Hand</h1>
+                <h1>Blender</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work4')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\05.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Water</h1>
+                <h1>Dispenser</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work5')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\06.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Delivery</h1>
+                <h1>Cart</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work6')">Show More</a></h5></div>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+    <div class="slideshow-frame">
+
+<div class="slideshow-grid">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="slideshow" id="work1">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
+            </div>
         </div>
 
     </div>
 
 </div>
+
+<div class="slideshow" id="work2">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work3">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work4">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work5">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work6">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow-rotate-screen">
+    <h1>please rotate</h1>
+    <h1>your device</h1>
+    <h1>into landscape.</h1>
+</div>
+
+    </div>
+
+    </div>
+
+
+
   
-
-
-<div id="home">
-
-    <div class="home-frame">
-
-        <div class="home-grid">
-
-            <div class="home-box-a">
-                <div class="home-box-a-overlay">
-                    <h1>Portfolio</h1>
-                    <h1>Industrial Design</h1>
-                    <h4>Timo Janzon</h4>
-                    <br>
-                    <br>
-                    <h5><a href="#contact"></a></h5>
-                </div>
-            </div>
-
-            <div class="home-box-b">
-                <img class="pic" src=".\img\01_home\01.png" alt="Avatar" style="width:100%">
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 
 
 <div id="about">
@@ -302,381 +690,377 @@
 </div>
 
 
-
 <div id="work">
-
-    <div class="work-bg"></div>
 
     <div class="work-frame">
 
-        <div class="work-grid">
+<div class="work-grid">
 
-            <div class="box">
-                <img class="pic" src=".\img\03_work\01.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Bluetooth</h1>
-                        <h1>Speaker</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work1')">Show More</a></h5>
-                    </div>
-                </div>
+    <div class="box">
+        <img class="pic" src=".\img\03_work\01.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Bluetooth</h1>
+                <h1>Speaker</h1>
             </div>
-
-            <div class="box">
-                <img class="pic" src=".\img\03_work\02.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Form</h1>
-                        <h1>Study</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work2')">Show More</a></h5>
-                    </div>
-                </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work1')">Show More</a></h5>
             </div>
-
-            <div class="box">
-                <img class="pic" src=".\img\03_work\03.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Weather</h1>
-                        <h1>Station</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work3')">Show More</a></h5></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img class="pic" src=".\img\03_work\04.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Hand</h1>
-                        <h1>Blender</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work4')">Show More</a></h5></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img class="pic" src=".\img\03_work\05.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Water</h1>
-                        <h1>Dispenser</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work5')">Show More</a></h5></div>
-                </div>
-            </div>
-
-            <div class="box">
-                <img class="pic" src=".\img\03_work\06.png" alt="Avatar" style="width:100%">
-                <div class="box-overlay">
-                    <div class="text-overlay"></div>
-                    <div class="projectname">
-                        <h1>Delivery</h1>
-                        <h1>Cart</h1>
-                    </div>
-                    <div class="projectlink">
-                        <h5><a href="#work" onclick="toggleProject('work6')">Show More</a></h5></div>
-                </div>
-            </div>
-
         </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\02.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Form</h1>
+                <h1>Study</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work2')">Show More</a></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\03.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Weather</h1>
+                <h1>Station</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work3')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\04.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Hand</h1>
+                <h1>Blender</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work4')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\05.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Water</h1>
+                <h1>Dispenser</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work5')">Show More</a></h5></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <img class="pic" src=".\img\03_work\06.png" alt="Avatar" style="width:100%">
+        <div class="box-overlay">
+            <div class="text-overlay"></div>
+            <div class="projectname">
+                <h1>Delivery</h1>
+                <h1>Cart</h1>
+            </div>
+            <div class="projectlink">
+                <h5><a href="#work" onclick="toggleProject('work6')">Show More</a></h5></div>
+        </div>
+    </div>
+
+</div>
 
     </div>
 
     <div class="slideshow-frame">
 
-        <div class="slideshow-grid">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+<div class="slideshow-grid">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<div class="slideshow" id="work1">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work1\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
         </div>
 
-        <div class="slideshow" id="work1">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\01.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\03.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\04.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\05.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work1\06.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
         </div>
 
-        <div class="slideshow" id="work2">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\01.png" style="width:100%">
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
             </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\03.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\04.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\05.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work2\06.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slideshow" id="work3">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\01.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\03.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\04.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\05.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work3\06.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slideshow" id="work4">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work4\01.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work4\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work4\03.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slideshow" id="work5">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work5\01.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work5\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work5\03.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slideshow" id="work6">
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work6\01.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work6\02.png" style="width:100%">
-            </div>
-
-            <div class="slides fade">
-                <img class="pic" src=".\img\03_work6\03.png" style="width:100%">
-            </div>
-
-            <div class="slideshow-controls">
-
-                <div class="slideshow-controls-pages">
-                </div>
-
-                <div class="slideshow-controls-prev-next">
-                    <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
-                    <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
-                </div>
-
-                <div class="slideshow-controls-compass">
-                    <div class="compass">
-                        <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
-                        <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="slideshow-rotate-screen">
-            <h1>please rotate</h1>
-            <h1>your device</h1>
-            <h1>into landscape.</h1>
         </div>
 
     </div>
 
 </div>
 
+<div class="slideshow" id="work2">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work2\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work3">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\03.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\04.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\05.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work3\06.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(4)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(5)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(6)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work4">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work4\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work5">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work5\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow" id="work6">
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\01.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\02.png" style="width:100%">
+    </div>
+
+    <div class="slides fade">
+        <img class="pic" src=".\img\03_work6\03.png" style="width:100%">
+    </div>
+
+    <div class="slideshow-controls">
+
+        <div class="slideshow-controls-pages">
+        </div>
+
+        <div class="slideshow-controls-prev-next">
+            <a href="#work" class="button-prev" onclick="plusSlides(-1)"><span class="prev"></span></a>
+            <a href="#work" class="button-next" onclick="plusSlides(1)"><span class="next"></span></a>
+        </div>
+
+        <div class="slideshow-controls-compass">
+            <div class="compass">
+                <a href="#work" class="dot" onclick="currentSlide(1)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(2)"><span></span></a>
+                <a href="#work" class="dot" onclick="currentSlide(3)"><span></span></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="slideshow-rotate-screen">
+    <h1>please rotate</h1>
+    <h1>your device</h1>
+    <h1>into landscape.</h1>
+</div>
+
+    </div>
+
+    </div>
 
 
 <div id="resume">
@@ -699,7 +1083,6 @@
     </div>
 
 </div>
-
 
 
 <div id="contact">
@@ -949,7 +1332,6 @@
 </div>
 
 
-
 <div class="footer">
 
     <div class="footer-frame">
@@ -998,7 +1380,6 @@
 
 
 
-</body>
 
 <script src=".\js\main.js"></script>
 
