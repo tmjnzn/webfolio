@@ -84,6 +84,7 @@ body::-webkit-scrollbar {
 .navibar {
     position: relative;
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     height: 50px;
