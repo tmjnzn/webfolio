@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 
-.grid-frame {
+.segment {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,6 @@ body::-webkit-scrollbar {
 .navibar {
     position: relative;
     display: flex;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
     height: 50px;
@@ -310,6 +309,32 @@ body::-webkit-scrollbar {
     z-index: 1;
 }
 
+.menu-socials {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.logospace {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+    opacity: 0.6;
+    transition: .3s ease;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
 .menu-overlay {
     position: absolute;
     display: flex;
@@ -330,12 +355,13 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .menu-link {
     position: relative;
-    height: 12.5px;
-    width: 100px;
+    height: 25px;
+    width: 100%;
 }
 
 .menu-language {
@@ -343,7 +369,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .menu-language-links {
@@ -358,9 +384,7 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 50px;
-    margin-left: 12.5px;
-    margin-right: 12.5px;
+    align-items: center;
 }
 
 .menu-language-rechts {
@@ -369,6 +393,21 @@ body::-webkit-scrollbar {
     justify-content: flex-start;
     align-items: center;
     width: 75px;
+}
+
+.menu-language-trennung {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 25px;
+}
+
+.menu-copy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -489,25 +528,9 @@ body::-webkit-scrollbar {
 
 /*----- about me -----*/
 
-#about {
+.about{
     position: relative;
     display: none;
-    align-items: center;
-    justify-content: center;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.about-frame {
-    position: relative;
-    width: 124vh;
-}
-
-.about-grid {
-    position: relative;
-    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1778,118 +1801,6 @@ input, textarea {
 
 
 
-
-
-/*----- footer -----*/
-
-.footer {
-    position: relative;
-    display: none;
-    justify-content: center;
-    width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: black;
-}
-
-.footer-frame {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 124vh;
-    margin-bottom: 75px;
-    margin-top: 50px;
-}
-
-.footer-part1 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-part2 {
-    position: relative;
-    display: flex;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-part3 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.homebutton {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    width: 50px;
-    padding-top: 3px;
-    background-color: rgb(40, 40, 40);
-    transition: .3s ease;
-}
-
-.arrow {
-    content: '';
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-top: 3px solid rgb(150, 150, 150);
-    border-right: 3px solid rgb(150, 150, 150);
-    transform: rotate(-45deg);
-    transition: .3s ease;
-}
-
-.socials {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-}
-
-.logospace {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    margin-left: 12.5px;
-    margin-right: 12.5px;
-}
-
-.logo {
-    width: 25px;
-    height: 25px;
-    opacity: 0.6;
-    transition: .3s ease;
-}
-
-.logo:hover {
-    opacity: 1;
-}
-
-.homebutton:hover .arrow {
-    transform: rotate(-45deg);
-    border-top: 4px solid black;
-    border-right: 4px solid black;
-}
-
-.homebutton:hover {
-    background-color: white;
-}
-
-
-
-
-
 /*----- fonts-----*/
 
 a {
@@ -2021,7 +1932,7 @@ p {
 
 /*home*/
 
-.grid-frame {
+.segment {
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -2044,12 +1955,7 @@ p {
 
 /*about*/
 
-    #about {
-        padding-left: 12.5px;
-        padding-right: 12.5px;
-    }
-
-    .about-grid {
+    .about {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
         grid-template-columns: 1fr 1fr;
