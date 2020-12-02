@@ -355,12 +355,12 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .menu-link {
     position: relative;
-    height: 25px;
+    height: 12.5px;
     width: 100%;
 }
 
@@ -481,7 +481,6 @@ body::-webkit-scrollbar {
 
 
 
-
 /*-----home-----*/
 
 .home {
@@ -521,7 +520,6 @@ body::-webkit-scrollbar {
     padding: 25px;
     transition: .3s ease;
 }
-
 
 
 
@@ -685,49 +683,15 @@ body::-webkit-scrollbar {
 
 
 
-/*----- my work -----*/
+/*----- work -----*/
 
-.grid1 {
-    position: relative;
-    height:100%;
-    justify-content: center;
-}
-
-
-
-.grid2 {
-    position: relative;
-    display: flex;
-    
-    height: 100%;
-    width: 124vh;
-
-    background-color: blue;
-}
-
-#work {
+.work {
     position: relative;
     display: none;
-    height: 100%;
-    width: 100%;
-    padding-right: 25px;
-    padding-left: 25px;
-    
-}
-
-
-.work-frame {
-    position: relative;
-    width: 100%;
-}
-
-.work-grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 25px;
     grid-row-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .box {
@@ -796,12 +760,11 @@ body::-webkit-scrollbar {
 }
 
 
+/*----- slideshow -----*/
 
 
-
-.slideshow-frame {
+.projects {
     position: relative;
-    width: 124vh;
     display: none;
 }
 
@@ -1088,25 +1051,9 @@ body::-webkit-scrollbar {
 
 /*-----resume-----*/
 
-#resume {
+.resume {
     position: relative;
     display: none;
-    align-items: center;
-    justify-content: center;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.resume-frame {
-    position: relative;
-    width: 124vh;
-}
-
-.resume-grid {
-    position: relative;
-    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
@@ -1240,41 +1187,10 @@ body::-webkit-scrollbar {
 
 /*----- contact -----*/
 
-#contact {
+
+.contact-grid {
     position: relative;
     display: none;
-    align-items: center;
-    justify-content: center;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-.contact-bg {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-}
-
-.contact-frame {
-    position: relative;
-    width: 124vh;
-}
-
-
-
-
-
-.contact1-grid {
-    position: relative;
-    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat (3, 1fr);
@@ -1282,7 +1198,7 @@ body::-webkit-scrollbar {
     grid-template-areas: "b a a" "c a a";
 }
 
-.contact1-box1 {
+.contact-box-a {
     grid-area: a;
     position: relative;
     display: flex;
@@ -1291,7 +1207,7 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact1-box2 {
+.contact-box-b {
     grid-area: b;
     position: relative;
     display: flex;
@@ -1300,7 +1216,7 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact1-box3 {
+.contact-box-c {
     grid-area: c;
     position: relative;
     display: flex;
@@ -1309,57 +1225,57 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.contact1-box3:hover .box-overlay {
+.contact-box-c:hover .box-overlay {
     opacity: 1;
 }
 
-.contact1-box3:hover .projectname {
+.contact-box-c:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box3:hover .projectlink {
+.contact-box-c:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box3:hover .pic {
+.contact-box-c:hover .pic {
     filter: blur(1.5px);
 }
 
-.contact1-box2:hover .box-overlay {
+.contact-box-b:hover .box-overlay {
     opacity: 1;
 }
 
-.contact1-box2:hover .projectname {
+.contact-box-b:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box2:hover .projectlink {
+.contact-box-b:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box2:hover .pic {
+.contact-box-b:hover .pic {
     filter: blur(1.5px);
 }
 
-.contact1-box1:hover .box-overlay {
+.contact-box-a:hover .box-overlay {
     opacity: 1;
 }
 
-.contact1-box1:hover .projectname {
+.contact-box-a:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box1:hover .projectlink {
+.contact-box-a:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
 
-.contact1-box1:hover .pic {
+.contact-box-a:hover .pic {
     filter: blur(1.5px);
 }
 
@@ -1379,11 +1295,11 @@ body::-webkit-scrollbar {
 
 
 
-.contact2 {
+.request {
     display: none;
 }
 
-.contact2-grid {
+.request-grid {
     position: relative;
     display: grid;
     grid-column-gap: 25px;
@@ -1393,7 +1309,7 @@ body::-webkit-scrollbar {
     grid-template-areas: "a b b" "a b b";
 }
 
-.contact2-box-a {
+.request-box-a {
     grid-area: a;
     position: relative;
     background-color:black;
@@ -1562,7 +1478,7 @@ body::-webkit-scrollbar {
 
 
 
-.contact2-box-b {
+.request-box-b {
     grid-area: b;
     position: relative;
     display: flex;
@@ -2010,12 +1926,7 @@ p {
 
 /*work*/
 
-    #work {
-        padding-right: 12.5px;
-        padding-left: 12.5px;
-    }
-
-    .work-grid {
+    .work {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
         grid-template-columns: repeat(2, 1fr);
@@ -2066,19 +1977,9 @@ p {
 
 
 
-/*contact*/ 
+/*contact*/
 
-    #contact {
-        padding-right: 12.5px;
-        padding-left: 12.5px;
-    }
-
-    #contact2 {
-        padding-right: 12.5px;
-        padding-left: 12.5px;
-    }
-
-    .contact1-grid {
+    .contact-grid {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
         grid-template-columns: repeat (2, 1fr);
@@ -2086,7 +1987,7 @@ p {
         grid-template-areas: "b c" "a a" "a a";
     }
 
-    .contact2-grid {
+    .request-grid {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
         grid-template-columns: 1fr 1fr;

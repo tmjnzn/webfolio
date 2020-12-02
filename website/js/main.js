@@ -84,9 +84,10 @@ function menuBtnClick() {
                 }
             }
         } else {
-            $('.work-bg').delay(300).fadeToggle(300);
-            $('.work-frame').delay(300).fadeToggle(300);
-            $('.slideshow-frame').fadeToggle(300);
+            $('.work').delay(300).fadeToggle(300);
+            $('.projects').fadeToggle(300);
+            $('.slideshow').fadeToggle(300);
+
             $('#' + currentProjectName).toggle();
             $('body').removeClass('noscroll');
             $('.chapter #menu').toggle();
@@ -156,17 +157,15 @@ $(window).scroll(() => {
 
 
 
-/*project*/
+/*work*/
 
 var messageProjectClosed = true
 var currentProjectName
 
 function toggleProject(projectName) {
     if (messageProjectClosed) {
-        $('.work-bg').delay(300).fadeToggle(300);
-        $('.work-frame').fadeToggle(300);
-        $('.slideshow-frame').delay(300).fadeToggle(300);
-        /*$('#rotateHeader').delay(300).fadeToggle(300);*/
+        $('.work').fadeToggle(300);
+        $('.projects').delay(300).fadeToggle(300);
         $('#' + projectName).toggle();
         openSlideShow(projectName);
         $('body').addClass('noscroll');
@@ -237,17 +236,15 @@ var currentFormName = undefined;
 function toggleForm(formName) {
     if (messageFormClosed) {
         currentFormName = formName;
-        $('.contact1').fadeToggle(300);
-        $('.contact2').delay(300).fadeToggle(300);
-        $('.contact-bg').delay(300).fadeToggle(300);
+        $('.contact').fadeToggle(300);
+        $('.request').delay(300).fadeToggle(300);
         $(formName).toggle();
         menuBtn.classList.add('open');
         $('body').addClass('noscroll');
         menuBtn.classList.remove('close')
     } else {
-        $('.contact1').delay(300).fadeToggle(300);
-        $('.contact2').fadeToggle(300);
-        $('.contact-bg').delay(300).fadeToggle(300);
+        $('.contact').delay(300).fadeToggle(300);
+        $('.request').fadeToggle(300);
         $(formName).fadeToggle(300);
         menuBtn.classList.add('close');
         $('body').removeClass('noscroll');
