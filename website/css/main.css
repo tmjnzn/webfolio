@@ -301,7 +301,7 @@ body::-webkit-scrollbar {
 /*----- menu -----*/
 
 .menu {
-    position: absolute;
+    position: fixed;
     display: none;
     flex-direction: column;
     top: 50px;
