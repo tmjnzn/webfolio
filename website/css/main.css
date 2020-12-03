@@ -22,6 +22,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 100%;
+    height: -webkit-fill-available;
 }
 
 
@@ -31,8 +32,14 @@ html {
 /*----- body -----*/
 
 body {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     scroll-behavior: smooth;
     background-color: rgb(230, 230, 230);
+   
 
 }
 
@@ -46,17 +53,9 @@ body::-webkit-scrollbar {
 
 
 
-/*----- grid -----*/
 
-.grid {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    
-}
+/*----- navigation -----*/
+
 
 .navibar {
     position: fixed;
@@ -96,6 +95,9 @@ body::-webkit-scrollbar {
 
 
 
+/*----- frame -----*/
+
+
 .frame {
     position: relative;
     display: flex;
@@ -113,12 +115,6 @@ body::-webkit-scrollbar {
     margin-left: 25px;
     margin-right: 25px;
 }
-
-
-/*----- navi -----*/
-
-
-
 
 
 
@@ -307,8 +303,11 @@ body::-webkit-scrollbar {
 .menu {
     position: absolute;
     display: none;
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
+    top: 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.85);
     z-index: 1;
 }
