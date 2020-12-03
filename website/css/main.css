@@ -49,13 +49,13 @@ body::-webkit-scrollbar {
 /*----- grid -----*/
 
 .grid {
-    position: fixed;
-    top:0;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    
 }
 
 .navibar {
@@ -76,7 +76,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 125vh;
+    width: 128vh;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -109,7 +109,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 125vh;
+    width: 128vh;
     margin-left: 25px;
     margin-right: 25px;
 }
