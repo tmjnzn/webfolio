@@ -104,7 +104,7 @@ function menuBtnClick() {
 
     } else {
         $('#impHeader').fadeToggle(300);
-        $('.imp-frame').delay(300).toggle(300);
+        $('.imprint').fadeToggle(300);
         $('.menu').fadeToggle(300);
         $('.chapter #menu').toggle();
         $('.menu-overlay').delay(300).fadeToggle(300);
@@ -315,12 +315,11 @@ function evaluateDocuments() {
 
 /*impressum*/
 
-
 $(document).ready(function () {
     $('#imp a').on('click', function () {
         $('#impHeader').delay(300).fadeToggle(300);
         $('#menu').fadeToggle(300);
-        $('.imp-frame').delay(300).fadeToggle(300);
+        $('.imprint').delay(300).fadeToggle(300);
         $('.menu-overlay').fadeToggle(300);
         messageImpClosed =  !messageImpClosed;
     });
