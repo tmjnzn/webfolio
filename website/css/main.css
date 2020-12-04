@@ -32,15 +32,13 @@ html {
 /*----- body -----*/
 
 body {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     scroll-behavior: smooth;
     background-color: rgb(230, 230, 230);
-   
-
 }
 
 body::-webkit-scrollbar {
@@ -96,7 +94,6 @@ body::-webkit-scrollbar {
 
 
 /*----- frame -----*/
-
 
 .pages {
     position: relative;
@@ -498,7 +495,7 @@ body::-webkit-scrollbar {
 
 .home {
     position: relative;
-    display: none;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -541,7 +538,7 @@ body::-webkit-scrollbar {
 
 .about{
     position: relative;
-    display: grid;
+    display: none;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1825,13 +1822,17 @@ p {
 
 
 
-
 /*navibar*/
 
-    .navi-frame {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
+.navi-frame {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+}
+
+.frame {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+}
 
 
 
@@ -1839,148 +1840,154 @@ p {
 
 /*impressum*/
 
-     .imprint-grid {
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "a a" 
-        "b b"
-        "b b";
-        }    
+.imprint-grid {
+    grid-column-gap: 12.5px;
+    grid-row-gap: 12.5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "a a" 
+    "b b"
+    "b b";
+}    
 
+.imp-frame {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+}
+
+.imp-box-overlay {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 12.5px;
+    transition: .3s ease;
+}
 
 
 
 
 /*home*/
 
-.segment {
-    margin-left: 25px;
-    margin-right: 25px;
+.home {
+    grid-column-gap: 12.5px;
+    grid-row-gap: 12.5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a a" "b b" "b b";
 }
 
-    .home {
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "a a" "b b" "b b";
-    }
-
-    .home-box-a-overlay {
-        padding: 12.5px;
-    }
-
+.home-box-a-overlay {
+    padding: 12.5px;
+}
 
 
 
 
 /*about*/
 
-    .about {
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "a c" "b b" "d d";
-    }
+.about {
+    grid-column-gap: 12.5px;
+    grid-row-gap: 12.5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a c" "b b" "d d";
+}
 
-    .about-overlay {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 12.5px;
-        transition: .3s ease;
-        opacity: 1;
-    }
+.about-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 12.5px;
+    transition: .3s ease;
+    opacity: 1;
+}
 
-    .about-overlay-2 {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 12.5px;
-        transition: .3s ease;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.75);
-    }
+.about-overlay-2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 12.5px;
+    transition: .3s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
 
-    .about-overlay-3 {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 12.5px;
-        transition: .3s ease;
-        opacity: 0;
-        background-color: black;
-    }
-
+.about-overlay-3 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 12.5px;
+    transition: .3s ease;
+    opacity: 0;
+    background-color: black;
+}
 
 
 
 
 /*work*/
 
-    .work {
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-    }
+.work {
+    grid-column-gap: 12.5px;
+    grid-row-gap: 12.5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
-    .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+.project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
 
-    .slideshow-grid {
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-    }
+.slideshow-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 12.5px;
+    grid-row-gap: 12.5px;
+}
 
-    .slideshow-rotate-screen {
-        display: flex;
-    }
-
+.slideshow-rotate-screen {
+    display: flex;
+}
 
 
 
 
 /*resume*/
 
-    #resume {
-        padding-right: 12.5px;
-        padding-left: 12.5px;
-    }
+#resume {
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+}
 
-    .resume-grid {
-        grid-row-gap: 12.5px;
-        grid-column-gap: 12.5px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas:
-        "b c"
-        "a a"
-        "a a";
-    }
-
+.resume-grid {
+    grid-row-gap: 12.5px;
+    grid-column-gap: 12.5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "b c"
+    "a a"
+    "a a";
+}
 
 
 
@@ -2031,14 +2038,4 @@ p {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(13, 1fr);
         grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
-    }
-
-
-
-
-
-    @media only screen and (min-width: 65vh) {
-
-    
-
     }
