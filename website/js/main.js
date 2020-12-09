@@ -316,7 +316,7 @@ function evaluateDocuments() {
 /*impressum*/
 
 $(document).ready(function () {
-    $('#imp a').on('click', function () {
+    $('#imprint a').on('click', function () {
         $('#impHeader').delay(300).fadeToggle(300);
         $('#menu').fadeToggle(300);
         $('.imprint').delay(300).fadeToggle(300);

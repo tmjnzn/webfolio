@@ -339,12 +339,12 @@ body::-webkit-scrollbar {
     position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    align-items: center;
-    justify-content: center;
     z-index: 2;
 }
 
@@ -493,7 +493,7 @@ body::-webkit-scrollbar {
 
 /*-----home-----*/
 
-.home {
+.home-grid {
     position: relative;
     display: grid;
     grid-column-gap: 25px;
@@ -536,9 +536,13 @@ body::-webkit-scrollbar {
 
 /*----- about me -----*/
 
-.about{
-    position: relative;
+.about {
     display: none;
+}
+
+.about-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -696,8 +700,12 @@ body::-webkit-scrollbar {
 /*----- work -----*/
 
 .work {
-    position: relative;
     display: none;
+}
+
+.work-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
@@ -1062,8 +1070,12 @@ body::-webkit-scrollbar {
 /*-----resume-----*/
 
 .resume {
-    position: relative;
     display: none;
+}
+
+.resume-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
@@ -1197,10 +1209,13 @@ body::-webkit-scrollbar {
 
 /*----- contact -----*/
 
+.contact {
+    display: none;
+}
 
 .contact-grid {
     position: relative;
-    display: none;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat (3, 1fr);
@@ -1890,6 +1905,10 @@ p {
 /*about*/
 
 .about {
+    display: none;
+}
+
+.about-grid {
     grid-column-gap: 12.5px;
     grid-row-gap: 12.5px;
     grid-template-columns: 1fr 1fr;
