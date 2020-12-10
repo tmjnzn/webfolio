@@ -495,7 +495,7 @@ body::-webkit-scrollbar {
 
 .home {
     position: relative;
-    display: none;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -538,7 +538,7 @@ body::-webkit-scrollbar {
 
 .about {
     position: relative;
-    display: grid;
+    display: none;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
