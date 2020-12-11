@@ -537,8 +537,12 @@ body::-webkit-scrollbar {
 /*----- about me -----*/
 
 .about {
-    position: relative;
     display: none;
+}
+
+.about-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -696,8 +700,12 @@ body::-webkit-scrollbar {
 /*----- work -----*/
 
 .work {
-    position: relative;
     display: none;
+}
+
+.work-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
@@ -1061,8 +1069,12 @@ body::-webkit-scrollbar {
 /*-----resume-----*/
 
 .resume {
-    position: relative;
     display: none;
+}
+
+.resume-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
@@ -1197,8 +1209,12 @@ body::-webkit-scrollbar {
 /*----- contact -----*/
 
 .contact {
-    position: relative;
     display: none;
+}
+
+.contact-grid {
+    position: relative;
+    display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
     grid-template-columns: repeat (3, 1fr);
@@ -1887,7 +1903,7 @@ p {
 
 /*about*/
 
-.about {
+.about-grid {
     grid-column-gap: 12.5px;
     grid-row-gap: 12.5px;
     grid-template-columns: 1fr 1fr;
@@ -1941,7 +1957,7 @@ p {
 
 /*work*/
 
-.work {
+.work-grid {
     grid-column-gap: 12.5px;
     grid-row-gap: 12.5px;
     grid-template-columns: repeat(2, 1fr);
@@ -1971,7 +1987,7 @@ p {
 
 /*resume*/
 
-.resume {
+.resume-grid {
     grid-row-gap: 12.5px;
     grid-column-gap: 12.5px;
     grid-template-columns: repeat(2, 1fr);
@@ -1987,7 +2003,7 @@ p {
 
 /*contact*/
 
-    .contact {
+    .contact-grid {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
         grid-template-columns: repeat (2, 1fr);
