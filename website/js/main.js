@@ -1,5 +1,3 @@
-
-
 /*menu auf / zu*/
 
 var checkboxMsg = false;
@@ -25,6 +23,11 @@ $(window).on('beforeunload', function () {
 
 var showMenu = false;
 var scrollDisabled = false
+
+function togglePage(name) {
+    $('.page').fadeOut(300);
+    $('.' + name).delay(300).fadeIn(300);
+}
 
 function toggleMenu(name) {
     if (messageFormClosed) {
@@ -55,9 +58,8 @@ function toggleMenu(name) {
 }
 
 
-
-
 var messageImpClosed = true
+
 function menuBtnClick() {
 
     if (messageImpClosed) {
@@ -114,13 +116,10 @@ function menuBtnClick() {
         setTimeout(() => setHeader(), 300);
         messageImpClosed = true
         menuOpen = false;
-        showMenu=false
+        showMenu = false
     }
 
 }
-
-
-
 
 
 var visibleHeaderName = undefined
@@ -150,15 +149,6 @@ $(window).scroll(() => {
 });
 
 
-
-
-
-
-
-
-
-
-
 /*work*/
 
 var messageProjectClosed = true
@@ -183,9 +173,6 @@ function toggleProject(projectName) {
     }
     messageProjectClosed = false;
 };
-
-
-
 
 
 /*slideshow*/
@@ -227,9 +214,6 @@ function showSlides(n) {
 }
 
 
-
-
-
 /*contact*/
 
 var messageFormClosed = true
@@ -257,9 +241,6 @@ function toggleForm(formName) {
     }
     messageFormClosed = !messageFormClosed;
 };
-
-
-
 
 
 /*form*/
@@ -310,9 +291,6 @@ function evaluateDocuments() {
 }
 
 
-
-
-
 /*impressum*/
 
 $(document).ready(function () {
@@ -321,6 +299,6 @@ $(document).ready(function () {
         $('#menu').fadeToggle(300);
         $('.imprint').delay(300).fadeToggle(300);
         $('.menu-overlay').fadeToggle(300);
-        messageImpClosed =  !messageImpClosed;
+        messageImpClosed = !messageImpClosed;
     });
 });
