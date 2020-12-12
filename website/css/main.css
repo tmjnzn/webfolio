@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
 /*----- navigation -----*/
 
 
-.navibar {
+.navi {
     position: fixed;
     top:0;
     display: flex;
@@ -347,7 +347,7 @@ body::-webkit-scrollbar {
     z-index: 2;
 }
 
-.menu-links {
+.page-links {
     position: relative;
     display: flex;
     flex-direction: column;
