@@ -780,7 +780,7 @@ body::-webkit-scrollbar {
 /*----- slideshow -----*/
 
 
-.projects {
+.project {
     display: none;
 }
 
@@ -1830,10 +1830,51 @@ p {
 
 /*responsive*/
 
-@media only screen and (max-width: 65vh) {
+@media only screen and (max-width: 588px) {
 
+/*   
 
+    h1 {
+        font-size: 10px;
+        line-height: 15px;
+    }
 
+    h2 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    h3 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    h3 a {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    h4 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    h5 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    h5 a {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    */
 
 /*navibar*/
 
@@ -2047,3 +2088,4 @@ p {
         grid-template-rows: repeat(13, 1fr);
         grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
     }
+}

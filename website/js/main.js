@@ -89,7 +89,7 @@ function menuBtnClick() {
             }
         } else {
             $('.work').delay(300).fadeToggle(300);
-            $('.projects').fadeToggle(300);
+            $('.project').fadeToggle(300);
             $('.slideshow').fadeToggle(300);
 
             $('#' + currentProjectName).toggle();
@@ -157,7 +157,7 @@ var currentProjectName
 function toggleProject(projectName) {
     if (messageProjectClosed) {
         $('.work').fadeToggle(300);
-        $('.projects').delay(300).fadeToggle(300);
+        $('.project').delay(300).fadeToggle(300);
         $('#' + projectName).toggle();
         openSlideShow(projectName);
         $('body').addClass('noscroll');
