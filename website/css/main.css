@@ -35,7 +35,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     scroll-behavior: smooth;
     /*
     background-color: rgb(230, 230, 230);
@@ -75,7 +74,7 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 128vh;
+    width: 120vh;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -100,17 +99,17 @@ body::-webkit-scrollbar {
 .pages {
     position: relative;
     display: flex;
+    margin-top: 60px;
     justify-content: center;
-    height: 100%;
-    margin-top: 40px;
 }
 
 .frame {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 128vh;
+    width: 120vh;
+    margin-top: 90px;
+    margin-bottom: 90px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -693,10 +692,10 @@ body::-webkit-scrollbar {
 .work-grid {
     position: relative;
     display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .box {
@@ -729,7 +728,7 @@ body::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.75);
     opacity: 0;
     transition: .3s ease;
-    padding: 20px;
+    padding: 30px;
 }
 
 .text-overlay {
@@ -748,7 +747,7 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     transition: .3s ease;
-    transform: translateY(-25px);
+    transform: translateY(-30px);
     opacity: 0;
 }
 
@@ -761,7 +760,7 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     transition: .3s ease;
-    transform: translateY(25px);
+    transform: translateY(30px);
     opacity: 0;
 }
 
