@@ -302,28 +302,76 @@ body::-webkit-scrollbar {
 .menu {
     position: fixed;
     display: none;
-    flex-direction: column;
-    top: 40px;
+    top: 60px;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.90);
     z-index: 1;
+}
+
+.menu-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.menu-links {
+    position: relative;
+    display: flex;
+    width: 128vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100%;
+    top: 60px;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.menu-language {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.segment {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gap {
+    width: 20px;
+    height: 20px;
+}
+
+.page-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-bottom: 60px;
 }
 
 .menu-socials {
     position: relative;
     display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+    flex-direction: column;
+    margin-bottom: 60px;
 }
 
 .logospace {
     position: relative;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 22px;
+    height: 22px;
 }
 
 .logo {
@@ -337,79 +385,11 @@ body::-webkit-scrollbar {
     opacity: 1;
 }
 
-.menu-overlay {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-}
-
-.page-links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.link-gap {
-    position: relative;
-    height: 10px;
-    width: 100%;
-}
-
-.menu-language {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.menu-language-links {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 75px;
-}
-
-.menu-language-mitte {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-language-rechts {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 75px;
-}
-
-.menu-language-trennung {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 20px;
-}
-
 .menu-copy {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 
@@ -1760,7 +1740,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1790,7 +1770,7 @@ h3 {
 }
 
 h3 a {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1802,7 +1782,6 @@ h3 a {
 h4 {
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 20px;
@@ -2006,8 +1985,8 @@ p {
 /*work*/
 
 .work-grid {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }

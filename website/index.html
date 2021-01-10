@@ -22,8 +22,8 @@
             
             <div class="navi-elements">
                         <div class="chapter" id="homeHeader" data-visible="home"><h1></h1></div>
-                        <div class="chapter" id="aboutHeader" data-visible="about"><h1>About Me</h1></div>
-                        <div class="chapter" id="workHeader" data-visible="work"><h1>Latest Work</h1></div>
+                        <div class="chapter" id="aboutHeader" data-visible="about"><h1>About</h1></div>
+                        <div class="chapter" id="workHeader" data-visible="work"><h1>Work</h1></div>
                         <div class="chapter" id="resumeHeader" data-visible="resume"><h1>Resume</h1></div>
                         <div class="chapter" id="contactHeader" data-visible="contact"><h1>Contact</h1></div>
             
@@ -54,96 +54,115 @@
     <div class="menu">
 
         <div class="menu-overlay">
-        
-            <div id="links" class="menu-language">
 
-                <div class="menu-language-links">
-                    <h5><a href="#home" onclick="toggleMenu(undefined)">deutsch</a></h5>
-                </div>
+            <div class="menu-links">
 
-                <div class="menu-language-trennung">
-                    <h3>|</h3>
-                </div>
+                <div class="page-links">
 
-                <div class="menu-language-mitte">
-                    <h5><a href="#home" onclick="toggleMenu()">français</a></h5>
-                </div>
+                        <div id="links">
 
-                <div class="menu-language-trennung">
-                    <h3>|</h3>
-                </div>
+                            <div id="home link">
+                                <h3><a href="#home" onclick="toggleMenu('homeHeader'); togglePage('home')">Home</a></h3>
+                            </div>
 
-                <div class="menu-language-rechts">
-                    <h5><a href="#home" onclick="toggleMenu()">español</a></h5>
-                </div>
+                            <div class="gap"></div>
+                            
+                            <div id="about link">
+                                <h3><a href="javascript:;" onclick="toggleMenu('aboutHeader'); togglePage('about')">About</a></h3>
+                            </div>
 
-            </div>
+                            <div class="gap"></div>
 
-            <div class="page-links">
+                            <div id="work link">
+                                <h3><a href="javascript:;" onclick="toggleMenu('workHeader'); togglePage('work')">Work</a></h3>
+                            </div>
 
-                    <div id="links">
+                            <div class="gap"></div>
 
-                        <div id="home link">
-                            <h3><a href="#home" onclick="toggleMenu('homeHeader'); togglePage('home')">Home</a></h3>
-                            <div class="link-gap"></div>
-                        </div>
-                        
-                        <div id="about link">
-                            <h3><a href="javascript:;" onclick="toggleMenu('aboutHeader'); togglePage('about')">About Me</a></h3>
-                            <div class="link-gap"></div>
-                        </div>
+                            <div id="resume link">
+                                <h3><a href="javascript:;" onclick="toggleMenu('resumeHeader'); togglePage('resume')">Resume</a></h3>
+                            </div>
 
-                        <div id="work link">
-                            <h3><a href="javascript:;" onclick="toggleMenu('workHeader'); togglePage('work')">Latest Work</a></h3>
-                            <div class="link-gap"></div>
+                            <div class="gap"></div>
+
+                            <div id="contact link">
+                                <h3><a href="javascript:;" onclick="toggleMenu('contactHeader'); togglePage('contact')">Contact</a></h3>
+                            </div>
+
+                            <div class="gap"></div>
+
                         </div>
 
-                        <div id="resume link">
-                            <h3><a href="javascript:;" onclick="toggleMenu('resumeHeader'); togglePage('resume')">Resume</a></h3>
-                            <div class="link-gap"></div>
+                        <div id="imprint">
+                            <h3><a href="javascript:;" onclick="toggleImp('imprint')">Impressum</a></h3>
                         </div>
 
-                        <div id="contact link">
-                            <h3><a href="javascript:;" onclick="toggleMenu('contactHeader'); togglePage('contact')">Contact</a></h3>
-                            <div class="link-gap"></div>
+                </div>
+                    
+                <div id="links" class="menu-language">
+
+                    <div class="segment">
+
+                        <h5>Language</h5>
+
+                    </div>
+
+                    <div class="gap"></div>
+
+                    <div class="segment">
+
+                        <h3><a href="#home" onclick="toggleMenu(undefined)">EN</a></h3>
+                        <div class="gap"></div>
+                        <h3><a href="#home" onclick="toggleMenu(undefined)">DE</a></h3>
+                        <div class="gap"></div>
+                        <h3><a href="#home" onclick="toggleMenu(undefined)">FR</a></h3>
+                        <div class="gap"></div>
+                        <h3><a href="#home" onclick="toggleMenu(undefined)">ES</a></h3>
+
+                    </div>
+
+                </div>
+
+                <div class="menu-socials">
+
+                    <div class="segment">
+
+                        <h5>Socials</h5>
+
+                    </div>
+
+                    <div class="gap"></div>
+
+                    <div class="segment">
+            
+                        <div class="logospace">
+                            <a href="https://www.behance.net" target="_new"><img class="logo" src=".\img\06_footer\behance.svg"></a>
+                        </div>
+                        <div class="gap"></div>
+                        <div class="logospace">
+                            <a href="https://www.xing.com" target="_new"><img class="logo" src=".\img\06_footer\xing.svg"></a>
+                        </div>
+                        <div class="gap"></div>
+                        <div class="logospace">
+                            <a href="https://www.instagram.com" target="_new"><img class="logo" src=".\img\06_footer\insta.svg"></a>
+                        </div>
+                        <div class="gap"></div>
+                        <div class="logospace">
+                            <a href="https://www.youtube.com" target="_new"><img class="logo" src=".\img\06_footer\yt.svg"></a>
                         </div>
 
                     </div>
 
-                    <div id="imprint">
-                        <h3><a href="javascript:;" onclick="toggleImp('imprint')">Impressum</a></h3>
-                    </div>
-
-            </div>
-                
-            <div class="menu-socials">
-        
-                <div class="logospace">
-                    <a href="https://www.behance.net" target="_new"><img class="logo" src=".\img\06_footer\behance.svg"></a>
                 </div>
+            
+                <div class="menu-copy">
 
-                <div class="logospace">
-                    <a href="https://www.xing.com" target="_new"><img class="logo" src=".\img\06_footer\xing.svg"></a>
-                </div>
-
-                <div class="logospace">
-                    <a href="https://www.instagram.com" target="_new"><img class="logo" src=".\img\06_footer\insta.svg"></a>
-                </div>
-
-                <div class="logospace">
-                    <a href="https://www.youtube.com" target="_new"><img class="logo" src=".\img\06_footer\yt.svg"></a>
-                </div>
-
-            </div>
-        
-            <div class="menu-copy">
-
-                <div>
                     <p>©2020 Timo Janzon. All rights reserved.<p>
-                </div>
 
-            </div>
+                </div>
         
+            </div>
+
         </div>
         
     </div>
