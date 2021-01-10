@@ -324,11 +324,11 @@ body::-webkit-scrollbar {
 .menu-links {
     position: relative;
     display: flex;
+    justify-content: center;
     width: 128vh;
     margin-left: 20px;
     margin-right: 20px;
     height: 100%;
-    top: 60px;
     flex-direction: column;
     z-index: 2;
 }
@@ -345,19 +345,28 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+.segment-c {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .gap {
     width: 20px;
-    height: 20px;
+    height: 15px;
 }
 
 .page-links {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    text-align: start;
+    align-items: center;
+    text-align: center;
     margin-bottom: 60px;
 }
 
@@ -388,7 +397,7 @@ body::-webkit-scrollbar {
 .menu-copy {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -1740,7 +1749,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1750,7 +1759,7 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1770,7 +1779,7 @@ h3 {
 }
 
 h3 a {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1789,14 +1798,6 @@ h4 {
 }
 
 h5 {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'asse 11';
-    line-height: 20px;
-    color: rgb(129, 236, 236);
-}
-
-h5 a {
     font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
