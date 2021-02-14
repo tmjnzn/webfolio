@@ -59,7 +59,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 50px;
     width: 100%;
     background-color: black;
     z-index: 2;
@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
 .pages {
     position: relative;
     display: flex;
-    margin-top: 60px;
+    margin-top: 50px;
     justify-content: center;
 }
 
@@ -107,8 +107,8 @@ body::-webkit-scrollbar {
     width: 120vh;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
 
 
@@ -121,7 +121,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 19px;
+    height: 17px;
     width: 20px;
     cursor: pointer;
 }
@@ -142,11 +142,11 @@ body::-webkit-scrollbar {
 }
 
 .menu-burger::before {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 }
 
 .menu-burger::after {
-    transform: translateY(8px);
+    transform: translateY(7px);
 }
 
 .menu-btn.open .menu-burger {
@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
 
 @keyframes ani-top-for {
     0% {
-        transform: translateY(-8px);
+        transform: translateY(-7px);
         background-color: white;
     }
     50% {
@@ -190,7 +190,7 @@ body::-webkit-scrollbar {
 
 @keyframes ani-bottom-for {
     0% {
-        transform: translateY(8px);
+        transform: translateY(7px);
         background-color: white;
     }
     50% {
@@ -253,7 +253,7 @@ body::-webkit-scrollbar {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-8px);
+        transform: translateY(-7px);
     }
 }
 
@@ -270,7 +270,7 @@ body::-webkit-scrollbar {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(8px);
+        transform: translateY(7px);
     }
 }
 
@@ -298,7 +298,7 @@ body::-webkit-scrollbar {
 .menu {
     position: fixed;
     display: none;
-    top: 60px;
+    top: 50px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -380,8 +380,8 @@ body::-webkit-scrollbar {
 }
 
 .gap {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 .logospace {
