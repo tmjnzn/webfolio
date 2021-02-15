@@ -107,8 +107,8 @@ body::-webkit-scrollbar {
     width: 120vh;
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 75px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 
@@ -487,9 +487,11 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "a b b" "a b b";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    grid-template-areas:
+    "a b b"
+    ". b b";
 }
 
 .home-box-a {
@@ -505,17 +507,6 @@ body::-webkit-scrollbar {
     transition: .3s ease;
     overflow: hidden;
     padding-top: 100%;
-}
-
-.home-box-a-overlay {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
 }
 
 
@@ -1797,11 +1788,13 @@ p {
 /*home*/
 
 .home {
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "a a" "b b" "b b";
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2);
+    grid-template-areas:
+    "a"
+    "b";
 }
 
 
