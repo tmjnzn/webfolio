@@ -72,8 +72,8 @@ body::-webkit-scrollbar {
     align-items: center;
     height: 100%;
     width: 120vh;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .navi-elements {
@@ -105,8 +105,8 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     width: 120vh;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
     margin-top: 75px;
     margin-bottom: 75px;
 }
@@ -322,8 +322,8 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     width: 128vh;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
     height: 100%;
     flex-direction: column;
     z-index: 2;
@@ -486,8 +486,8 @@ body::-webkit-scrollbar {
 .home {
     position: relative;
     display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "a b b" "a b b";
@@ -531,8 +531,8 @@ body::-webkit-scrollbar {
 .about-grid {
     position: relative;
     display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "a b b" "c d d";
@@ -694,8 +694,8 @@ body::-webkit-scrollbar {
 .work-grid {
     position: relative;
     display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
@@ -730,7 +730,7 @@ body::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.75);
     opacity: 0;
     transition: .3s ease;
-    padding: 30px;
+    padding: 25px;
 }
 
 .text-overlay {
@@ -749,7 +749,7 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     transition: .3s ease;
-    transform: translateY(-20px);
+    transform: translateY(-25px);
     opacity: 0;
 }
 
@@ -762,7 +762,7 @@ body::-webkit-scrollbar {
     height: 100%;
     width: 100%;
     transition: .3s ease;
-    transform: translateY(20px);
+    transform: translateY(25px);
     opacity: 0;
 }
 
@@ -1810,6 +1810,15 @@ h4 {
     color: rgb(129, 236, 236);
 }
 
+h4 a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'asse 5';
+    line-height: 20px;
+    color: rgb(129, 236, 236);
+}
+
 h5 {
     font-size: 16px;
     font-weight: 500;
@@ -1842,48 +1851,6 @@ p {
 
 @media only screen and (max-width: 588px) {
 
-/*
-    h1 {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h2 {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h3 {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h3 a {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h4 {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h5 {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    h5 a {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    p {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    */
 
 /*navibar*/
 
@@ -1915,8 +1882,8 @@ p {
 }    
 
 .imp-frame {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .imp-box-overlay {
@@ -1926,7 +1893,6 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    margin: 10px;
     transition: .3s ease;
 }
 
@@ -1936,15 +1902,11 @@ p {
 /*home*/
 
 .home {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "a a" "b b" "b b";
-}
-
-.home-box-a-overlay {
-    padding: 10px;
 }
 
 
@@ -1953,8 +1915,8 @@ p {
 /*about*/
 
 .about-grid {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "a c" "b b" "d d";
@@ -2037,8 +1999,8 @@ p {
 /*resume*/
 
 .resume-grid {
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
@@ -2053,8 +2015,8 @@ p {
 /*contact*/
 
     .contact-grid {
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
         grid-template-columns: repeat (2, 1fr);
         grid-template-rows: repeat (3, 1fr);
         grid-template-areas: "b c" "a a" "a a";
