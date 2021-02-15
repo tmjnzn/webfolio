@@ -578,7 +578,6 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 20px;
     transition: .3s ease;
     opacity: 1;
 }
@@ -1070,21 +1069,19 @@ body::-webkit-scrollbar {
 .resume-grid {
     position: relative;
     display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 25px;
+    grid-row-gap: 75px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
     grid-template-areas:
-    "a a b"
-    "a a c";
+    "a b"
+    "c d";
 }
 
 .resume-box-a {
     grid-area: a;
     position: relative;
     display: flex;
-    padding-top: 100%;
-    background: blue;
 }
 
 .resume-box-b {
@@ -1092,111 +1089,20 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color:yellow;
 }
 
 .resume-box-c {
     grid-area: c;
     position: relative;
     display: flex;
-    flex-direction: column;
-    background-color: red;
 }
 
-.split-box {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.split-top {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    padding: 25px;
-    margin-bottom: 12.5px;
-    background-color: white;
-}
-
-.split-bottom {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    margin-top: 12.5px;
-    padding: 25px;
-    background-color: white;
-}
-
-.exp-infobox {
-    position: relative;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.exp-details {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: space-between;
-}
-
-.period {
+.resume-box-d {
+    grid-area: d;
     position: relative;
     display: flex;
     flex-direction: column;
 }
-
-.company {
-    position: relative;
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-}
-
-.companylogo {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.resumelogo {
-    width: 140px;
-}
-
-.summ-infobox {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.summary {
-    position: relative;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-}
-
 
 
 
@@ -1930,7 +1836,6 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 10px;
     transition: .3s ease;
     opacity: 1;
 }
@@ -1943,7 +1848,6 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 10px;
     transition: .3s ease;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.75);
@@ -1957,7 +1861,6 @@ p {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 10px;
     transition: .3s ease;
     opacity: 0;
     background-color: black;
@@ -1999,14 +1902,19 @@ p {
 /*resume*/
 
 .resume-grid {
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4);
     grid-template-areas:
-    "b c"
-    "a a"
-    "a a";
+    "a"
+    "b"
+    "c"
+    "d";
+}
+
+.resume-box-c {
+    padding-top: 50px;
 }
 
 
