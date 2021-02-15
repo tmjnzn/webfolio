@@ -107,8 +107,8 @@ body::-webkit-scrollbar {
     width: 120vh;
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 75px;
+    margin-bottom: 125px;
 }
 
 
@@ -491,7 +491,7 @@ body::-webkit-scrollbar {
     grid-template-rows: repeat(2);
     grid-template-areas:
     "a b b"
-    ". b b";
+    "a b b";
 }
 
 .home-box-a {
@@ -1790,11 +1790,12 @@ p {
 .home {
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3);
     grid-template-areas:
-    "a"
-    "b";
+    "a a"
+    "b b"
+    "b b";
 }
 
 
