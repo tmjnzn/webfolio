@@ -28,7 +28,7 @@ function togglePage(name) {
     $('.page').fadeOut(300);
     $('.' + name).delay(300).fadeIn(300);
     $('.footer').fadeOut(300);
-    $('.footer').delay(300).fadeIn(300);
+    $('.footer').fadeIn(300);
 }
 
 function toggleMenu(name) {

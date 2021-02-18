@@ -1110,7 +1110,9 @@ body::-webkit-scrollbar {
     grid-row-gap: 20px;
     grid-template-columns: repeat (3, 1fr);
     grid-template-rows: repeat (2, 1fr);
-    grid-template-areas: "b a a" "c a a";
+    grid-template-areas:
+    "a c c"
+    "b c c";
 }
 
 .contact-box-a {
@@ -1120,6 +1122,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
+    overflow: hidden;
 }
 
 .contact-box-b {
@@ -1129,6 +1132,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
+    overflow: hidden;
 }
 
 .contact-box-c {
@@ -1138,6 +1142,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     padding-top: 100%;
+    overflow: hidden;
 }
 
 .contact-box-c:hover .box-overlay {
@@ -1221,13 +1226,14 @@ body::-webkit-scrollbar {
     grid-row-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "a b b" "a b b";
+    grid-template-areas:
+    "a b b"
+    "a b b";
 }
 
 .request-box-a {
     grid-area: a;
     position: relative;
-    background-color:black;
 }
 
 .doc-grid {
@@ -1238,12 +1244,24 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 20px;
-    grid-column-gap: 12.5px;
-    grid-row-gap: 12.5px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     grid-template-columns: 2fr;
     grid-template-rows: repeat(13, 1fr);
-    grid-template-areas: "t" "t" "." "a" "b" "c" "." "d" "d" "d" "d" "d" "d";
+    grid-template-areas:
+    "t"
+    "t"
+    "."
+    "a"
+    "b"
+    "c"
+    "."
+    "d"
+    "d"
+    "d"
+    "d"
+    "d"
+    "d";
 }
 
 .doc-box-t {
@@ -1280,11 +1298,11 @@ body::-webkit-scrollbar {
 }
 
 .doc-box-a div label span {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
-    color: black;
+    color: white;
 }
 
 .doc-box-b {
@@ -1321,11 +1339,11 @@ body::-webkit-scrollbar {
 }
 
 .doc-box-b div.checked label span {
-    color: black;
+    color: white;
 }
 
 .doc-box-b div label span {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
@@ -1355,11 +1373,11 @@ body::-webkit-scrollbar {
 }
 
 .doc-box-c div.checked label span {
-    color: black;
+    color: white;
 }
 
 .doc-box-c div label span {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
@@ -1371,6 +1389,7 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     overflow: hidden;
+    padding-top: 100%;
 }
 
 .write-message {
@@ -1409,12 +1428,24 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 25px;
-    grid-column-gap: 12.5px;
-    grid-row-gap: 12.5px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(13, 1fr);
-    grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
+    grid-template-areas:
+    "t t t t t t t t"
+    "t t t t t t t t"
+    "a a a a a a a a"
+    "b b b b c c c c"
+    "d d d d e e e e"
+    "f f f f g g g g"
+    "h h h h i i i i"
+    "j j j j j j j j"
+    "j j j j j j j j"
+    "j j j j j j j j"
+    "j j j j j j j j"
+    "j j j j j j j j"
+    ". . k k k k . .";
 }
 
 input[type=text] {
@@ -1422,7 +1453,7 @@ input[type=text] {
     display: flex;
     width: 100%;
     height: 100%;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     padding-left: 12.5px;
@@ -1438,7 +1469,7 @@ input[type=text]:valid {
 }
 
 ::placeholder {
-    color: rgb(150, 150, 150);
+    color: rgb(200, 200, 200);
 }
 
 textarea:focus,
@@ -1448,15 +1479,15 @@ textarea:valid {
 }
 
 textarea::placeholder {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
-    color: rgb(150, 150, 150);
+    color: rgb(200, 200, 200);
 }
 
 input, textarea {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
@@ -1588,7 +1619,7 @@ input, textarea {
 }
 
 .form-box-k div label span {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 100%;
@@ -1677,23 +1708,13 @@ h2 {
     color: black;
 }
 
-h3 {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.025em;
-    text-transform: uppercase;
-    font-family: 'asse 5';
-    line-height: 20px;
-    color: rgb(150, 150, 150);
-}
-
 h3 a {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
-    line-height: 20px;
+    line-height: 16px;
     color: rgb(150, 150, 150);
 }
 
@@ -1734,9 +1755,9 @@ h5 a {
 p {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 6';
+    font-family: 'asse 11';
     line-height: 20px;
-    color: rgb(150, 150, 150);
+    color: rgb(200, 200, 200);
 }
 
 
@@ -1910,7 +1931,10 @@ p {
         grid-row-gap: 20px;
         grid-template-columns: repeat (2, 1fr);
         grid-template-rows: repeat (3, 1fr);
-        grid-template-areas: "b c" "a a" "a a";
+        grid-template-areas:
+        "a b"
+        "c c"
+        "c c";
     }
 
     .request-grid {
