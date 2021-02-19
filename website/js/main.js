@@ -228,14 +228,12 @@ function toggleForm(formName) {
         $('.request').delay(300).fadeToggle(300);
         $(formName).toggle();
         menuBtn.classList.add('open');
-        $('body').addClass('noscroll');
         menuBtn.classList.remove('close')
     } else {
         $('.contact').delay(300).fadeToggle(300);
         $('.request').fadeToggle(300);
         $(formName).fadeToggle(300);
         menuBtn.classList.add('close');
-        $('body').removeClass('noscroll');
         menuBtn.classList.remove('open')
         setTimeout(function () {
             $('.checked').removeClass("checked")

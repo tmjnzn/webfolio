@@ -1228,11 +1228,48 @@ body::-webkit-scrollbar {
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "a b b"
-    "a b b";
+    "c d d";
 }
 
 .request-box-a {
     grid-area: a;
+    position: relative;
+}
+
+.request-box-a-grid {
+    position: absolute;
+    display: grid;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "t"
+    "t"
+    "a"
+    "b"
+    "c";
+}
+
+.request-box-b {
+    grid-area: b;
+    position: relative;
+    display: flex;
+}
+
+.request-box-c {
+    grid-area: c;
+    position: relative;
+    padding-top: 100%;
+}
+
+.request-box-d {
+    grid-area: d;
     position: relative;
 }
 
@@ -1385,11 +1422,9 @@ body::-webkit-scrollbar {
 }
 
 .doc-box-d {
-    grid-area: d;
+    grid-area: e;
     position: relative;
     display: flex;
-    overflow: hidden;
-    padding-top: 100%;
 }
 
 .write-message {
@@ -1412,16 +1447,9 @@ body::-webkit-scrollbar {
 
 
 
-.request-box-b {
-    grid-area: b;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    padding-top: 100%;
-    background-color: white;
-}
 
-.form-grid {
+
+.request-box-b-grid {
     position: absolute;
     display: grid;
     top: 0;
@@ -1431,21 +1459,32 @@ body::-webkit-scrollbar {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-    "t t t t t t t t"
-    "t t t t t t t t"
     "a a a a a a a a"
     "b b b b c c c c"
     "d d d d e e e e"
     "f f f f g g g g"
     "h h h h i i i i"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    "j j j j j j j j"
-    ". . k k k k . .";
+}
+
+.request-box-d-grid {
+    position: absolute;
+    display: grid;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "j j j j"
+    "j j j j"
+    "j j j j"
+    "j j j j"
+    ". . k k"
 }
 
 input[type=text] {
@@ -1755,9 +1794,9 @@ h5 a {
 p {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 20px;
-    color: rgb(200, 200, 200);
+    color: rgb(170, 170, 170);
 }
 
 
@@ -1938,11 +1977,97 @@ p {
     }
 
     .request-grid {
-        grid-column-gap: 12.5px;
-        grid-row-gap: 12.5px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "a a" "b b" "b b";
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "a"
+        "c"
+        "b"
+        "d";
+    }
+
+    .request-box-a {
+        grid-area: a;
+        position: relative;
+    }
+
+    .request-box-a-grid {
+        position: absolute;
+        display: grid;
+        flex-direction: column;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1;
+        grid-template-rows: 4;
+        grid-template-areas:
+        "t"
+        "a"
+        "b"
+        "c";
+    }
+
+    .request-box-b-grid {
+        position: absolute;
+        display: grid;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+        "a a a a a a a a"
+        "b b b b b b b b"
+        "c c c c c c c c"
+        "d d d d d d d d"
+        "e e e e e e e e"
+        "f f f f f f f f"
+        "g g g g g g g g"
+        "h h h h h h h h"
+        "i i i i i i i i"
+    }
+
+    .request-box-d-grid {
+        position: absolute;
+        display: grid;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        "j j j j"
+        ". k k ."
+    }
+
+    .doc-box-t {
+        height: 100%;
+    }
+
+    .doc-box-a {
+        height: 50px;
+    }
+
+    .doc-box-b {
+        height: 50px;
+    }
+
+    .doc-box-c {
+        height: 50px;
     }
 
     .doc-grid {
@@ -1967,11 +2092,10 @@ p {
         left: 0;
         bottom: 0;
         right: 0;
-        padding: 12.5px;
         grid-column-gap: 6.25px;
         grid-row-gap: 6.25px;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(13, 1fr);
-        grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . . k k . . .";
+        grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . k k k k . .";
     }
 }

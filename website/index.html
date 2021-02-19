@@ -849,44 +849,54 @@
                 
                         <div class="request-box-a">
                 
-                                    <div class="doc-grid">
+                                <div class="request-box-a-grid">
                 
                                         <div class="doc-box-t">
-                                            <h2>Documents</h2>
-                                            <p>For the requestion of my resume a/o portfolio please enable the corresponding boxes
-                                                below.</p>
+                        
+                                                <div class="write-message">
+                                                        <div class="form-box-t">
+                                                            <h2>Write a Message</h2>
+                                                            <p>You may request additional documents by enabling the corresponding boxes below.</p>
+                                                        </div>                                                    
+                                                </div>
+                            
+                                                <div class="req-resume">                                                    
+                                                        <div class="form-box-t">
+                                                            <h2>Request for Resume</h2>
+                                                            <p>Please fill out the following form if possible.</p>
+                                                        </div>                                                    
+                                                </div>
+                            
+                                                <div class="req-portfolio">                                                    
+                                                        <div class="form-box-t">
+                                                            <h2>Request for Portfolio</h2>
+                                                            <p>Due to copyright restrictions please fill out the following form.</p>
+                                                        </div>                                                    
+                                                </div>
+                            
+                                                <div class="req-resume-portfolio">                                                    
+                                                        <div class="form-box-t">
+                                                            <h2>Request for Portfolio & Resume</h2>
+                                                            <p>Due to copyright restrictions please fill out the following form.</p>
+                                                        </div>                                                    
+                                                </div>
                                         </div>
+
                                         <div class="doc-box-a">
                                             <div>
                                                 <label><input id="checkboxMessage" type="checkbox"><span>Message</span></label>
                                             </div>
                                         </div>
+
                                         <div class="doc-box-b">
                                             <div id="checkboxResume" onclick="$(this).toggleClass('checked');evaluateDocuments();">
                                                 <label><span>Resume</span></label>
                                             </div>
                                         </div>
+
                                         <div class="doc-box-c">
                                             <div id="checkboxPortfolio" onclick="$(this).toggleClass('checked');evaluateDocuments();">
                                                 <label><span>Portfolio</span></label>
-                                            </div>
-                                        </div>
-                                        <div class="doc-box-d">
-                                            <img class="pic" src=".\img\05_contact2\00.png" alt="Avatar" style="width:100%">
-                                            <div class="write-message">
-                                                <img class="pic" src=".\img\05_contact2\01.png" alt="Avatar" style="width:100%">
-                                            </div>
-                
-                                            <div class="req-resume">
-                                                <img class="pic" src=".\img\05_contact2\02.png" alt="Avatar" style="width:100%">
-                                            </div>
-                
-                                            <div class="req-portfolio">
-                                                <img class="pic" src=".\img\05_contact2\03.png" alt="Avatar" style="width:100%">
-                                            </div>
-                
-                                            <div class="req-resume-portfolio">
-                                                <img class="pic" src=".\img\05_contact2\04.png" alt="Avatar" style="width:100%">
                                             </div>
                                         </div>
                 
@@ -896,7 +906,10 @@
                 
                         <div class="request-box-b">
                 
-                                    <div class="form-grid">
+                                    <div class="request-box-b-grid">
+                                        <div class="form-box-a">
+                                            <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
+                                        </div>
                                         <div class="form-box-b">
                                             <input type="text" required id="fname" name="fname" placeholder="First Name*">
                                         </div>
@@ -912,21 +925,10 @@
                                         <div class="form-box-i">
                                             <input type="text" required id="fname" name="fname" placeholder="Country*">
                                         </div>
-                                        <div class="form-box-j">
-                                            <textarea placeholder="Your Message*" required name="fname"></textarea>
-                                        </div>
-                                        <div class="form-box-k">
-                                            <div>
-                                                <label><input type="checkbox"><span>Send</span></label>
-                                            </div>
-                                        </div>
                                     </div>
                 
                                     <div class="form-1">
-                                        <div class="form-grid">
-                                            <div class="form-box-1">
-                                                <h5>You may request additional documents if you like.</h5>
-                                            </div>
+                                        <div class="request-box-b-grid">
                                             <div class="form-box-d">
                                                 <input type="text" required id="fname" name="fname" placeholder="Company">
                                             </div>
@@ -940,10 +942,7 @@
                                     </div>
                 
                                     <div class="form-2">
-                                        <div class="form-grid">
-                                            <div class="form-box-a">
-                                                <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
-                                            </div>
+                                        <div class="request-box-b-grid">                                            
                                             <div class="form-box-d">
                                                 <input type="text" required id="fname" name="fname" placeholder="Company">
                                             </div>
@@ -957,10 +956,7 @@
                                     </div>
                 
                                     <div class="form-3">
-                                        <div class="form-grid">
-                                            <div class="form-box-a">
-                                                <input type="text" required id="fname" name="fname" placeholder="Intent Of Request*">
-                                            </div>
+                                        <div class="request-box-b-grid">
                                             <div class="form-box-d">
                                                 <input type="text" required id="fname" name="fname" placeholder="Company*">
                                             </div>
@@ -973,42 +969,44 @@
                                         </div>
                                     </div>
                 
-                                    <div class="write-message">
-                                        <div class="form-grid">
-                                            <div class="form-box-t">
-                                                <h2>Get In Touch</h2>
-                                                <p>Please fill out the following form if possible and send me a message.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <div class="req-resume">
-                                        <div class="form-grid">
-                                            <div class="form-box-t">
-                                                <h2>Request for Resume</h2>
-                                                <p>Please fill out the following form if possible.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <div class="req-portfolio">
-                                        <div class="form-grid">
-                                            <div class="form-box-t">
-                                                <h2>Request for Portfolio</h2>
-                                                <p>Due to copyright restrictions please fill out the following form.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <div class="req-resume-portfolio">
-                                        <div class="form-grid">
-                                            <div class="form-box-t">
-                                                <h2>Request for Portfolio & Resume</h2>
-                                                <p>Due to copyright restrictions please fill out the following form.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                
+                        </div>
+
+                        <div class="request-box-c">
+
+                                <img class="pic" src=".\img\05_contact2\00.png" alt="Avatar" style="width:100%">
+                                
+                                <div class="write-message">
+                                    <img class="pic" src=".\img\05_contact2\01.png" alt="Avatar" style="width:100%">
+                                </div>
+    
+                                <div class="req-resume">
+                                    <img class="pic" src=".\img\05_contact2\02.png" alt="Avatar" style="width:100%">
+                                </div>
+    
+                                <div class="req-portfolio">
+                                    <img class="pic" src=".\img\05_contact2\03.png" alt="Avatar" style="width:100%">
+                                </div>
+    
+                                <div class="req-resume-portfolio">
+                                    <img class="pic" src=".\img\05_contact2\04.png" alt="Avatar" style="width:100%">
+                                </div>
+                            
+                        </div>
+
+                        <div class="request-box-d">
+                            <div class="request-box-d-grid">
+
+                            <div class="form-box-j">
+                                <textarea placeholder="Your Message*" required name="fname"></textarea>
+                            </div>
+
+                            <div class="form-box-k">
+                                <div>
+                                    <label><input type="checkbox"><span>Send</span></label>
+                                </div>
+                            </div>
+                            </div>
+
                         </div>
                     
                     </div>
