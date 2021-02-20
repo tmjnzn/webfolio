@@ -1469,14 +1469,14 @@ body::-webkit-scrollbar {
     right: 0;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-    "a a a a a a a a"
-    "b b b b c c c c"
-    "d d d d e e e e"
-    "f f f f g g g g"
-    "h h h h i i i i"
+    "a a"
+    "b c"
+    "d e"
+    "f g"
+    "h i"
 }
 
 .request-box-d-grid {
@@ -1673,33 +1673,6 @@ input, textarea {
 
 .form-box-k div label:hover span {
     color: white;
-}
-
-.form-1 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.form-2 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.form-3 {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 
@@ -1993,23 +1966,39 @@ p {
         display: flex;
         flex-direction: column;
     }
-     
+
     .request-box-b-grid {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+        "i";
     }
 
     .request-box-d-grid {
         position: relative;
         display: flex;
         flex-direction: column;
-    }
-
-    .form-box-j {
-        height: 320px;
+        align-items: center;
     }
     
+    .form-box-j {
+        height: 460px;
+        width: 100%;
+    }
+
+    .form-box-k {
+        width: 50%;
+    }
+
     #formbox {
         height: 40px;
     }
