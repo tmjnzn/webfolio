@@ -254,11 +254,11 @@ $('label.btn').on('click', 'input', function (e) {
 function evaluateDocuments() {
     let resumeChecked = $('#checkboxResume').hasClass("checked");
     let portfolieChecked = $('#checkboxPortfolio').hasClass("checked");
-    $(currentFormName).fadeToggle();
+    $(currentFormName).toggle();
     //Resume
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
-        $('.req-resume').fadeToggle(300);
+        $('.req-resume').delay(300).fadeToggle(300);
         $('.form-2').fadeIn(300);
         $('.form-3').fadeOut(300);
         $('.form-1').fadeOut(300);
@@ -266,7 +266,7 @@ function evaluateDocuments() {
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
-        $('.req-portfolio').fadeToggle(300);
+        $('.req-portfolio').delay(300).fadeToggle(300);
         $('.form-3').fadeIn(300);
         $('.form-1').fadeOut(300);
         $('.form-2').fadeOut(300);
@@ -274,7 +274,7 @@ function evaluateDocuments() {
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
-        $('.req-resume-portfolio').fadeToggle(300);
+        $('.req-resume-portfolio').delay(300).fadeToggle(300);
         $('.form-3').fadeIn(300);
         $('.form-1').fadeOut(300);
         $('.form-2').fadeOut(300);
@@ -282,7 +282,7 @@ function evaluateDocuments() {
     //Message
     else {
         currentFormName = '.write-message'
-        $('.write-message').fadeToggle(300);
+        $('.write-message').delay(300).fadeToggle(300);
         $('.form-1').fadeIn(300);
         $('.form-2').fadeOut(300);
         $('.form-3').fadeOut(300);

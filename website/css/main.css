@@ -498,7 +498,6 @@ body::-webkit-scrollbar {
     grid-area: a;
     position: relative;
     transition: .3s ease;
-    overflow: hidden;
 }
 
 .home-box-b {
@@ -1213,7 +1212,7 @@ body::-webkit-scrollbar {
 
 
 
-
+/*----- request -----*/
 
 .request {
     display: none;
@@ -1224,12 +1223,15 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
     "a b b"
     "c d d";
 }
+
+
+
 
 .request-box-a {
     grid-area: a;
@@ -1255,6 +1257,34 @@ body::-webkit-scrollbar {
     "b"
     "c";
 }
+
+.request-box-a-text {
+    grid-area: t;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-a {
+    grid-area: a;
+    position: relative;
+    display: flex;
+}
+
+.checkbox-b {
+    grid-area: b;
+    position: relative;
+    display: flex;
+}
+
+.checkbox-c {
+    grid-area: c;
+    position: relative;
+    display: flex;
+}
+
+
+
 
 .request-box-b {
     grid-area: b;
@@ -1301,26 +1331,17 @@ body::-webkit-scrollbar {
     "d";
 }
 
-.doc-box-t {
-    grid-area: t;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 
-.doc-box-a {
-    grid-area: a;
-    position: relative;
-    display: flex;
-}
 
-.doc-box-a div {
+
+
+.checkbox-a div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-a div label { /*klickfläche*/
+.checkbox-a div label { /*klickfläche*/
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1330,11 +1351,11 @@ body::-webkit-scrollbar {
     background-color:rgb(129, 236, 236);
 }
 
-.doc-box-a label input[type="checkbox"] {
+.checkbox-a label input[type="checkbox"] {
     display: none;
 }
 
-.doc-box-a div label span {
+.checkbox-a div label span {
     font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
@@ -1342,19 +1363,15 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-.doc-box-b {
-    grid-area: b;
-    position: relative;
-    display: flex;
-}
 
-.doc-box-b div {
+
+.checkbox-b div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-b div label {
+.checkbox-b div label {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1369,17 +1386,17 @@ body::-webkit-scrollbar {
     transition: 0.3s;
 }
 
-.doc-box-b label input[type="checkbox"]:checked {
+.checkbox-b label input[type="checkbox"]:checked {
     background-color: rgb(129, 236, 236);
     color:black;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-b div.checked label span {
+.checkbox-b div.checked label span {
     color: white;
 }
 
-.doc-box-b div label span {
+.checkbox-b div label span {
     font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
@@ -1387,19 +1404,13 @@ body::-webkit-scrollbar {
     color: rgb(129, 236, 236);
 }
 
-.doc-box-c {
-    grid-area: c;
-    position: relative;
-    display: flex;
-}
-
-.doc-box-c div {
+.checkbox-c div {
     position: relative;
     width: 100%;
     border: 3px solid rgb(129, 236, 236);
 }
 
-.doc-box-c div label {
+.checkbox-c div label {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1409,11 +1420,11 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
-.doc-box-c div.checked label span {
+.checkbox-c div.checked label span {
     color: white;
 }
 
-.doc-box-c div label span {
+.checkbox-c div label span {
     font-size: 16px;
     font-weight: 500;
     font-family: 'asse 11';
@@ -1531,13 +1542,6 @@ input, textarea {
     font-family: 'asse 11';
     line-height: 100%;
     color: rgb(150, 150, 150);
-}
-
-.form-box-t {
-    grid-area: t;
-    position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .form-box-1 {
@@ -1979,8 +1983,8 @@ p {
     .request-grid {
         grid-column-gap: 20px;
         grid-row-gap: 20px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
         "a"
         "c"
@@ -1988,114 +1992,43 @@ p {
         "d";
     }
 
-    .request-box-a {
-        grid-area: a;
+    .request-box-a-grid {
         position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
-    .request-box-a-grid {
-        position: absolute;
-        display: grid;
-        flex-direction: column;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-columns: 1;
-        grid-template-rows: 4;
-        grid-template-areas:
-        "t"
-        "a"
-        "b"
-        "c";
+    .checkbox-a {
+        height: 40px;
     }
+    
+    .checkbox-b {
+        height: 40px;
+    }
+    
+    .checkbox-c {
+        height: 40px;
+    }
+
+    
 
     .request-box-b-grid {
-        position: absolute;
-        display: grid;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        grid-template-areas:
-        "a a a a a a a a"
-        "b b b b b b b b"
-        "c c c c c c c c"
-        "d d d d d d d d"
-        "e e e e e e e e"
-        "f f f f f f f f"
-        "g g g g g g g g"
-        "h h h h h h h h"
-        "i i i i i i i i"
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     .request-box-d-grid {
-        position: absolute;
-        display: grid;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        grid-template-areas:
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        "j j j j"
-        ". k k ."
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
-    .doc-box-t {
-        height: 100%;
+    .form-box-j {
+        height: 320px;
     }
-
-    .doc-box-a {
-        height: 50px;
-    }
-
-    .doc-box-b {
-        height: 50px;
-    }
-
-    .doc-box-c {
-        height: 50px;
-    }
-
-    .doc-grid {
-        position: absolute;
-        display: grid;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 12.5px;
-        grid-column-gap: 12.5px;
-        grid-row-gap: 6.25px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas: "t d" "t d" ". d" "a d" "b d" "c d";
-    }
-
-    .form-grid {
-        position: absolute;
-        display: grid;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        grid-column-gap: 6.25px;
-        grid-row-gap: 6.25px;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(13, 1fr);
-        grid-template-areas: "t t t t t t t t" "t t t t t t t t" "a a a a a a a a" "b b b b c c c c" "d d d d e e e e" "f f f f g g g g" "h h h h i i i i" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" "j j j j j j j j" ". . k k k k . .";
+    
+    .form-box-k {
+        height: 40px;
     }
 }
