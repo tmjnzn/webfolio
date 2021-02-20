@@ -259,33 +259,21 @@ function evaluateDocuments() {
     if (resumeChecked && !portfolieChecked) {
         currentFormName = '.req-resume'
         $('.req-resume').delay(300).fadeToggle(300);
-        $('.form-2').fadeIn(300);
-        $('.form-3').fadeOut(300);
-        $('.form-1').fadeOut(300);
     }
     //Portfolie
     else if (!resumeChecked && portfolieChecked) {
         currentFormName = '.req-portfolio'
         $('.req-portfolio').delay(300).fadeToggle(300);
-        $('.form-3').fadeIn(300);
-        $('.form-1').fadeOut(300);
-        $('.form-2').fadeOut(300);
     }
     //Resume und PF
     else if (resumeChecked && portfolieChecked) {
         currentFormName = '.req-resume-portfolio'
         $('.req-resume-portfolio').delay(300).fadeToggle(300);
-        $('.form-3').fadeIn(300);
-        $('.form-1').fadeOut(300);
-        $('.form-2').fadeOut(300);
     }
     //Message
     else {
         currentFormName = '.write-message'
         $('.write-message').delay(300).fadeToggle(300);
-        $('.form-1').fadeIn(300);
-        $('.form-2').fadeOut(300);
-        $('.form-3').fadeOut(300);
 
     }
 }
