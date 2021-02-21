@@ -1508,6 +1508,7 @@ input[type=text] {
     padding-right: 10px;
     border: 3px solid rgb(240, 240, 240);
     border-radius: 0;
+    box-shadow: inset 0px 0px 0px 0px;
     color: black;
 }
 
@@ -1634,6 +1635,8 @@ input, textarea {
     height: 100%;
     padding: 10px;
     border: 3px solid rgb(240, 240, 240);
+    border-radius: 0;
+    box-shadow: inset 0px 0px 0px 0px;
     color: black;
     resize: none;
 }
