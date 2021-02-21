@@ -36,7 +36,6 @@ body {
     flex-direction: column;
     scroll-behavior: smooth;
     background-color: white;
-    /*background-color: rgb(230, 230, 230);*/
 }
 
 body::-webkit-scrollbar {
@@ -1357,7 +1356,7 @@ body::-webkit-scrollbar {
 .checkbox-a div label span {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
     color: white;
 }
@@ -1398,7 +1397,7 @@ body::-webkit-scrollbar {
 .checkbox-b div label span {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
     color: rgb(129, 236, 236);
 }
@@ -1426,7 +1425,7 @@ body::-webkit-scrollbar {
 .checkbox-c div label span {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
     color: rgb(129, 236, 236);
 }
@@ -1504,43 +1503,44 @@ input[type=text] {
     height: 100%;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
-    padding-left: 12.5px;
-    padding-right: 12.5px;
-    border: 3px solid rgb(230, 230, 230);
+    font-family: 'asse 6';
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid rgb(240, 240, 240);
+    border-radius: 0;
     color: black;
 }
 
 input[type=text]:focus,
 input[type=text]:valid {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
     outline: none;
 }
 
 ::placeholder {
-    color: rgb(200, 200, 200);
+    color: rgb(170, 170, 170);
 }
 
 textarea:focus,
 textarea:valid {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
     outline: none;
 }
 
 textarea::placeholder {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
-    color: rgb(200, 200, 200);
+    color: rgb(170, 170, 170);
 }
 
 input, textarea {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
-    color: rgb(150, 150, 150);
+    color: rgb(170, 170, 170);
 }
 
 .form-box-1 {
@@ -1633,7 +1633,7 @@ input, textarea {
     width: 100%;
     height: 100%;
     padding: 10px;
-    border: 3px solid rgb(230, 230, 230);
+    border: 3px solid rgb(240, 240, 240);
     color: black;
     resize: none;
 }
@@ -1661,7 +1661,7 @@ input, textarea {
 .form-box-k div label span {
     font-size: 16px;
     font-weight: 500;
-    font-family: 'asse 11';
+    font-family: 'asse 6';
     line-height: 100%;
     color: rgb(129, 236, 236);
 }
@@ -1728,7 +1728,7 @@ h3 a {
     text-transform: uppercase;
     font-family: 'asse 5';
     line-height: 16px;
-    color: rgb(150, 150, 150);
+    color: rgb(170, 170, 170);
 }
 
 h4 {
@@ -1779,8 +1779,9 @@ p {
 
 /*responsive*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) and (orientation: portrait) {
 
+    
 
 /*navibar*/
 
@@ -1898,6 +1899,18 @@ p {
 .project-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+}
+
+.box-overlay {
+    padding: 20px;
+}
+
+.projectname {
+    transform: translateY(-20px);
+}
+
+.projectlink {
+    transform: translateY(20px);
 }
 
 .slideshow-grid {
