@@ -760,6 +760,19 @@ body::-webkit-scrollbar {
     opacity: 0;
 }
 
+.comingsoon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    transition: .3s ease;
+    transform: translateY(25px);
+    opacity: 0;
+}
+
 
 /*----- slideshow -----*/
 
@@ -831,6 +844,14 @@ body::-webkit-scrollbar {
 }
 
 #work6Header {
+    display: none;
+}
+
+#work7Header {
+    display: none;
+}
+
+#work8Header {
     display: none;
 }
 
@@ -990,6 +1011,11 @@ body::-webkit-scrollbar {
 }
 
 .box:hover .projectlink {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.box:hover .comingsoon {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1925,6 +1951,10 @@ p {
 }
 
 .projectlink {
+    transform: translateY(20px);
+}
+
+.comingsoon {
     transform: translateY(20px);
 }
 
