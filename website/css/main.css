@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     height: 50px;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.90);
     z-index: 2;
 }
 
@@ -1512,6 +1512,9 @@ body::-webkit-scrollbar {
 }
 
 input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     position: relative;
     display: flex;
     width: 100%;
