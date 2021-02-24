@@ -9,7 +9,7 @@ $(document).ready(function () {
         menuBtn.classList.add('close')
         $('.menu').fadeToggle(300);
         menuBtn.classList.remove('open');
-        $('body').removeClass('noscroll');
+        $('.pages').removeClass('noscroll');
         menuOpen = false;
     });
 });
@@ -287,7 +287,7 @@ $(document).ready(function () {
         $('#menu').fadeToggle(300);
         $('.imprint').delay(300).fadeToggle(300);
         $('.menu-overlay').fadeToggle(300);
-        $('body').addClass('noscroll');
+        $('.pages').addClass('noscroll');
         messageImpClosed = !messageImpClosed;
     });
 });
