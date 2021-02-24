@@ -406,33 +406,33 @@ body::-webkit-scrollbar {
 /*-----imp-----*/
 
 .imprint {
-    position: fixed;
+    position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
-    top: 50px;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
+    height: auto;
     z-index: 1;
 }
 
 .imp-page {
     position: relative;
     display: flex;
+    margin-top: 50px;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    overflow: auto;
 }
 
 .imp-frame {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 120vh;
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 75px;
+    margin-bottom: 125px;
+    background-color: snow;
 }
 
 .imprint-grid {
@@ -440,10 +440,9 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
-    "a b b" 
     "a b b";
 }
 
@@ -455,25 +454,14 @@ body::-webkit-scrollbar {
     grid-area: a;
     position: relative;
     transition: .3s ease;
-    overflow: hidden;
+    background-color: rosybrown;
 }
 
 .imp-box-b {
     grid-area: b;
     position: relative;
     transition: .3s ease;
-    overflow: hidden;
-    padding-top: 100%;
-}
-
-.imp-box-overlay {
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
+    background-color: slateblue;
 }
 
 
@@ -1513,7 +1501,6 @@ body::-webkit-scrollbar {
 
 input[type=text] {
     -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     position: relative;
     display: flex;
@@ -1649,6 +1636,8 @@ input, textarea {
 }
 
 .form-box-j textarea {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -1833,11 +1822,10 @@ p {
 .imprint-grid {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "a a" 
-    "b b"
     "b b";
 }    
 
@@ -1964,7 +1952,7 @@ p {
 .resume-grid {
     grid-row-gap: 25px;
     grid-column-gap: 25px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
     "a"
