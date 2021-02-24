@@ -419,8 +419,8 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     margin-top: 50px;
+    height: 100%;
     justify-content: center;
-    overflow: auto;
 }
 
 .imp-frame {
@@ -432,7 +432,6 @@ body::-webkit-scrollbar {
     margin-right: 25px;
     margin-top: 75px;
     margin-bottom: 125px;
-    background-color: snow;
 }
 
 .imprint-grid {
@@ -454,14 +453,12 @@ body::-webkit-scrollbar {
     grid-area: a;
     position: relative;
     transition: .3s ease;
-    background-color: rosybrown;
 }
 
 .imp-box-b {
     grid-area: b;
     position: relative;
     transition: .3s ease;
-    background-color: slateblue;
 }
 
 
