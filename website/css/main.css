@@ -509,9 +509,9 @@ body::-webkit-scrollbar {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-    "a . ."
-    "e c c"
-    "b d d";
+    "a b b"
+    "c c ."
+    "d e e";
 }
 
 .about-box-a {
@@ -519,15 +519,12 @@ body::-webkit-scrollbar {
     position: relative;
     transition: .3s ease;
     padding-top: 100%;
-    overflow: hidden;
 }
 
 .about-box-b {
     grid-area: b;
     position: relative;
     transition: .3s ease;
-    overflow: hidden;
-    background-color: white;
 }
 
 .about-box-c {
@@ -535,7 +532,6 @@ body::-webkit-scrollbar {
     position: relative;
     display: flex;
     transition: .3s ease;
-    overflow: hidden;
     background-color: rgb(129, 236, 236);
 }
 
@@ -553,19 +549,7 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-.about-overlay {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
-    opacity: 1;
-}
-
-.about-overlay-2 {
+.about-overlay-c {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -575,11 +559,10 @@ body::-webkit-scrollbar {
     right: 0;
     padding: 20px;
     transition: .3s ease;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 1;
 }
 
-.about-overlay-3 {
+.about-overlay-c2 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -593,7 +576,7 @@ body::-webkit-scrollbar {
     background-color: black;
 }
 
-.about-overlay-4 {
+.about-overlay-c3 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -601,7 +584,7 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 20px;
+    padding: 25px;
     transition: .3s ease;
     opacity: 0;
 }
@@ -636,23 +619,11 @@ body::-webkit-scrollbar {
     transition: .3s ease;
 }
 
-.about-box-a:hover .about-overlay-2 {
+.about-box-c:hover .about-overlay-c2 {
     opacity: 1;
 }
 
-.about-box-a:hover .pic {
-    filter: blur(1.5px);
-}
-
-.about-box-a:hover .text-overlay {
-    transform: translateY(0px);
-}
-
-.about-box-c:hover .about-overlay-3 {
-    opacity: 1;
-}
-
-.about-box-c:hover .about-overlay-4 {
+.about-box-c:hover .about-overlay-c3 {
     opacity: 1;
 }
 
@@ -662,11 +633,6 @@ body::-webkit-scrollbar {
 }
 
 .about-box-c:hover .projectlink {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-.about-box-a:hover .projectname {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1881,48 +1847,12 @@ p {
 .about-grid {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "a c" "b b" "d d";
-}
-
-.about-overlay {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
-    opacity: 1;
-}
-
-.about-overlay-2 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.about-overlay-3 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: .3s ease;
-    opacity: 0;
-    background-color: black;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "a a"
+    "a a"
+    "d d";
 }
 
 
