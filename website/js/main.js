@@ -287,7 +287,6 @@ $(document).ready(function () {
         $('#menu').fadeToggle(300);
         $('.imprint').delay(300).fadeToggle(300);
         $('.menu-overlay').fadeToggle(300);
-        $('body').addClass('noscroll');
         messageImpClosed = !messageImpClosed;
     });
 });

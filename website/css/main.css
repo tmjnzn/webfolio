@@ -510,46 +510,57 @@ body::-webkit-scrollbar {
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     "a b b"
-    "c c ."
-    "d e e";
+    "c e e"
+    "d d d";
 }
 
 .about-box-a {
     grid-area: a;
     position: relative;
-    transition: .3s ease;
+    display: flex;
     padding-top: 100%;
 }
 
 .about-box-b {
     grid-area: b;
     position: relative;
-    transition: .3s ease;
+}
+
+.about-box-b-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
 }
 
 .about-box-c {
     grid-area: c;
     position: relative;
+}
+
+.about-box-c-overlay {
+    position: absolute;
     display: flex;
-    transition: .3s ease;
-    background-color: rgb(129, 236, 236);
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    background-color: black;
 }
 
 .about-box-d {
     grid-area: d;
     position: relative;
     transition: .3s ease;
-    overflow: hidden;
 }
 
-.about-box-e {
-    grid-area: e;
-    position: relative;
-    transition: .3s ease;
-    overflow: hidden;
-}
-
-.about-overlay-c {
+.about-box-d-overlay-1 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -560,9 +571,10 @@ body::-webkit-scrollbar {
     padding: 20px;
     transition: .3s ease;
     opacity: 1;
+    background-color: rgb(129, 236, 236);
 }
 
-.about-overlay-c2 {
+.about-box-d-overlay-2 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -576,7 +588,7 @@ body::-webkit-scrollbar {
     background-color: black;
 }
 
-.about-overlay-c3 {
+.about-box-d-overlay-3 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -584,12 +596,19 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 25px;
+    padding: 20px;
     transition: .3s ease;
     opacity: 0;
 }
 
-.about-overlay-5 {
+.about-box-e {
+    grid-area: e;
+    position: relative;
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.about-box-e-overlay {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -597,42 +616,18 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     right: 0;
-    transition: .3s ease;
+    overflow: hidden;
+}
+
+.about-box-d:hover .about-box-d-overlay-2 {
     opacity: 1;
 }
 
-.textcolumn {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.columns {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.text-overlay {
-    transform: translateY(-25px);
-    transition: .3s ease;
-}
-
-.about-box-c:hover .about-overlay-c2 {
+.about-box-d:hover .about-box-d-overlay-3 {
     opacity: 1;
 }
 
-.about-box-c:hover .about-overlay-c3 {
-    opacity: 1;
-}
-
-.about-box-c:hover .projectname {
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-.about-box-c:hover .projectlink {
+.about-box-d:hover .projectlink {
     transform: translateY(0px);
     opacity: 1;
 }
@@ -1098,8 +1093,8 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: repeat (2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
     "a c c"
     "b c c";
@@ -1786,7 +1781,7 @@ p {
 
 /*responsive*/
 
-@media only screen and (max-width: 700px) and (orientation: portrait) {
+@media only screen and (max-width: 700px) {
 
     
 
@@ -1848,10 +1843,12 @@ p {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-    "a a"
-    "a a"
+    "a c"
+    "b b"
+    "b b"
+    "e e"
     "d d";
 }
 
@@ -1930,8 +1927,8 @@ p {
     .contact-grid {
         grid-column-gap: 20px;
         grid-row-gap: 20px;
-        grid-template-columns: repeat (2, 1fr);
-        grid-template-rows: repeat (3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
         "a b"
         "c c"
