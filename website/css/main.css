@@ -95,7 +95,8 @@ body::-webkit-scrollbar {
 .pages {
     position: relative;
     display: flex;
-    margin-top: 50px;
+    margin-top: 125px;    
+    margin-bottom: 125px;
     justify-content: center;
 }
 
@@ -106,8 +107,6 @@ body::-webkit-scrollbar {
     width: 120vh;
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 75px;
-    margin-bottom: 125px;
 }
 
 
@@ -410,17 +409,22 @@ body::-webkit-scrollbar {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
+    background-color: blueviolet;
 }
 
 .imp-page {
     position: relative;
     display: flex;
-    margin-top: 50px;
-    height: 100%;
+    margin-top: 125px;
+    margin-bottom: 155px;
     justify-content: center;
+    background-color: cyan;
+    overflow: hidden;
 }
 
 .imp-frame {
@@ -428,10 +432,8 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     width: 120vh;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 75px;
-    margin-bottom: 125px;
+    background-color: bisque;
+    overflow: auto;
 }
 
 .imprint-grid {
@@ -506,16 +508,22 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
     "a b b"
-    "c e e"
-    "d d d";
+    "d e e";
 }
 
 .about-box-a {
     grid-area: a;
+    position: relative;
+    display: flex;
+    padding-top: 100%;
+}
+
+.about-box-f {
+    grid-area: f;
     position: relative;
     display: flex;
     padding-top: 100%;
@@ -1696,7 +1704,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1706,7 +1714,7 @@ h1 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
@@ -1716,17 +1724,17 @@ h2 {
 }
 
 h3 a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.025em;
     text-transform: uppercase;
     font-family: 'asse 5';
-    line-height: 16px;
+    line-height: 15px;
     color: rgb(170, 170, 170);
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     font-family: 'asse 5';
@@ -1735,7 +1743,7 @@ h4 {
 }
 
 h4 a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     font-family: 'asse 5';
@@ -1744,7 +1752,7 @@ h4 a {
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 20px;
@@ -1752,7 +1760,7 @@ h5 {
 }
 
 h5 a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'asse 11';
     line-height: 20px;
@@ -1760,7 +1768,7 @@ h5 a {
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'asse 6';
     line-height: 20px;
@@ -1768,7 +1776,7 @@ h6 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'asse 6';
     line-height: 20px;
