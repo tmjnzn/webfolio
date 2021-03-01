@@ -494,6 +494,20 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
+.home-box-b:hover .box-overlay {
+    opacity: 1;
+}
+
+.home-box-b:hover .projectname {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.home-box-b:hover .projectlink {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 
 
@@ -508,8 +522,8 @@ body::-webkit-scrollbar {
     display: grid;
     grid-column-gap: 25px;
     grid-row-gap: 25px;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "a b b"
     "d e e";
@@ -522,16 +536,10 @@ body::-webkit-scrollbar {
     padding-top: 100%;
 }
 
-.about-box-f {
-    grid-area: f;
-    position: relative;
-    display: flex;
-    padding-top: 100%;
-}
-
 .about-box-b {
     grid-area: b;
     position: relative;
+    background-color: aquamarine;
 }
 
 .about-box-b-overlay {
@@ -566,6 +574,7 @@ body::-webkit-scrollbar {
     grid-area: d;
     position: relative;
     transition: .3s ease;
+    padding-top: 100%;
 }
 
 .about-box-d-overlay-1 {
@@ -1851,13 +1860,11 @@ p {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
-    "a c"
+    "a d"
     "b b"
-    "b b"
-    "e e"
-    "d d";
+    "e e";
 }
 
 
