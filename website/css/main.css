@@ -1693,10 +1693,8 @@ input, textarea {
 .footer {
     position: relative;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+    margin-bottom: 75px;
 }
 
 
@@ -2030,4 +2028,7 @@ p a{
     #formbox {
         height: 45px;
     }
+
+
+
 }
