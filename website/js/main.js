@@ -162,7 +162,6 @@ function toggleProject(projectName) {
         $('.project').delay(300).fadeToggle(300);
         $('#' + projectName).toggle();
         openSlideShow(projectName);
-        $('body').addClass('noscroll');
         $('.chapter[data-visible]').each(function () {
             $(this).fadeOut(300);
         })

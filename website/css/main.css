@@ -109,6 +109,10 @@ body::-webkit-scrollbar {
     margin-right: 25px;
 }
 
+.gap {
+    width: 25px;
+    height: 25px;
+}
 
 
 
@@ -375,11 +379,6 @@ body::-webkit-scrollbar {
     width: 20px;
     height: 3px;
     background-color: white;
-}
-
-.gap {
-    width: 25px;
-    height: 25px;
 }
 
 .logospace {
@@ -677,7 +676,7 @@ body::-webkit-scrollbar {
     padding-top: 100%;
     transition: .3s ease;
     overflow: hidden;
-
+background-color: blueviolet;
 }
 
 .pic {
@@ -1047,6 +1046,35 @@ body::-webkit-scrollbar {
     opacity: 1;
     transform: translateX(0px);
 }
+
+
+
+/*-----project-1-----*/
+
+.project-pic{
+    position: relative;
+    display: grid;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    cursor: pointer;
+    
+}
+
+.project-textbox {
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+}
+
+.picbox {
+    position: relative;
+    display: flex;
+    padding-top: 100%;
+}
+
+/*-----project-1-----*/
 
 
 
@@ -1824,6 +1852,10 @@ p a{
     margin-right: 15px;
 }
 
+.gap {
+    width: 15px;
+    height: 15px;
+}
 
 
 
@@ -1930,7 +1962,6 @@ p a{
 
 .resume-grid {
     grid-row-gap: 15px;
-    grid-column-gap: 15px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
@@ -1941,7 +1972,7 @@ p a{
 }
 
 .resume-box-c {
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 
