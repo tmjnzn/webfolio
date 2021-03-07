@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: rgb(245,245,245);
 }
 
 body::-webkit-scrollbar {
